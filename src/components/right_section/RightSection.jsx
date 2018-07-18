@@ -1,10 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // CSS
 import './RightSection.css';
 
-export default () => (
+const RightSection = ({ contents }) => (
   <div id="right" className="column">
-    hello
+    {contents}
   </div>
 );
+
+RightSection.propTypes = {
+  contents: PropTypes.element.isRequired,
+};
+
+export default RightSection;
