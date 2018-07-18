@@ -6,7 +6,7 @@ import './Header.css';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function callSidebar() {
+export function callSidebar() {
   const sidebar = document.querySelector('.App');
   sidebar.classList.toggle('slide');
 }
