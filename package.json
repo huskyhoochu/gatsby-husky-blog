@@ -10,7 +10,7 @@
     "lint": "eslint --fix"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
+    "src/**/*.{js,jsx}": [
       "yarn prettier",
       "yarn lint",
       "git add"
