@@ -1,0 +1,17 @@
+.slide #grey-out {
+  height: 100%;
+  opacity: 1.0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#grey-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 0;
+  opacity: 0.0;
+  background-color: transparent;
+  transition: background-color .5s cubic-bezier(0.5, -0.5, 0.3, 1.3);
+}
