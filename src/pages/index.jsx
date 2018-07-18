@@ -4,7 +4,7 @@ import React from 'react';
 import 'bulma/css/bulma.min.css';
 
 // Components
-import Layout from '../components/Layout';
+import Layout from '../components/layout/Layout';
 
 export default () => (
   <div className="App">
