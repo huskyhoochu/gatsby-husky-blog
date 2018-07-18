@@ -28,6 +28,7 @@
     "bluebird": "^3.5.1",
     "bulma": "^0.7.1",
     "gatsby": "next",
+    "gatsby-plugin-react-helmet": "^3.0.0-beta.3",
     "lodash": "^4.17.10",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
