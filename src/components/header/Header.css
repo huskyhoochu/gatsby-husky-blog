@@ -1,0 +1,27 @@
+.slide .navbar-burger {
+  left: -52px;
+}
+
+.navbar-burger {
+  border: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  transition: .5s ease left;
+  -webkit-transition: .5s ease left;
+  -moz-transition: .5s ease left;
+}
+
+.navbar-burger:hover {
+  background-color: transparent;
+}
+
+.navbar-burger:focus {
+  outline: none;
+}
+
+.icon {
+  margin-right: 12px;
+}
