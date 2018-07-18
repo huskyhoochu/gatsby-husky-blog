@@ -1,0 +1,15 @@
+aside {
+  position: absolute;
+  width: 300px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  border: 1px solid salmon;
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+}
+
+aside > div {
+  margin-top: 52px;
+  padding: 0 24px 24px 24px;
+}
