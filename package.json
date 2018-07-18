@@ -1,0 +1,42 @@
+{
+  "name": "husky-blog",
+  "description": "Huskyhoochu's tech blog",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "prettier": "prettier --single-quote --arrow-parens always --write",
+    "lint": "eslint --fix"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "yarn prettier",
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "pre-commit": "lint-staged"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "bulma": "^0.7.1",
+    "gatsby": "next",
+    "lodash": "^4.17.10",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
+    "prettier": "1.13.7"
+  }
+}
