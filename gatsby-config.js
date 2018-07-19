@@ -3,5 +3,15 @@ module.exports = {
     title: 'Huskyhoochu',
     description: '허스키후추의 개발 블로그',
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
+    'gatsby-transformer-remark',
+  ],
 };
