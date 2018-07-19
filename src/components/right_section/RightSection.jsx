@@ -11,7 +11,7 @@ const RightSection = ({ contents }) => (
 );
 
 RightSection.propTypes = {
-  contents: PropTypes.element.isRequired,
+  contents: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
 };
 
 export default RightSection;

@@ -11,16 +11,18 @@ import RightSection from '../right_section/RightSection';
 import GreyOut from '../grey_out/GreyOut';
 
 const Layout = ({ children }) => (
-  <div id="canvas" className="columns is-desktop is-gapless">
-    <SideMenu />
-    <LeftSection />
-    <RightSection contents={children} />
-    <GreyOut />
+  <div className="App">
+    <div id="canvas" className="columns is-desktop is-gapless">
+      <SideMenu />
+      <LeftSection />
+      <RightSection contents={children} />
+      <GreyOut />
+    </div>
   </div>
 );
 
 Layout.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
 };
 
 export default Layout;
