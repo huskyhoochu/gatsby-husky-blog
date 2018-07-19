@@ -1,7 +1,8 @@
-import React from 'react';
+import _ from 'lodash';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 // CSS
 import 'bulma/css/bulma.min.css';
@@ -10,15 +11,24 @@ import 'bulma/css/bulma.min.css';
 import Layout from '../components/layout/Layout';
 
 const BlogIndex = ({ data }) => (
-  <div className="App">
+  <Fragment>
     <Helmet>
       <title>{data.site.siteMetadata.title}</title>
       <meta name="description" content={data.site.siteMetadata.description} />
     </Helmet>
     <Layout>
-      <h1 className="title">Welcome to huskyhoochu blog</h1>
+      {_.map(data.allMarkdownRemark.edges, ({ node }) => {
+        const { title } = node.frontmatter;
+        return (
+          <div key={node.fields.slug}>
+            <Link to={node.fields.slug}>
+              <h3>{title}</h3>
+            </Link>
+          </div>
+        );
+      })}
     </Layout>
-  </div>
+  </Fragment>
 );
 
 BlogIndex.propTypes = {
@@ -28,6 +38,9 @@ BlogIndex.propTypes = {
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
       }).isRequired,
+    }).isRequired,
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf.isRequired,
     }).isRequired,
   }).isRequired,
 };
@@ -40,6 +53,20 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "YYYY-MM-DD")
+          }
+        }
       }
     }
   }
