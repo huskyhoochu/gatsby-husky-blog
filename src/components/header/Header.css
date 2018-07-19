@@ -1,8 +1,8 @@
-.slide .navbar-burger {
+.slide #burger {
   left: -52px;
 }
 
-.navbar-burger {
+#burger {
   border: none;
   display: block;
   position: absolute;
@@ -14,11 +14,11 @@
   -moz-transition: .5s ease left;
 }
 
-.navbar-burger:hover {
+#burger:hover {
   background-color: transparent;
 }
 
-.navbar-burger:focus {
+#burger:focus {
   outline: none;
 }
 

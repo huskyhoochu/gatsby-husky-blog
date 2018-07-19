@@ -16,6 +16,7 @@ function hamburger() {
     <div className="column is-2">
       <div className="navbar-brand">
         <button
+          id="burger"
           type="button"
           className="navbar-burger"
           aria-label="menu"
