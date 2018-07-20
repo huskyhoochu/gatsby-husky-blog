@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 
 // CSS
 import './Header.css';
-import './hamburgers.css';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -12,22 +11,17 @@ export function callSidebar() {
   const sidebar = document.querySelector('.App');
   sidebar.classList.toggle('slide');
 
-  const burger = document.querySelector('.hamburger--collapse');
+  const burger = document.querySelector('#burger');
   burger.classList.toggle('is-active');
 }
 
 function hamburger() {
   return (
     <div className="side-menu">
-      <button
-        id="burger"
-        type="button"
-        className="hamburger hamburger--collapse"
-        onClick={() => callSidebar()}
-      >
-        <div className="hamburger-box">
-          <div className="hamburger-inner" />
-        </div>
+      <button type="button" id="burger" onClick={() => callSidebar()}>
+        <span />
+        <span />
+        <span />
       </button>
     </div>
   );
