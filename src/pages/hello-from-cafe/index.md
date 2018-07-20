@@ -17,12 +17,12 @@ date: '2018-07-19'
 
 <br/>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quam magna, pretium vitae euismod id, aliquet sed nisi.
+*Lorem ipsum* dolor sit amet, consectetur adipiscing elit. Mauris quam magna, pretium vitae euismod id, aliquet sed nisi.
 
 
 
 
-Etiam congue sagittis rhoncus. Nam pretium dapibus fermentum. Vivamus quis risus ultrices, congue justo sit amet, pretium massa.
+**Etiam congue** sagittis rhoncus. Nam pretium dapibus fermentum. Vivamus quis risus ultrices, congue justo sit amet, pretium massa.
 Integer in massa sed lorem ornare tristique dictum in sem. Phasellus luctus mi eget diam varius porttitor.
 
 
