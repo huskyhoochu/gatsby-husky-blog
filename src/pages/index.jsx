@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 
 // CSS
+import 'minireset.css/minireset.min.css';
 import './index.css';
 
 // Components
