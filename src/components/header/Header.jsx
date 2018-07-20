@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 
 // CSS
 import './Header.css';
+import './hamburgers.css';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -10,32 +11,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export function callSidebar() {
   const sidebar = document.querySelector('.App');
   sidebar.classList.toggle('slide');
+
+  const burger = document.querySelector('.hamburger--collapse');
+  burger.classList.toggle('is-active');
 }
 
 function hamburger() {
   return (
-    <div className="">
-      <div className="">
-        <button
-          id="burger"
-          type="button"
-          className=""
-          aria-label="menu"
-          aria-expanded="false"
-          onClick={() => callSidebar()}
-        >
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-        </button>
-      </div>
+    <div className="side-menu">
+      <button
+        id="burger"
+        type="button"
+        className="hamburger hamburger--collapse"
+        onClick={() => callSidebar()}
+      >
+        <div className="hamburger-box">
+          <div className="hamburger-inner" />
+        </div>
+      </button>
     </div>
   );
 }
 
 function title() {
   return (
-    <div className="">
+    <div className="home-menu">
       <Link to="/">
         <h6 className="">huskyhoochu.com</h6>
       </Link>
@@ -45,16 +45,16 @@ function title() {
 
 function search() {
   return (
-    <div className="">
+    <div className="search-menu">
       <FontAwesomeIcon className="icon" icon={faSearch} />
     </div>
   );
 }
 
 export default () => (
-  <div className="">
+  <nav className="nav-bar">
     {hamburger()}
     {title()}
     {search()}
-  </div>
+  </nav>
 );
