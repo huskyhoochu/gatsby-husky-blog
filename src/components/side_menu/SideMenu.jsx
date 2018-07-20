@@ -5,8 +5,8 @@ import { Link } from 'gatsby';
 import './SideMenu.css';
 
 export default () => (
-  <aside className="menu">
-    <div>
+  <aside className="menu-wrapper">
+    <div className="menu">
       <ul className="menu-list">
         <li>
           <Link to="/">Latest</Link>
