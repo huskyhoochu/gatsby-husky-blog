@@ -10,8 +10,6 @@
   left: 0;
   background-color: transparent;
   transition: .5s ease left;
-  -webkit-transition: .5s ease left;
-  -moz-transition: .5s ease left;
 }
 
 #burger:hover {
