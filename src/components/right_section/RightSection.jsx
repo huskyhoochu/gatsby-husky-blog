@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './RightSection.css';
 
 const RightSection = ({ contents }) => (
-  <div id="right" className="column">
+  <div id="right" className="">
     {contents}
   </div>
 );

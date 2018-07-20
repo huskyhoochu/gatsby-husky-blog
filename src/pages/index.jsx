@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 
 // CSS
-import 'bulma/css/bulma.min.css';
+import './index.css';
 
 // Components
 import Layout from '../components/layout/Layout';

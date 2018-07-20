@@ -12,7 +12,7 @@ import GreyOut from '../grey_out/GreyOut';
 
 const Layout = ({ children }) => (
   <div className="App">
-    <div id="canvas" className="columns is-desktop is-gapless">
+    <div id="canvas" className="">
       <SideMenu />
       <LeftSection />
       <RightSection contents={children} />

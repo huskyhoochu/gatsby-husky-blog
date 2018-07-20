@@ -2,6 +2,8 @@ import React from 'react';
 
 // CSS
 import './GreyOut.css';
+
+// Methods
 import { callSidebar } from '../header/Header';
 
 export default () => (

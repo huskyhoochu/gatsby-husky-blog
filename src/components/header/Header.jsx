@@ -6,6 +6,7 @@ import './Header.css';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// Methods
 export function callSidebar() {
   const sidebar = document.querySelector('.App');
   sidebar.classList.toggle('slide');
@@ -13,12 +14,12 @@ export function callSidebar() {
 
 function hamburger() {
   return (
-    <div className="column is-2">
-      <div className="navbar-brand">
+    <div className="">
+      <div className="">
         <button
           id="burger"
           type="button"
-          className="navbar-burger"
+          className=""
           aria-label="menu"
           aria-expanded="false"
           onClick={() => callSidebar()}
@@ -34,9 +35,9 @@ function hamburger() {
 
 function title() {
   return (
-    <div className="column is-8 has-text-centered">
+    <div className="">
       <Link to="/">
-        <h6 className="subtitle is-6">huskyhoochu.com</h6>
+        <h6 className="">huskyhoochu.com</h6>
       </Link>
     </div>
   );
@@ -44,14 +45,14 @@ function title() {
 
 function search() {
   return (
-    <div className="column is-2 has-text-right">
+    <div className="">
       <FontAwesomeIcon className="icon" icon={faSearch} />
     </div>
   );
 }
 
 export default () => (
-  <div className="columns is-mobile is-vcentered">
+  <div className="">
     {hamburger()}
     {title()}
     {search()}
