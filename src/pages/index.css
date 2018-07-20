@@ -1,0 +1,40 @@
+/* -- Global -- */
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/josefin_sans/JosefinSans-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../assets/fonts/josefin_sans/JosefinSans-Italic.woff2");
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../assets/fonts/josefin_sans/JosefinSans-Bold.woff2");
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: italic;
+  font-weight: bold;
+  src: url("../assets/fonts/josefin_sans/JosefinSans-BoldItalic.woff2");
+}
+
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: black;
+}
