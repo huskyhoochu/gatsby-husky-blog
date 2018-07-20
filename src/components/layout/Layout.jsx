@@ -12,10 +12,12 @@ import GreyOut from '../grey_out/GreyOut';
 
 const Layout = ({ children }) => (
   <div className="App">
-    <div id="canvas" className="">
+    <div className="canvas">
       <SideMenu />
-      <LeftSection />
-      <RightSection contents={children} />
+      <div className="grid-wrapper">
+        <LeftSection />
+        <RightSection contents={children} />
+      </div>
       <GreyOut />
     </div>
   </div>
