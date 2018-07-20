@@ -1,3 +1,5 @@
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
   siteMetadata: {
     title: 'Huskyhoochu',
@@ -5,6 +7,14 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postcss: {
+          plugins: () => [autoprefixer],
+        },
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
