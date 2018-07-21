@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 #content {
-  margin: 2rem;
+  margin: 1rem;
   line-height: 1.75;
   text-indent: 1rem;
-  font-size: 1.25rem;
-  font-weight: lighter;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 #content h1, h2, h3, h4, h5, h6 {
@@ -14,8 +14,8 @@
 
 #content blockquote {
   border-left: 0.4rem solid lightgray;
-  margin: 1rem;
-  padding: 1rem 2rem;
+  margin: 1rem 1rem 1rem 2rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
 }
 
@@ -29,7 +29,7 @@
   }
 
   #content blockquote {
-    padding: 1rem;
-    font-size: 0.75rem;
+    padding: 0.1rem 1rem;
+    font-size: 0.9rem;
   }
 }
