@@ -3,7 +3,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  padding: 1rem 0;
+  position: fixed;
+  width: 50vw;
+  z-index: 3;
+  top: 0;
+  background-color: transparent;
+}
+
+@media (max-width: 1024px) {
+  .nav-bar {
+    width: 100vw;
+    background-color: white;
+    opacity: .9;
+    box-shadow: 0 4px 8px -6px black;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
 }
 
 .side-menu, .search-menu {
