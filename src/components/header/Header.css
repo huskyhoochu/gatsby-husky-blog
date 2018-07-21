@@ -11,8 +11,13 @@
   text-align: center;
 }
 
+/* -- home-title -- */
+#home-title {
+  margin: 0 !important;
+}
+
 /* -- icon -- */
-.icon {
+#icon {
   width: 1rem;
   height: 1rem;
 }
