@@ -1,10 +1,17 @@
 .right-section {
   border: 1px solid rebeccapurple;
   background-color: white;
+  position: relative;
   z-index: 2;
   min-height: 100vh;
 }
 
 .contents-wrapper {
-  padding: 1rem;
+  padding: 4rem 1rem;
+}
+
+@media (max-width: 414px) {
+  .contents-wrapper {
+    padding: 2rem 0;
+  }
 }
