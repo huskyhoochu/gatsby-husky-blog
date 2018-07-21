@@ -6,6 +6,7 @@ import './Layout.css';
 
 // Components
 import SideMenu from '../side_menu/SideMenu';
+import Header from '../header/Header';
 import LeftSection from '../left_section/LeftSection';
 import RightSection from '../right_section/RightSection';
 import GreyOut from '../grey_out/GreyOut';
@@ -14,6 +15,7 @@ const Layout = ({ children }) => (
   <div className="App">
     <div className="canvas">
       <SideMenu />
+      <Header />
       <div className="grid-wrapper">
         <LeftSection />
         <RightSection contents={children} />
