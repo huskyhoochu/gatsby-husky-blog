@@ -15,7 +15,7 @@
 #content blockquote {
   border-left: 0.4rem solid lightgray;
   margin: 1rem 1rem 1rem 0;
-  padding: 0.5rem 0.8rem;
+  padding: 0.4rem 0.8rem;
   font-size: 1.1rem;
 }
 
@@ -30,7 +30,7 @@
 
   #content blockquote {
     margin-left: 0;
-    padding: 0.5rem;
+    padding: 0.25rem 0.5rem;
     font-size: 0.9rem;
   }
 }
