@@ -1,32 +1,5 @@
 /* -- Global -- */
-@font-face {
-  font-family: "Josefin Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../assets/fonts/josefin_sans/JosefinSans-Regular.woff2");
-}
-
-@font-face {
-  font-family: "Josefin Sans";
-  font-style: italic;
-  font-weight: normal;
-  src: url("../assets/fonts/josefin_sans/JosefinSans-Italic.woff2");
-}
-
-@font-face {
-  font-family: "Josefin Sans";
-  font-style: normal;
-  font-weight: bold;
-  src: url("../assets/fonts/josefin_sans/JosefinSans-Bold.woff2");
-}
-
-@font-face {
-  font-family: "Josefin Sans";
-  font-style: italic;
-  font-weight: bold;
-  src: url("../assets/fonts/josefin_sans/JosefinSans-BoldItalic.woff2");
-}
-
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i');
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 body {
