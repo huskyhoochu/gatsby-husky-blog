@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+#content {
+  margin: 2rem;
+  line-height: 1.75;
+  text-indent: 1rem;
+  font-size: 1.25rem;
+  font-weight: lighter;
+}
+
+#content h1, h2, h3, h4, h5, h6 {
+  text-indent: 0;
+}
+
+#content blockquote {
+  border-left: 0.4rem solid lightgray;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+#content code {
+  font-family: "Source Code Pro", monospace;
+}
+
+@media (max-width: 414px) {
+  #content {
+    font-size: 1rem;
+  }
+
+  #content blockquote {
+    padding: 1rem;
+    font-size: 0.75rem;
+  }
+}
