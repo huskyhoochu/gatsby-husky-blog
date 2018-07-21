@@ -27,9 +27,10 @@
   src: url("../assets/fonts/josefin_sans/JosefinSans-BoldItalic.woff2");
 }
 
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", "Noto Sans KR", sans-serif;
   font-style: normal;
   font-weight: normal;
 }
