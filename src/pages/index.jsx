@@ -54,6 +54,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
+        author
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
