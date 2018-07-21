@@ -7,7 +7,7 @@ import './LeftSection.css';
 import Header from '../header/Header';
 
 export default () => (
-  <div className="left-section">
+  <section className="left-section">
     <Header />
-  </div>
+  </section>
 );
