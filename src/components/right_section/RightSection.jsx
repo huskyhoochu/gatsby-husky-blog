@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 import './RightSection.css';
 
 const RightSection = ({ contents }) => (
-  <div className="right-section">{contents}</div>
+  <div className="right-section">
+    <div className="contents-wrapper">{contents}</div>
+  </div>
 );
 
 RightSection.propTypes = {
