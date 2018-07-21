@@ -3,8 +3,7 @@ import { Link } from 'gatsby';
 
 // CSS
 import './Header.css';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import faSearch from '../../assets/icons/search-solid.svg';
 
 // Methods
 export function callSidebar() {
@@ -40,7 +39,9 @@ function title() {
 function search() {
   return (
     <div className="search-menu">
-      <FontAwesomeIcon className="icon" icon={faSearch} />
+      <object className="icon" data={faSearch} type="image/svg+xml">
+        현재 브라우저는 iframe을 지원하지 않습니다.
+      </object>
     </div>
   );
 }
