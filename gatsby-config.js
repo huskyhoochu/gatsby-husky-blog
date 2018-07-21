@@ -40,10 +40,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 600,
-              wrapperStyle: {
-                margin: 'auto',
-                height: '100%',
-              },
+              withWebp: true,
             },
           },
           'gatsby-remark-copy-linked-files',
