@@ -9,7 +9,9 @@ export default () => (
     <div className="menu">
       <ul className="menu-list">
         <li>
-          <Link to="/">Latest</Link>
+          <Link id="latest" to="/">
+            Latest
+          </Link>
         </li>
       </ul>
       <p className="menu-label">Programming</p>
@@ -33,7 +35,9 @@ export default () => (
       <p className="menu-label">About</p>
       <ul className="menu-list">
         <li>
-          <Link to="/">About Me</Link>
+          <Link id="about" to="/">
+            About Me
+          </Link>
         </li>
       </ul>
     </div>

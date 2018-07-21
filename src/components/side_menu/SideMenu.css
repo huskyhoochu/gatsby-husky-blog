@@ -1,15 +1,46 @@
-aside {
+.menu-wrapper {
   position: absolute;
-  width: 300px;
+  width: 19rem;
   height: 100vh;
   top: 0;
   left: 0;
   border: 1px solid salmon;
   transform: translate3d(-100%, 0, 0);
-  -webkit-transform: translate3d(-100%, 0, 0);
 }
 
-aside > div {
-  margin-top: 52px;
-  padding: 0 24px 24px 24px;
+.menu {
+  margin-top: 1.75rem;
+  padding: 1.5rem;
+}
+
+.menu-list {
+  line-height: 2;
+  padding-left: 1rem;
+}
+
+.menu-list li {
+  transform: translateX(0);
+  transition: .25s ease;
+}
+
+.menu-list li:hover {
+  transform: translateX(0.25rem);
+  transition: .25s ease;
+}
+
+.menu-list li:hover > a {
+  color: rebeccapurple;
+}
+
+.menu-label {
+  font-weight: lighter;
+  line-height: 3;
+}
+
+#latest {
+  color: darkgoldenrod;
+}
+
+#about {
+  color: darkgrey;
 }
