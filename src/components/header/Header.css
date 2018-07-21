@@ -18,8 +18,8 @@
 }
 
 #burger {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border: none;
   position: absolute;
   top: 0;
@@ -27,7 +27,7 @@
   margin: 20px;
   padding: 0;
   transform: rotate(0deg);
-  transition: .5s ease-in-out;
+  transition: .5s ease;
   background-color: transparent;
   cursor: pointer;
 }

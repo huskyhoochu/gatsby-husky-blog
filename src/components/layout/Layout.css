@@ -5,7 +5,7 @@
 
 .slide .canvas {
   height: 100vh;
-  transform: translate3d(300px, 0, 0);
+  transform: translate3d(19rem, 0, 0);
 }
 
 .canvas {
@@ -13,7 +13,7 @@
   height: 100%;
   position: relative;
   transform: translate3d(0, 0, 0);
-  transition: .5s ease all;
+  transition: .5s ease;
 }
 
 .grid-wrapper {
