@@ -14,9 +14,9 @@
 
 #content blockquote {
   border-left: 0.4rem solid lightgray;
-  margin: 1rem 1rem 1rem 2rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  margin: 1rem 1rem 1rem 0;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.1rem;
 }
 
 #content code {
@@ -29,7 +29,8 @@
   }
 
   #content blockquote {
-    padding: 0.1rem 1rem;
+    margin-left: 0;
+    padding: 0.5rem;
     font-size: 0.9rem;
   }
 }
