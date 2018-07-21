@@ -1,5 +1,5 @@
 /* -- Global -- */
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i');
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 body {
@@ -48,5 +48,5 @@ a:link, a:visited, a:hover, a:active {
 }
 
 p {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
 }
