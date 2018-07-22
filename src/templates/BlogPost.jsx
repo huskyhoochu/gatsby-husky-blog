@@ -16,12 +16,17 @@ const BlogPost = ({ data }) => {
 
   return (
     <Fragment>
-      <Helmet>
-        <title>{`${markdownRemark.frontmatter.title} | ${
-          site.siteMetadata.title
-        }`}</title>
-      </Helmet>
       <Layout>
+        <Helmet>
+          <link
+            rel="canonical"
+            href={site.siteMetadata.site_url + markdownRemark.fields.slug}
+          />
+          <meta name="description" content={markdownRemark.excerpt} />
+          <title>{`${markdownRemark.frontmatter.title} | ${
+            site.siteMetadata.title
+          }`}</title>
+        </Helmet>
         <LeftSection>
           <article className="contents-wrapper">
             <h1>{markdownRemark.frontmatter.title}</h1>
@@ -48,14 +53,19 @@ BlogPost.propTypes = {
       siteMetadata: PropTypes.shape({
         title: PropTypes.string.isRequired,
         author: PropTypes.string.isRequired,
+        site_url: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
     markdownRemark: PropTypes.shape({
+      fields: PropTypes.shape({
+        slug: PropTypes.string.isRequired,
+      }).isRequired,
       frontmatter: PropTypes.shape({
         date: PropTypes.string,
         title: PropTypes.string,
       }).isRequired,
       html: PropTypes.string.isRequired,
+      excerpt: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };
@@ -68,11 +78,15 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        site_url
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
       html
+      excerpt
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
