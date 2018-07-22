@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
+.contents-wrapper {
+  padding: 4rem 1rem;
+}
+
+@media (max-width: 414px) {
+  .contents-wrapper {
+    padding: 2rem 0;
+  }
+}
+
 #content {
   margin: 1rem;
   line-height: 1.75;
