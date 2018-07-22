@@ -1,10 +1,12 @@
 const autoprefixer = require('autoprefixer');
+const config = require('./src/data/SiteConfig');
 
 module.exports = {
   siteMetadata: {
-    title: 'Huskyhoochu',
-    description: '허스키후추의 개발 블로그',
-    author: 'Husky',
+    site_url: config.siteUrl,
+    title: config.siteTitle,
+    description: config.siteDescription,
+    author: config.author,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
