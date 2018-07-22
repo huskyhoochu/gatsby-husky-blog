@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import config from '../../data/SiteConfig';
 
 // CSS
 import './Layout.css';
@@ -11,6 +13,11 @@ import GreyOut from '../grey_out/GreyOut';
 
 const Layout = ({ children }) => (
   <div className="App">
+    <Helmet>
+      <html lang="ko" />
+      <link rel="canonical" href={config.siteUrl} />
+      <meta name="description" content={config.siteDescription} />
+    </Helmet>
     <div className="canvas">
       <SideMenu />
       <Header />
