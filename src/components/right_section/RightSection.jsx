@@ -4,14 +4,12 @@ import PropTypes from 'prop-types';
 // CSS
 import './RightSection.css';
 
-const RightSection = ({ contents }) => (
-  <section className="right-section">
-    <article className="contents-wrapper">{contents}</article>
-  </section>
+const RightSection = ({ children }) => (
+  <section className="right-section">{children}</section>
 );
 
 RightSection.propTypes = {
-  contents: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default RightSection;

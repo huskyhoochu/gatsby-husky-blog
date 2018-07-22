@@ -1,13 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // CSS
 import './LeftSection.css';
 
-// Components
-import Header from '../header/Header';
-
-export default () => (
-  <section className="left-section">
-    <Header />
-  </section>
+const LeftSection = ({ children }) => (
+  <section className="left-section">{children}</section>
 );
+
+LeftSection.propTypes = {
+  children: PropTypes.element.isRequired,
+};
+
+export default LeftSection;

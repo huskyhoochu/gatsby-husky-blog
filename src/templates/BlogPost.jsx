@@ -7,19 +7,29 @@ import './BlogPost.css';
 
 // Component
 import Layout from '../components/layout/Layout';
+import LeftSection from '../components/left_section/LeftSection';
+import RightSection from '../components/right_section/RightSection';
 
 const BlogPost = ({ data }) => {
   const { markdownRemark, site } = data;
 
   return (
     <Layout>
-      <h1>{markdownRemark.frontmatter.title}</h1>
-      <h1>{markdownRemark.frontmatter.date}</h1>
-      <h1>{site.siteMetadata.author}</h1>
-      <div
-        id="content"
-        dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-      />
+      <LeftSection>
+        <article className="contents-wrapper">
+          <h1>{markdownRemark.frontmatter.title}</h1>
+          <h1>{markdownRemark.frontmatter.date}</h1>
+          <h1>{site.siteMetadata.author}</h1>
+        </article>
+      </LeftSection>
+      <RightSection>
+        <article className="contents-wrapper">
+          <div
+            id="content"
+            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+          />
+        </article>
+      </RightSection>
     </Layout>
   );
 };
