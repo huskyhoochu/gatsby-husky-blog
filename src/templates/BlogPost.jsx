@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 // CSS
@@ -14,23 +15,30 @@ const BlogPost = ({ data }) => {
   const { markdownRemark, site } = data;
 
   return (
-    <Layout>
-      <LeftSection>
-        <article className="contents-wrapper">
-          <h1>{markdownRemark.frontmatter.title}</h1>
-          <h1>{markdownRemark.frontmatter.date}</h1>
-          <h1>{site.siteMetadata.author}</h1>
-        </article>
-      </LeftSection>
-      <RightSection>
-        <article className="contents-wrapper">
-          <div
-            id="content"
-            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-          />
-        </article>
-      </RightSection>
-    </Layout>
+    <Fragment>
+      <Helmet>
+        <title>{`${markdownRemark.frontmatter.title} | ${
+          site.siteMetadata.title
+        }`}</title>
+      </Helmet>
+      <Layout>
+        <LeftSection>
+          <article className="contents-wrapper">
+            <h1>{markdownRemark.frontmatter.title}</h1>
+            <h1>{markdownRemark.frontmatter.date}</h1>
+            <h1>{site.siteMetadata.author}</h1>
+          </article>
+        </LeftSection>
+        <RightSection>
+          <article className="contents-wrapper">
+            <div
+              id="content"
+              dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+            />
+          </article>
+        </RightSection>
+      </Layout>
+    </Fragment>
   );
 };
 
