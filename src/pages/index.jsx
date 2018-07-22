@@ -13,35 +13,38 @@ import Layout from '../components/layout/Layout';
 import LeftSection from '../components/left_section/LeftSection';
 import RightSection from '../components/right_section/RightSection';
 
-const BlogIndex = ({ data }) => (
-  <Fragment>
-    <Helmet>
-      <title>{data.site.siteMetadata.title}</title>
-      <meta name="description" content={data.site.siteMetadata.description} />
-    </Helmet>
-    <Layout>
-      <LeftSection>
-        <article className="contents-wrapper">
-          <h1>{data.site.siteMetadata.title}</h1>
-        </article>
-      </LeftSection>
-      <RightSection>
-        <article className="contents-wrapper">
-          {_.map(data.allMarkdownRemark.edges, ({ node }) => {
-            const { title } = node.frontmatter;
-            return (
-              <div key={node.fields.slug}>
-                <Link to={node.fields.slug}>
-                  <h3>{title}</h3>
-                </Link>
-              </div>
-            );
-          })}
-        </article>
-      </RightSection>
-    </Layout>
-  </Fragment>
-);
+const BlogIndex = ({ data }) => {
+  const { allMarkdownRemark, site } = data;
+
+  return (
+    <Fragment>
+      <Helmet>
+        <title>{site.siteMetadata.title}</title>
+      </Helmet>
+      <Layout>
+        <LeftSection>
+          <article className="contents-wrapper">
+            <h1>{site.siteMetadata.title}</h1>
+          </article>
+        </LeftSection>
+        <RightSection>
+          <article className="contents-wrapper">
+            {_.map(allMarkdownRemark.edges, ({ node }) => {
+              const { title } = node.frontmatter;
+              return (
+                <div key={node.fields.slug}>
+                  <Link to={node.fields.slug}>
+                    <h3>{title}</h3>
+                  </Link>
+                </div>
+              );
+            })}
+          </article>
+        </RightSection>
+      </Layout>
+    </Fragment>
+  );
+};
 
 BlogIndex.propTypes = {
   data: PropTypes.shape({
