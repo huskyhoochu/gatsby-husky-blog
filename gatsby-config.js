@@ -40,6 +40,9 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
   ],
