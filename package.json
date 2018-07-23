@@ -22,15 +22,11 @@
     }
   },
   "dependencies": {
-    "autoprefixer": "^9.0.0",
     "bluebird": "^3.5.1",
     "browserslist": "^4.0.1",
     "gatsby": "next",
-    "gatsby-plugin-google-fonts": "^0.0.4",
-    "gatsby-plugin-offline": "^1.0.18",
-    "gatsby-plugin-postcss": "^1.0.0",
+    "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
-    "gatsby-plugin-robots-txt": "^1.1.0",
     "gatsby-plugin-sharp": "next",
     "gatsby-remark-copy-linked-files": "next",
     "gatsby-remark-images": "next",
@@ -57,6 +53,8 @@
     "prettier": "1.13.7"
   },
   "browserslist": [
-    "cover 99.5%"
+    "> 1%",
+    "IE >= 9",
+    "last 2 versions"
   ]
 }
