@@ -26,6 +26,10 @@ const Layout = ({ children }) => {
       <Helmet>
         <html lang="ko" />
         <link rel="canonical" href={config.siteUrl} />
+        <meta
+          name="google-site-verification"
+          content={config.googleVerificationCode}
+        />
         <meta name="description" content={config.siteDescription} />
         <script type="application/ld+json">
           {JSON.stringify(schemaOrgJSON)}
