@@ -11,21 +11,35 @@ import SideMenu from '../side_menu/SideMenu';
 import Header from '../header/Header';
 import GreyOut from '../grey_out/GreyOut';
 
-const Layout = ({ children }) => (
-  <div className="App">
-    <Helmet>
-      <html lang="ko" />
-      <link rel="canonical" href={config.siteUrl} />
-      <meta name="description" content={config.siteDescription} />
-    </Helmet>
-    <div className="canvas">
-      <SideMenu />
-      <Header />
-      <div className="grid-wrapper">{children}</div>
-      <GreyOut />
+const Layout = ({ children }) => {
+  const schemaOrgJSON = [
+    {
+      '@context': 'http://schema.org',
+      '@type': 'WebSite',
+      url: config.siteUrl,
+      name: config.siteTitle,
+    },
+  ];
+
+  return (
+    <div className="App">
+      <Helmet>
+        <html lang="ko" />
+        <link rel="canonical" href={config.siteUrl} />
+        <meta name="description" content={config.siteDescription} />
+        <script type="application/ld+json">
+          {JSON.stringify(schemaOrgJSON)}
+        </script>
+      </Helmet>
+      <div className="canvas">
+        <SideMenu />
+        <Header />
+        <div className="grid-wrapper">{children}</div>
+        <GreyOut />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
