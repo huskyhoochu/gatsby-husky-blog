@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
@@ -15,35 +15,33 @@ const BlogPost = ({ data }) => {
   const { markdownRemark, site } = data;
 
   return (
-    <Fragment>
-      <Layout>
-        <Helmet>
-          <link
-            rel="canonical"
-            href={site.siteMetadata.siteUrl + markdownRemark.fields.slug}
+    <Layout>
+      <Helmet>
+        <link
+          rel="canonical"
+          href={site.siteMetadata.siteUrl + markdownRemark.fields.slug}
+        />
+        <meta name="description" content={markdownRemark.excerpt} />
+        <title>{`${markdownRemark.frontmatter.title} | ${
+          site.siteMetadata.siteTitle
+        }`}</title>
+      </Helmet>
+      <LeftSection>
+        <article className="contents-wrapper">
+          <h1>{markdownRemark.frontmatter.title}</h1>
+          <h1>{markdownRemark.frontmatter.date}</h1>
+          <h1>{site.siteMetadata.author}</h1>
+        </article>
+      </LeftSection>
+      <RightSection>
+        <article className="contents-wrapper">
+          <div
+            id="content"
+            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
           />
-          <meta name="description" content={markdownRemark.excerpt} />
-          <title>{`${markdownRemark.frontmatter.title} | ${
-            site.siteMetadata.siteTitle
-          }`}</title>
-        </Helmet>
-        <LeftSection>
-          <article className="contents-wrapper">
-            <h1>{markdownRemark.frontmatter.title}</h1>
-            <h1>{markdownRemark.frontmatter.date}</h1>
-            <h1>{site.siteMetadata.author}</h1>
-          </article>
-        </LeftSection>
-        <RightSection>
-          <article className="contents-wrapper">
-            <div
-              id="content"
-              dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-            />
-          </article>
-        </RightSection>
-      </Layout>
-    </Fragment>
+        </article>
+      </RightSection>
+    </Layout>
   );
 };
 

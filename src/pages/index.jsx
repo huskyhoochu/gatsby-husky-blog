@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
@@ -17,7 +17,7 @@ const BlogIndex = ({ data }) => {
   const { allMarkdownRemark, site } = data;
 
   return (
-    <Fragment>
+    <Layout>
       <Helmet>
         <link rel="canonical" href={site.siteMetadata.siteUrl} />
         <meta name="description" content={site.siteMetadata.description} />
@@ -25,28 +25,26 @@ const BlogIndex = ({ data }) => {
           site.siteMetadata.siteTitleKorean
         }`}</title>
       </Helmet>
-      <Layout>
-        <LeftSection>
-          <article className="contents-wrapper">
-            <h1>{site.siteMetadata.siteTitle}</h1>
-          </article>
-        </LeftSection>
-        <RightSection>
-          <article className="contents-wrapper">
-            {_.map(allMarkdownRemark.edges, ({ node }) => {
-              const { title } = node.frontmatter;
-              return (
-                <div key={node.fields.slug}>
-                  <Link to={node.fields.slug}>
-                    <h3>{title}</h3>
-                  </Link>
-                </div>
-              );
-            })}
-          </article>
-        </RightSection>
-      </Layout>
-    </Fragment>
+      <LeftSection>
+        <article className="contents-wrapper">
+          <h1>{site.siteMetadata.siteTitle}</h1>
+        </article>
+      </LeftSection>
+      <RightSection>
+        <article className="contents-wrapper">
+          {_.map(allMarkdownRemark.edges, ({ node }) => {
+            const { title } = node.frontmatter;
+            return (
+              <div key={node.fields.slug}>
+                <Link to={node.fields.slug}>
+                  <h3>{title}</h3>
+                </Link>
+              </div>
+            );
+          })}
+        </article>
+      </RightSection>
+    </Layout>
   );
 };
 
