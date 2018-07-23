@@ -4,7 +4,8 @@ const config = require('./src/data/SiteConfig');
 module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl,
-    title: config.siteTitle,
+    siteTitle: config.siteTitle,
+    siteTitleKorean: config.siteTitleKorean,
     description: config.siteDescription,
     author: config.author,
   },
@@ -55,5 +56,6 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
+    'gatsby-plugin-offline',
   ],
 };
