@@ -24,7 +24,7 @@ const BlogPost = ({ data }) => {
           />
           <meta name="description" content={markdownRemark.excerpt} />
           <title>{`${markdownRemark.frontmatter.title} | ${
-            site.siteMetadata.title
+            site.siteMetadata.siteTitle
           }`}</title>
         </Helmet>
         <LeftSection>
@@ -51,7 +51,7 @@ BlogPost.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
+        siteTitle: PropTypes.string.isRequired,
         author: PropTypes.string.isRequired,
         siteUrl: PropTypes.string.isRequired,
       }).isRequired,
@@ -76,7 +76,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
-        title
+        siteTitle
         author
         siteUrl
       }
