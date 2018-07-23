@@ -1,5 +1,3 @@
-/* eslint-disable no-useless-escape */
-const autoprefixer = require('autoprefixer');
 const config = require('./src/data/SiteConfig');
 
 module.exports = {
@@ -11,15 +9,6 @@ module.exports = {
     author: config.author,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-postcss',
-      options: {
-        postcss: {
-          plugins: () => [autoprefixer],
-        },
-      },
-    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -35,14 +24,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-fonts',
-      options: {
-        fonts: ['Josefin Sans:300,300i,400,400i,600,600i', 'Source Code Pro'],
-      },
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -57,12 +38,9 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
+    'gatsby-plugin-react-helmet',
   ],
 };
