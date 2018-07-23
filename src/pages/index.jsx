@@ -19,12 +19,16 @@ const BlogIndex = ({ data }) => {
   return (
     <Fragment>
       <Helmet>
-        <title>{site.siteMetadata.title}</title>
+        <link rel="canonical" href={site.siteMetadata.siteUrl} />
+        <meta name="description" content={site.siteMetadata.description} />
+        <title>{`${site.siteMetadata.siteTitle} | ${
+          site.siteMetadata.siteTitleKorean
+        }`}</title>
       </Helmet>
       <Layout>
         <LeftSection>
           <article className="contents-wrapper">
-            <h1>{site.siteMetadata.title}</h1>
+            <h1>{site.siteMetadata.siteTitle}</h1>
           </article>
         </LeftSection>
         <RightSection>
@@ -50,8 +54,10 @@ BlogIndex.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
+        siteTitle: PropTypes.string.isRequired,
+        siteTitleKorean: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
+        siteUrl: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
     allMarkdownRemark: PropTypes.shape({
@@ -66,9 +72,10 @@ export const pageQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {
-        title
+        siteTitle
+        siteTitleKorean
         description
-        author
+        siteUrl
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
