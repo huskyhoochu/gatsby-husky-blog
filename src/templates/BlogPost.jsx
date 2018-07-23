@@ -20,7 +20,7 @@ const BlogPost = ({ data }) => {
         <Helmet>
           <link
             rel="canonical"
-            href={site.siteMetadata.site_url + markdownRemark.fields.slug}
+            href={site.siteMetadata.siteUrl + markdownRemark.fields.slug}
           />
           <meta name="description" content={markdownRemark.excerpt} />
           <title>{`${markdownRemark.frontmatter.title} | ${
@@ -53,7 +53,7 @@ BlogPost.propTypes = {
       siteMetadata: PropTypes.shape({
         title: PropTypes.string.isRequired,
         author: PropTypes.string.isRequired,
-        site_url: PropTypes.string.isRequired,
+        siteUrl: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
     markdownRemark: PropTypes.shape({
@@ -78,7 +78,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
-        site_url
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
