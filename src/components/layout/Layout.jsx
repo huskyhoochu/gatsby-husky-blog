@@ -25,12 +25,11 @@ const Layout = ({ children }) => {
     <div className="App">
       <Helmet>
         <html lang="ko" />
-        <link rel="canonical" href={config.siteUrl} />
         <meta
           name="google-site-verification"
           content={config.googleVerificationCode}
         />
-        <meta name="description" content={config.siteDescription} />
+        <meta name="author" content={config.author} />
         <script type="application/ld+json">
           {JSON.stringify(schemaOrgJSON)}
         </script>
