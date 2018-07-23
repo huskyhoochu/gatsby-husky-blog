@@ -3,7 +3,7 @@ const config = require('./src/data/SiteConfig');
 
 module.exports = {
   siteMetadata: {
-    site_url: config.siteUrl,
+    siteUrl: config.siteUrl,
     title: config.siteTitle,
     description: config.siteDescription,
     author: config.author,
@@ -47,6 +47,12 @@ module.exports = {
           },
           'gatsby-remark-copy-linked-files',
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],
