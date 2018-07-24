@@ -1,45 +1,45 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-// CSS
-import './SideMenu.css';
+// Styled
+import Styled from './Styled';
 
 export default () => (
-  <aside className="menu-wrapper">
-    <div className="menu">
-      <ul className="menu-list">
+  <Styled.MenuWrapper>
+    <Styled.Menu>
+      <Styled.MenuList>
         <li>
           <Link id="latest" to="/">
             Latest
           </Link>
         </li>
-      </ul>
-      <p className="menu-label">Programming</p>
-      <ul className="menu-list">
+      </Styled.MenuList>
+      <Styled.MenuLabel>Programming</Styled.MenuLabel>
+      <Styled.MenuList>
         <li>
           <Link to="/">Frontend</Link>
         </li>
         <li>
           <Link to="/">Backend</Link>
         </li>
-      </ul>
-      <p className="menu-label">Literature</p>
-      <ul className="menu-list">
+      </Styled.MenuList>
+      <Styled.MenuLabel>Literature</Styled.MenuLabel>
+      <Styled.MenuList>
         <li>
           <Link to="/">Essay</Link>
         </li>
         <li>
           <Link to="/">Review</Link>
         </li>
-      </ul>
-      <p className="menu-label">About</p>
-      <ul className="menu-list">
+      </Styled.MenuList>
+      <Styled.MenuLabel>About</Styled.MenuLabel>
+      <Styled.MenuList>
         <li>
           <Link id="about" to="/">
             About Me
           </Link>
         </li>
-      </ul>
-    </div>
-  </aside>
+      </Styled.MenuList>
+    </Styled.Menu>
+  </Styled.MenuWrapper>
 );
