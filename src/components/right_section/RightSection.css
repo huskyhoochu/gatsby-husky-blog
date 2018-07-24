@@ -3,5 +3,6 @@
   background-color: white;
   position: relative;
   z-index: 2;
-  min-height: 100vh;
+  flex: 1;
+  /*min-height: 100vh;*/
 }
