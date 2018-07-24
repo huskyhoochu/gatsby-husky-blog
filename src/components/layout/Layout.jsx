@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import WebFont from 'webfontloader';
 import config from '../../data/SiteConfig';
 
 // Styled
@@ -21,10 +22,22 @@ const Layout = ({ children }) => {
     },
   ];
 
+  const webFontConfig = {
+    google: {
+      families: ['Josefin Sans:300,300i,400,600,600i', 'Source Code Pro'],
+    },
+
+    custom: {
+      families: ['Noto Sans KR'],
+      urls: ['https://fonts.googleapis.com/earlyaccess/notosanskr.css'],
+    },
+  };
+
   return (
     <Styled.App>
       <Helmet>
         <html lang="ko" />
+        <script type="text/javascript">{WebFont.load(webFontConfig)}</script>
         <meta
           name="google-site-verification"
           content={config.googleVerificationCode}
