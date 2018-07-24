@@ -16,6 +16,7 @@ const Menu = styled.div`
 `;
 
 const MenuList = styled.ul`
+  font-weight: 400;
   line-height: 2;
   padding-left: 1rem;
 
@@ -35,7 +36,6 @@ const MenuList = styled.ul`
 `;
 
 const MenuLabel = styled.p`
-  font-weight: 300;
   margin-bottom: 0 !important;
   line-height: 3;
 `;
