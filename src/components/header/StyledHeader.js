@@ -28,6 +28,7 @@ const MenuSection = styled.div`
 
 const HomeTitle = styled.h6`
   margin: 0 !important;
+  color: white;
 `;
 
 const SearchIcon = styled.object.attrs({
@@ -63,7 +64,7 @@ const Burger = styled.button.attrs({
     position: absolute;
     height: 0.0625rem;
     width: 100%;
-    background: gray;
+    background: white;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
@@ -90,6 +91,7 @@ const Burger = styled.button.attrs({
       transform: rotate(45deg);
       top: 0.125rem;
       left: 0.125rem;
+      background: #263238;
     }
 
     &:nth-child(2) {
@@ -101,6 +103,7 @@ const Burger = styled.button.attrs({
       transform: rotate(-45deg);
       top: 0.8125rem;
       left: 0.125rem;
+      background: #263238;
     }
   }
 `;

@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
+import { ThemeProvider } from 'styled-components';
 
 // CSS
 import 'minireset.css/minireset.min.css';
@@ -16,7 +17,7 @@ import LeftSection from '../components/left_section/LeftSection';
 import RightSection from '../components/right_section/RightSection';
 
 const BlogIndex = ({ data }) => {
-  const { allMarkdownRemark, site } = data;
+  const { allMarkdownRemark, site, file } = data;
 
   return (
     <Layout>
@@ -27,11 +28,13 @@ const BlogIndex = ({ data }) => {
           site.siteMetadata.siteTitleKorean
         }`}</title>
       </Helmet>
-      <LeftSection>
-        <StyledBlogPost.ContentsWrapper>
-          <h1>{site.siteMetadata.siteTitle}</h1>
-        </StyledBlogPost.ContentsWrapper>
-      </LeftSection>
+      <ThemeProvider theme={{ main: file.publicURL }}>
+        <LeftSection>
+          <StyledBlogPost.ContentsWrapper>
+            <h1>{site.siteMetadata.siteTitle}</h1>
+          </StyledBlogPost.ContentsWrapper>
+        </LeftSection>
+      </ThemeProvider>
       <RightSection>
         <StyledBlogPost.ContentsWrapper>
           {_.map(allMarkdownRemark.edges, ({ node }) => {
@@ -40,6 +43,7 @@ const BlogIndex = ({ data }) => {
               <div key={node.fields.slug}>
                 <Link to={node.fields.slug}>
                   <h3>{title}</h3>
+                  <p>{node.excerpt}</p>
                 </Link>
               </div>
             );
@@ -52,6 +56,9 @@ const BlogIndex = ({ data }) => {
 
 BlogIndex.propTypes = {
   data: PropTypes.shape({
+    file: PropTypes.shape({
+      publicURL: PropTypes.string.isRequired,
+    }).isRequired,
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
         siteTitle: PropTypes.string.isRequired,
@@ -77,6 +84,9 @@ export const pageQuery = graphql`
         description
         siteUrl
       }
+    }
+    file(name: { eq: "thumb-min" }) {
+      publicURL
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
