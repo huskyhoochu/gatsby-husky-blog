@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Styled
-import Styled from './Styled';
+import Styled from './StyledGreyOut';
 
 // Methods
 import { callSidebar } from '../header/Header';

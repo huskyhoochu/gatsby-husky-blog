@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Styled
-import Styled from './Styled';
+import Styled from './StyledLeftSection';
 
 const LeftSection = ({ children }) => (
   <Styled.LeftSection>{children}</Styled.LeftSection>

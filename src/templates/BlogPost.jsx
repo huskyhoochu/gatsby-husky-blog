@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 // Styled
-import Styled from './Styled';
+import Styled from './StyledBlogPost';
 
 // Component
 import Layout from '../components/layout/Layout';

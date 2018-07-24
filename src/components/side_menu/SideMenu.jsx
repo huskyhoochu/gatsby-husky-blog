@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 // Styled
-import Styled from './Styled';
+import Styled from './StyledSideMenu';
 
 export default () => (
   <Styled.MenuWrapper>

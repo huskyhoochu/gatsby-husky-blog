@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import faSearch from '../../assets/icons/search-solid.svg';
 
 // Styled
-import Styled from './Styled';
+import Styled from './StyledHeader';
 
 // Methods
 export function callSidebar() {

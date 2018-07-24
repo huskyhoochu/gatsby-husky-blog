@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import config from '../../data/SiteConfig';
 
 // Styled
-import Styled from './Styled';
+import Styled from './StyledLayout';
 
 // Components
 import SideMenu from '../side_menu/SideMenu';
