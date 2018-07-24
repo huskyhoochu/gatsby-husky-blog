@@ -5,6 +5,9 @@ import { Link } from 'gatsby';
 import './Header.css';
 import faSearch from '../../assets/icons/search-solid.svg';
 
+// Styled
+import Styled from './Styled';
+
 // Methods
 export function callSidebar() {
   const sidebar = document.querySelector('.App');
@@ -16,13 +19,13 @@ export function callSidebar() {
 
 function hamburger() {
   return (
-    <div className="side-menu">
-      <button type="button" id="burger" onClick={() => callSidebar()}>
+    <Styled.MenuSection>
+      <Styled.Burger type="button" id="burger" onClick={() => callSidebar()}>
         <span />
         <span />
         <span />
-      </button>
-    </div>
+      </Styled.Burger>
+    </Styled.MenuSection>
   );
 }
 
@@ -30,7 +33,7 @@ function title() {
   return (
     <div className="home-menu">
       <Link to="/">
-        <h6 id="home-title">huskyhoochu.com</h6>
+        <Styled.HomeTitle>huskyhoochu.com</Styled.HomeTitle>
       </Link>
     </div>
   );
@@ -38,18 +41,18 @@ function title() {
 
 function search() {
   return (
-    <div className="search-menu">
-      <object id="icon" data={faSearch} type="image/svg+xml">
+    <Styled.MenuSection>
+      <Styled.SearchIcon data={faSearch} type="image/svg+xml">
         현재 브라우저는 iframe을 지원하지 않습니다.
-      </object>
-    </div>
+      </Styled.SearchIcon>
+    </Styled.MenuSection>
   );
 }
 
 export default () => (
-  <nav className="nav-bar">
+  <Styled.NavBar>
     {hamburger()}
     {title()}
     {search()}
-  </nav>
+  </Styled.NavBar>
 );
