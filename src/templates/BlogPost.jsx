@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
-// CSS
-import './BlogPost.css';
+// Styled
+import Styled from './Styled';
 
 // Component
 import Layout from '../components/layout/Layout';
@@ -27,19 +27,18 @@ const BlogPost = ({ data }) => {
         }`}</title>
       </Helmet>
       <LeftSection>
-        <article className="contents-wrapper">
+        <Styled.ContentsWrapper>
           <h1>{markdownRemark.frontmatter.title}</h1>
           <h1>{markdownRemark.frontmatter.date}</h1>
           <h1>{site.siteMetadata.author}</h1>
-        </article>
+        </Styled.ContentsWrapper>
       </LeftSection>
       <RightSection>
-        <article className="contents-wrapper">
-          <div
-            id="content"
+        <Styled.ContentsWrapper>
+          <Styled.Content
             dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
           />
-        </article>
+        </Styled.ContentsWrapper>
       </RightSection>
     </Layout>
   );
