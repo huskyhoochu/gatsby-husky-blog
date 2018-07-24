@@ -30,12 +30,17 @@ const HomeTitle = styled.h6`
   margin: 0 !important;
 `;
 
-const SearchIcon = styled.object`
+const SearchIcon = styled.object.attrs({
+  type: 'image/svg+xml',
+})`
   width: 1rem;
   height: 1rem;
 `;
 
-const Burger = styled.button`
+const Burger = styled.button.attrs({
+  id: 'burger',
+  type: 'button',
+})`
   width: 1rem;
   height: 1rem;
   border: none;
