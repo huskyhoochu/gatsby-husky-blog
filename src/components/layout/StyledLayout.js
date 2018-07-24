@@ -1,23 +1,27 @@
 import styled from 'styled-components';
 
+// Styled
+import StyledGreyOut from '../grey_out/StyledGreyOut';
+import StyledHeader from '../header/StyledHeader';
+
 const Canvas = styled.div`
   position: relative;
   transition: 0.5s ease;
 `;
 
 const App = styled.div.attrs({
-  className: 'App',
+  id: 'App',
 })`
   &.slide {
     overflow: hidden;
 
-    #grey-out {
+    ${StyledGreyOut.GreyOut} {
       height: 100%;
       opacity: 1;
       background-color: rgba(0, 0, 0, 0.5);
     }
 
-    #burger {
+    ${StyledHeader.Burger} {
       left: -3.25rem;
     }
 

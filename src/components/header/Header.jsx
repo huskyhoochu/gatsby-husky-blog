@@ -9,7 +9,7 @@ import Styled from './StyledHeader';
 
 // Methods
 export function callSidebar() {
-  const sidebar = document.querySelector('.App');
+  const sidebar = document.querySelector('#App');
   sidebar.classList.toggle('slide');
 
   const burger = document.querySelector('#burger');

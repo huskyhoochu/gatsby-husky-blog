@@ -7,5 +7,5 @@ import Styled from './StyledGreyOut';
 import { callSidebar } from '../header/Header';
 
 export default () => (
-  <Styled.GreyOut id="grey-out" onClick={() => callSidebar()} aria-hidden />
+  <Styled.GreyOut onClick={() => callSidebar()} aria-hidden />
 );
