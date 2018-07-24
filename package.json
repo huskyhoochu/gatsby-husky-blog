@@ -22,12 +22,14 @@
     }
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.5.1",
     "bluebird": "^3.5.1",
     "gatsby": "next",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "next",
     "gatsby-plugin-sitemap": "next",
+    "gatsby-plugin-styled-components": "next",
     "gatsby-remark-copy-linked-files": "next",
     "gatsby-remark-images": "next",
     "gatsby-source-filesystem": "next",
@@ -38,7 +40,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "styled-components": "^3.3.3"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",

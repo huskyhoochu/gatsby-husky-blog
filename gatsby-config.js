@@ -23,6 +23,7 @@ module.exports = {
         name: 'assets',
       },
     },
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
