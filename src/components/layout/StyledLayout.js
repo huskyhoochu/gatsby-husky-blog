@@ -14,7 +14,7 @@ const App = styled.div.attrs({
 })`
   font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   color: #263238;
 
   h1,
