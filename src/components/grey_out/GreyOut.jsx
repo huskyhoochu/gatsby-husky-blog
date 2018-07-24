@@ -3,9 +3,12 @@ import React from 'react';
 // CSS
 import './GreyOut.css';
 
+// Styled
+import Styled from './Styled';
+
 // Methods
 import { callSidebar } from '../header/Header';
 
 export default () => (
-  <div id="grey-out" onClick={() => callSidebar()} aria-hidden />
+  <Styled.GreyOut id="grey-out" onClick={() => callSidebar()} aria-hidden />
 );
