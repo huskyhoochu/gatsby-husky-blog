@@ -4747,6 +4747,13 @@ gatsby-plugin-styled-components@next:
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
 
+gatsby-plugin-web-font-loader@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-web-font-loader/-/gatsby-plugin-web-font-loader-1.0.2.tgz#ed34f6c1c0a19d6a57d8ed716f12246d1911b448"
+  dependencies:
+    babel-runtime "^6.26.0"
+    webfontloader "^1.6.28"
+
 gatsby-react-router-scroll@^2.0.0-beta.2:
   version "2.0.0-beta.2"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.0.0-beta.2.tgz#9b702feff11952320e743f202d5d2095f995a84c"

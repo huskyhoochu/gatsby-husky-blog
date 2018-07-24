@@ -30,6 +30,7 @@
     "gatsby-plugin-sharp": "next",
     "gatsby-plugin-sitemap": "next",
     "gatsby-plugin-styled-components": "next",
+    "gatsby-plugin-web-font-loader": "^1.0.2",
     "gatsby-remark-copy-linked-files": "next",
     "gatsby-remark-images": "next",
     "gatsby-source-filesystem": "next",
@@ -41,8 +42,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.3.3",
-    "webfontloader": "^1.6.28"
+    "styled-components": "^3.3.3"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",
