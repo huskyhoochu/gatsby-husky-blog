@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// CSS
-import './RightSection.css';
+// Styled
+import Styled from './Styled';
 
 const RightSection = ({ children }) => (
-  <section className="right-section">{children}</section>
+  <Styled.RightSection>{children}</Styled.RightSection>
 );
 
 RightSection.propTypes = {
