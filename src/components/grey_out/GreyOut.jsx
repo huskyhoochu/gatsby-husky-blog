@@ -1,8 +1,5 @@
 import React from 'react';
 
-// CSS
-import './GreyOut.css';
-
 // Styled
 import Styled from './Styled';
 
