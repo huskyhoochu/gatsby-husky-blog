@@ -6,7 +6,6 @@ import { graphql, Link } from 'gatsby';
 
 // CSS
 import 'minireset.css/minireset.min.css';
-import './index.css';
 
 // Styled
 import StyledBlogPost from '../templates/StyledBlogPost';
