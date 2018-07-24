@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import config from '../../data/SiteConfig';
 
-// CSS
-import './Layout.css';
+// Styled
+import Styled from './Styled';
 
 // Components
 import SideMenu from '../side_menu/SideMenu';
@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
   ];
 
   return (
-    <div className="App">
+    <Styled.App>
       <Helmet>
         <html lang="ko" />
         <meta
@@ -34,13 +34,13 @@ const Layout = ({ children }) => {
           {JSON.stringify(schemaOrgJSON)}
         </script>
       </Helmet>
-      <div className="canvas">
+      <Styled.Canvas>
         <SideMenu />
         <Header />
-        <div className="grid-wrapper">{children}</div>
+        <Styled.FlexWrapper>{children}</Styled.FlexWrapper>
         <GreyOut />
-      </div>
-    </div>
+      </Styled.Canvas>
+    </Styled.App>
   );
 };
 
