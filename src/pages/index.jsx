@@ -8,6 +8,9 @@ import { graphql, Link } from 'gatsby';
 import 'minireset.css/minireset.min.css';
 import './index.css';
 
+// Styled
+import StyledBlogPost from '../templates/StyledBlogPost';
+
 // Components
 import Layout from '../components/layout/Layout';
 import LeftSection from '../components/left_section/LeftSection';
@@ -26,12 +29,12 @@ const BlogIndex = ({ data }) => {
         }`}</title>
       </Helmet>
       <LeftSection>
-        <article className="contents-wrapper">
+        <StyledBlogPost.ContentsWrapper>
           <h1>{site.siteMetadata.siteTitle}</h1>
-        </article>
+        </StyledBlogPost.ContentsWrapper>
       </LeftSection>
       <RightSection>
-        <article className="contents-wrapper">
+        <StyledBlogPost.ContentsWrapper>
           {_.map(allMarkdownRemark.edges, ({ node }) => {
             const { title } = node.frontmatter;
             return (
@@ -42,7 +45,7 @@ const BlogIndex = ({ data }) => {
               </div>
             );
           })}
-        </article>
+        </StyledBlogPost.ContentsWrapper>
       </RightSection>
     </Layout>
   );
