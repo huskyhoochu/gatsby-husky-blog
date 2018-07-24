@@ -13,7 +13,6 @@ const Content = styled.div`
   line-height: 1.75;
   text-indent: 1rem;
   font-size: 1.2rem;
-  font-weight: 300;
 
   h1,
   h2,
@@ -22,6 +21,11 @@ const Content = styled.div`
   h5,
   h6 {
     text-indent: 0;
+  }
+
+  code {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
   }
 
   blockquote {
