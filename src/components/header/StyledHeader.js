@@ -9,15 +9,11 @@ const NavBar = styled.nav`
   width: 50vw;
   z-index: 3;
   top: 0;
-  background-color: transparent;
+  opacity: 0.5;
+  background: linear-gradient(black, transparent);
 
   @media (max-width: 1024px) {
     width: 100vw;
-    background-color: white;
-    opacity: 0.9;
-    box-shadow: 0 4px 8px -6px black;
-    border-bottom-left-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
   }
 `;
 
