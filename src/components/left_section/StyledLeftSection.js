@@ -13,6 +13,8 @@ const LeftSection = styled.section`
   }});
   background-size: cover;
   background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
 
 LeftSection.defaultProps = {
