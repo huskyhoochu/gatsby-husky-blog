@@ -5,9 +5,7 @@ const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  position: fixed;
   width: 50vw;
-  z-index: 3;
   top: 0;
   opacity: 0.5;
   background: linear-gradient(black, transparent);
