@@ -63,7 +63,7 @@ const Burger = styled.button.attrs({
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
-    transition: 0.5s ease-in-out;
+    transition: 0.5s ease;
 
     &:nth-child(1) {
       top: 0;
