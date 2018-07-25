@@ -15,6 +15,10 @@ const LeftSection = styled.section`
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (max-width: 1024px) {
+    min-height: 100vh;
+  }
 `;
 
 LeftSection.defaultProps = {
