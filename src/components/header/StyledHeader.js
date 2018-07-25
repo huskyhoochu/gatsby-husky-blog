@@ -2,11 +2,18 @@ import styled from 'styled-components';
 
 const NavBar = styled.nav`
   display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 50vw;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  opacity: 0.5;
-  background: linear-gradient(black, transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), transparent);
+
+  @media (max-width: 1024px) {
+    width: 100vw;
+  }
 `;
 
 const MenuSection = styled.div`
