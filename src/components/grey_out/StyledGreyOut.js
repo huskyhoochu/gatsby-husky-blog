@@ -8,8 +8,8 @@ const GreyOut = styled.div`
   width: 100%;
   height: 0;
   opacity: 0;
-  background-color: transparent;
-  transition: background-color 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease;
 `;
 
 export default {
