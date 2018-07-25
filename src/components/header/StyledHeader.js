@@ -5,20 +5,8 @@ const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  position: fixed;
-  width: 50vw;
-  z-index: 3;
-  top: 0;
-  background-color: transparent;
-
-  @media (max-width: 1024px) {
-    width: 100vw;
-    background-color: white;
-    opacity: 0.9;
-    box-shadow: 0 4px 8px -6px black;
-    border-bottom-left-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-  }
+  opacity: 0.5;
+  background: linear-gradient(black, transparent);
 `;
 
 const MenuSection = styled.div`

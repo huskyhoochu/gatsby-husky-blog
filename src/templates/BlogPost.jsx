@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import { ThemeProvider } from 'styled-components';
 
 // Styled
 import Styled from './StyledBlogPost';
@@ -12,7 +13,7 @@ import LeftSection from '../components/left_section/LeftSection';
 import RightSection from '../components/right_section/RightSection';
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark, site } = data;
+  const { markdownRemark, site, file } = data;
 
   return (
     <Layout>
@@ -26,13 +27,15 @@ const BlogPost = ({ data }) => {
           site.siteMetadata.siteTitle
         }`}</title>
       </Helmet>
-      <LeftSection>
-        <Styled.ContentsWrapper>
-          <h1>{markdownRemark.frontmatter.title}</h1>
-          <h1>{markdownRemark.frontmatter.date}</h1>
-          <h1>{site.siteMetadata.author}</h1>
-        </Styled.ContentsWrapper>
-      </LeftSection>
+      <ThemeProvider theme={{ main: file.publicURL }}>
+        <LeftSection>
+          <Styled.ContentsWrapper>
+            <h1>{markdownRemark.frontmatter.title}</h1>
+            <h1>{markdownRemark.frontmatter.date}</h1>
+            <h1>{site.siteMetadata.author}</h1>
+          </Styled.ContentsWrapper>
+        </LeftSection>
+      </ThemeProvider>
       <RightSection>
         <Styled.ContentsWrapper>
           <Styled.Content
@@ -46,6 +49,9 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
+    file: PropTypes.shape({
+      publicURL: PropTypes.string.isRequired,
+    }).isRequired,
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
         siteTitle: PropTypes.string.isRequired,
@@ -77,6 +83,9 @@ export const pageQuery = graphql`
         author
         siteUrl
       }
+    }
+    file(relativeDirectory: { regex: $slug }, name: { eq: "post_thumb" }) {
+      publicURL
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html

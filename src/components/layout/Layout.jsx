@@ -9,7 +9,6 @@ import Styled from './StyledLayout';
 
 // Components
 import SideMenu from '../side_menu/SideMenu';
-import Header from '../header/Header';
 import GreyOut from '../grey_out/GreyOut';
 
 class Layout extends React.Component {
@@ -59,7 +58,6 @@ class Layout extends React.Component {
         </Helmet>
         <Styled.Canvas>
           <SideMenu />
-          <Header />
           <Styled.FlexWrapper>{children}</Styled.FlexWrapper>
           <GreyOut />
         </Styled.Canvas>
