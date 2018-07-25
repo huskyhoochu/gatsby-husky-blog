@@ -9,8 +9,10 @@ import Header from '../header/Header';
 
 const LeftSection = ({ children }) => (
   <Styled.LeftSection>
-    <Header />
-    {children}
+    <Styled.FixedWrapper>
+      <Header />
+      {children}
+    </Styled.FixedWrapper>
   </Styled.LeftSection>
 );
 

@@ -2,11 +2,23 @@ import styled from 'styled-components';
 import MainThumb from '../../assets/images/thumb-min.jpg';
 
 const LeftSection = styled.section`
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 1;
   height: 100vh;
   flex: 1;
+
+  @media (max-width: 1024px) {
+    min-height: 100vh;
+  }
+`;
+
+const FixedWrapper = styled.article`
+  position: fixed;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+
   background-image: url(${(props) => {
     const { theme } = props;
     return theme.main;
@@ -17,11 +29,12 @@ const LeftSection = styled.section`
   background-repeat: no-repeat;
 
   @media (max-width: 1024px) {
+    width: 100vw;
     min-height: 100vh;
   }
 `;
 
-LeftSection.defaultProps = {
+FixedWrapper.defaultProps = {
   theme: {
     main: MainThumb,
   },
@@ -29,4 +42,5 @@ LeftSection.defaultProps = {
 
 export default {
   LeftSection,
+  FixedWrapper,
 };
