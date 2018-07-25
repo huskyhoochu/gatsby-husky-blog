@@ -4,14 +4,11 @@ import PropTypes from 'prop-types';
 // Styled
 import Styled from './StyledLeftSection';
 
-// Components
-import Header from '../header/Header';
-
 const LeftSection = ({ children }) => (
   <Styled.LeftSection>
     <Styled.FixedWrapper>
-      <Header />
       {children}
+      <Styled.GreyOut />
     </Styled.FixedWrapper>
   </Styled.LeftSection>
 );
