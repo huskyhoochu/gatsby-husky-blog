@@ -73,7 +73,6 @@ const App = styled.div.attrs({
     ${StyledGreyOut.GreyOut} {
       height: 100%;
       opacity: 1;
-      background-color: rgba(0, 0, 0, 0.5);
     }
 
     ${StyledHeader.Burger} {
