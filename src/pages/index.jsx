@@ -15,6 +15,7 @@ import StyledBlogPost from '../templates/StyledBlogPost';
 import Layout from '../components/layout/Layout';
 import LeftSection from '../components/left_section/LeftSection';
 import RightSection from '../components/right_section/RightSection';
+import IndexInformation from '../components/index_information/IndexInformation';
 
 const BlogIndex = ({ data }) => {
   const { allMarkdownRemark, site, file } = data;
@@ -31,7 +32,7 @@ const BlogIndex = ({ data }) => {
       <ThemeProvider theme={{ main: file.publicURL }}>
         <LeftSection>
           <StyledBlogPost.ContentsWrapper>
-            <h1>{site.siteMetadata.siteTitle}</h1>
+            <IndexInformation />
           </StyledBlogPost.ContentsWrapper>
         </LeftSection>
       </ThemeProvider>
