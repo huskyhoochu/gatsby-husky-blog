@@ -5,14 +5,8 @@ const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  width: 50vw;
-  top: 0;
   opacity: 0.5;
   background: linear-gradient(black, transparent);
-
-  @media (max-width: 1024px) {
-    width: 100vw;
-  }
 `;
 
 const MenuSection = styled.div`
