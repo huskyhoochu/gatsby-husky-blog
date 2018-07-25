@@ -4,7 +4,7 @@ const RightSection = styled.section`
   border: 1px solid rebeccapurple;
   background-color: white;
   position: relative;
-  z-index: 2;
+  z-index: 4;
   flex: 1;
 `;
 
