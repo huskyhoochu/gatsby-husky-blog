@@ -13,8 +13,16 @@ const InfoWrapper = styled.div`
   @media (max-width: 414px) {
     margin: 0 1rem;
 
+    h2 {
+      font-size: 2rem;
+    }
+
     h6 {
       font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
     }
   }
 `;

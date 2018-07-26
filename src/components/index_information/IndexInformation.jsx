@@ -8,7 +8,9 @@ export default () => (
   <Styled.InfoWrapper>
     <Styled.InfoInner>
       <Styled.Quote>{config.welcomeMessage}</Styled.Quote>
-      <h6>{config.welcomeMessageAuthor}</h6>
+      <p>
+        <strong>{config.welcomeMessageAuthor}</strong>
+      </p>
     </Styled.InfoInner>
   </Styled.InfoWrapper>
 );

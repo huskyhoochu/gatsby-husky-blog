@@ -11,6 +11,7 @@ import Styled from './StyledBlogPost';
 import Layout from '../components/layout/Layout';
 import LeftSection from '../components/left_section/LeftSection';
 import RightSection from '../components/right_section/RightSection';
+import PostInformation from '../components/post_information/PostInformation';
 
 const BlogPost = ({ data }) => {
   const { markdownRemark, site, file } = data;
@@ -30,9 +31,12 @@ const BlogPost = ({ data }) => {
       <ThemeProvider theme={{ main: file.publicURL }}>
         <LeftSection>
           <Styled.ContentsWrapper>
-            <h1>{markdownRemark.frontmatter.title}</h1>
-            <h1>{markdownRemark.frontmatter.date}</h1>
-            <h1>{site.siteMetadata.author}</h1>
+            <PostInformation
+              content={{
+                frontmatter: markdownRemark.frontmatter,
+                author: site.siteMetadata.author,
+              }}
+            />
           </Styled.ContentsWrapper>
         </LeftSection>
       </ThemeProvider>
