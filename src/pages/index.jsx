@@ -38,7 +38,7 @@ const BlogIndex = ({ data }) => {
       </ThemeProvider>
       <RightSection>
         <StyledBlogPost.ContentsWrapper>
-          <PostList content={allMarkdownRemark.edges} />
+          <PostList edges={allMarkdownRemark.edges} />
         </StyledBlogPost.ContentsWrapper>
       </RightSection>
     </Layout>
