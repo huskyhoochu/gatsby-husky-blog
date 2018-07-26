@@ -27,7 +27,7 @@ const InfoWrapper = styled.div`
   }
 `;
 
-const InfoInner = styled.div`
+const InfoInner = styled.article`
   align-self: center;
 `;
 

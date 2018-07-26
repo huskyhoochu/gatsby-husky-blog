@@ -38,7 +38,7 @@ const LeftSection = styled.section.attrs({
   }
 `;
 
-const FixedWrapper = styled.article`
+const FixedWrapper = styled.div`
   position: fixed;
   top: 0;
   width: 50vw;

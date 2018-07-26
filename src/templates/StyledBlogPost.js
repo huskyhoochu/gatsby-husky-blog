@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ContentsWrapper = styled.article`
+const ContentsWrapper = styled.div`
   padding: 4rem 1rem;
 
   @media (max-width: 414px) {
@@ -8,7 +8,7 @@ const ContentsWrapper = styled.article`
   }
 `;
 
-const Content = styled.div`
+const Content = styled.article`
   margin: 1rem;
   line-height: 1.75;
   text-indent: 1rem;
