@@ -9,20 +9,22 @@ import Styled from './StyledPostList';
 const PostList = ({ content }) => _.map(content, ({ node }) => {
   const { date, title } = node.frontmatter;
   return (
-      <div key={node.fields.slug}>
+      <Styled.PostBody key={node.fields.slug}>
         <Link to={node.fields.slug}>
           <h3>{title}</h3>
-          <p>{date}</p>
-          <p>{node.excerpt}</p>
+          <Styled.PostDate>{date}</Styled.PostDate>
+          <Styled.PostExcerpt>{node.excerpt}</Styled.PostExcerpt>
         </Link>
-      </div>
+      </Styled.PostBody>
   );
 });
 
 const PostWrapper = ({ edges }) => (
   <Fragment>
-    <Styled.CategoryTitle>hi</Styled.CategoryTitle>
-    <PostList content={edges} />
+    <Styled.CategoryTitle>Latest</Styled.CategoryTitle>
+    <Styled.PostWrapper>
+      <PostList content={edges} />
+    </Styled.PostWrapper>
   </Fragment>
 );
 

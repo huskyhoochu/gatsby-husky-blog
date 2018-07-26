@@ -19,8 +19,18 @@ const PostBody = styled.article`
   margin: 0 1rem;
 `;
 
+const PostDate = styled.p`
+  color: rebeccapurple;
+`;
+
+const PostExcerpt = styled.p`
+  color: dimgrey;
+`;
+
 export default {
   CategoryTitle,
   PostWrapper,
   PostBody,
+  PostDate,
+  PostExcerpt,
 };
