@@ -17,14 +17,16 @@ const GreyOut = styled.div`
   transition: opacity 0.5s ease;
 `;
 
-const LeftSection = styled.section`
+const LeftSection = styled.section.attrs({
+  id: 'left',
+})`
   position: relative;
   top: 0;
   z-index: 1;
   height: 100vh;
   flex: 1;
 
-  &:hover {
+  &.move {
     ${GreyOut} {
       height: 100%;
       opacity: 1;
@@ -33,10 +35,6 @@ const LeftSection = styled.section`
     ${StyledIndexInformation.InfoWrapper} {
       transform: translateY(-1rem);
     }
-  }
-
-  @media (max-width: 1024px) {
-    min-height: 100vh;
   }
 `;
 

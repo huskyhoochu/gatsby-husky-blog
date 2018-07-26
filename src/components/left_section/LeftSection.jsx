@@ -4,14 +4,31 @@ import PropTypes from 'prop-types';
 // Styled
 import Styled from './StyledLeftSection';
 
-const LeftSection = ({ children }) => (
-  <Styled.LeftSection>
-    <Styled.FixedWrapper>
-      {children}
-      <Styled.GreyOut />
-    </Styled.FixedWrapper>
-  </Styled.LeftSection>
-);
+class LeftSection extends React.Component {
+  static handleTouch(e) {
+    e.currentTarget.classList.toggle('move');
+  }
+
+  componentDidMount() {
+    const el = document.getElementById('left');
+    el.addEventListener('touchstart', LeftSection.handleTouch, false);
+    el.addEventListener('mouseenter', LeftSection.handleTouch, false);
+    el.addEventListener('mouseleave', LeftSection.handleTouch, false);
+  }
+
+  render() {
+    const { children } = this.props;
+
+    return (
+      <Styled.LeftSection>
+        <Styled.FixedWrapper>
+          {children}
+          <Styled.GreyOut />
+        </Styled.FixedWrapper>
+      </Styled.LeftSection>
+    );
+  }
+}
 
 LeftSection.propTypes = {
   children: PropTypes.element.isRequired,
