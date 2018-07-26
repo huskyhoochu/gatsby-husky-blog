@@ -2,11 +2,18 @@ import styled from 'styled-components';
 
 const NavBar = styled.nav`
   display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 50vw;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  opacity: 0.5;
-  background: linear-gradient(black, transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), transparent);
+
+  @media (max-width: 1024px) {
+    width: 100vw;
+  }
 `;
 
 const MenuSection = styled.div`
@@ -56,7 +63,7 @@ const Burger = styled.button.attrs({
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
-    transition: 0.5s ease-in-out;
+    transition: 0.5s ease;
 
     &:nth-child(1) {
       top: 0;
