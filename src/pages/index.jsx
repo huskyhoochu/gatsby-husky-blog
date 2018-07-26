@@ -1,8 +1,7 @@
-import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
 // CSS
@@ -16,6 +15,7 @@ import Layout from '../components/layout/Layout';
 import LeftSection from '../components/left_section/LeftSection';
 import RightSection from '../components/right_section/RightSection';
 import IndexInformation from '../components/index_information/IndexInformation';
+import PostList from '../components/post_list/PostList';
 
 const BlogIndex = ({ data }) => {
   const { allMarkdownRemark, site, file } = data;
@@ -38,17 +38,7 @@ const BlogIndex = ({ data }) => {
       </ThemeProvider>
       <RightSection>
         <StyledBlogPost.ContentsWrapper>
-          {_.map(allMarkdownRemark.edges, ({ node }) => {
-            const { title } = node.frontmatter;
-            return (
-              <div key={node.fields.slug}>
-                <Link to={node.fields.slug}>
-                  <h3>{title}</h3>
-                  <p>{node.excerpt}</p>
-                </Link>
-              </div>
-            );
-          })}
+          <PostList content={allMarkdownRemark.edges} />
         </StyledBlogPost.ContentsWrapper>
       </RightSection>
     </Layout>
