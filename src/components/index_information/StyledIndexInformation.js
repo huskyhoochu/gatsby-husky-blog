@@ -7,12 +7,20 @@ const InfoWrapper = styled.div`
   margin: 0 7rem;
   text-align: center;
   display: flex;
-  height: calc(100vh - 10rem);
+  height: 30rem;
   transition: transform 0.5s ease;
+
+  @media (max-width: 414px) {
+    margin: 0 1rem;
+
+    h6 {
+      font-size: 1rem;
+    }
+  }
 `;
 
 const InfoInner = styled.div`
-  align-self: flex-end;
+  align-self: center;
 `;
 
 const Quote = styled.h6`
