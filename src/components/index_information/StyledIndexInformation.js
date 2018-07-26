@@ -5,9 +5,10 @@ const InfoWrapper = styled.div`
   z-index: 3;
   color: floralwhite;
   margin: 0 7rem;
-  text-align: center;
-  display: flex;
   height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: transform 0.5s ease;
 
   @media (max-width: 414px) {
@@ -27,8 +28,9 @@ const InfoWrapper = styled.div`
   }
 `;
 
-const InfoInner = styled.div`
+const InfoInner = styled.article`
   align-self: center;
+  text-align: center;
 `;
 
 const Quote = styled.h6`
