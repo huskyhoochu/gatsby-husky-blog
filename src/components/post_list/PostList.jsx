@@ -6,18 +6,32 @@ import { Link } from 'gatsby';
 // Styled
 import Styled from './StyledPostList';
 
-const PostList = ({ content }) => _.map(content, ({ node }) => {
-  const { date, title } = node.frontmatter;
-  return (
-      <Styled.PostBody key={node.fields.slug}>
-        <Link to={node.fields.slug}>
+const PostList = ({ content }) => {
+  const { markdown, imgSharp } = content;
+
+  return _.map(_.zip(markdown, imgSharp), (item) => {
+    const markdownItem = item[0].node;
+    const { date, title } = markdownItem.frontmatter;
+
+    const imgSharpItem = item[1].node;
+    const { publicURL, childImageSharp } = imgSharpItem;
+
+    return (
+      <Styled.PostBody key={markdownItem.fields.slug}>
+        <Link to={markdownItem.fields.slug}>
+          <img
+            src={publicURL}
+            srcSet={childImageSharp.fluid.srcSet}
+            alt="post-thumb"
+          />
           <h3>{title}</h3>
           <Styled.PostDate>{date}</Styled.PostDate>
-          <Styled.PostExcerpt>{node.excerpt}</Styled.PostExcerpt>
+          <Styled.PostExcerpt>{markdownItem.excerpt}</Styled.PostExcerpt>
         </Link>
       </Styled.PostBody>
-  );
-});
+    );
+  });
+};
 
 const PostWrapper = ({ edges }) => (
   <Fragment>
@@ -29,7 +43,10 @@ const PostWrapper = ({ edges }) => (
 );
 
 PostWrapper.propTypes = {
-  edges: PropTypes.arrayOf(PropTypes.object).isRequired,
+  edges: PropTypes.shape({
+    markdown: PropTypes.array.isRequired,
+    imgSharp: PropTypes.array.isRequired,
+  }).isRequired,
 };
 
 export default PostWrapper;
