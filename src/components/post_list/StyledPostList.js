@@ -47,6 +47,7 @@ const PostThumb = styled.img.attrs({
 
 const PostDate = styled.p`
   color: rebeccapurple;
+  font-weight: 400;
 `;
 
 const PostExcerpt = styled.p`
