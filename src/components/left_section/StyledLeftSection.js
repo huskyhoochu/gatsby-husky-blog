@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import MainThumb from '../../assets/images/thumb-min.jpg';
+import MainThumb from '../../assets/images/thumb_min.jpg';
 
 // Styled
 import StyledIndexInformation from '../index_information/StyledIndexInformation';
