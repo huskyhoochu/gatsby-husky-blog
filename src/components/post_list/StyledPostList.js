@@ -45,6 +45,16 @@ const PostThumb = styled.img.attrs({
   }
 `;
 
+const PostTitle = styled.h4`
+  margin-bottom: 0 !important;
+`;
+
+const PostSubtitle = styled.h6`
+  margin-top: 0 !important;
+  color: dimgrey;
+  font-weight: 100 !important;
+`;
+
 const PostDate = styled.p`
   color: rebeccapurple;
   font-weight: 400;
@@ -59,6 +69,8 @@ export default {
   PostWrapper,
   PostBody,
   PostThumb,
+  PostTitle,
+  PostSubtitle,
   PostDate,
   PostExcerpt,
 };

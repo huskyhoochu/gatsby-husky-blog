@@ -41,8 +41,8 @@ class PostList extends React.Component {
               srcSet={fluid.srcSet}
               alt="post-thumb"
             />
-            <h3>{title}</h3>
-            <h6>{subtitle}</h6>
+            <Styled.PostTitle>{title}</Styled.PostTitle>
+            <Styled.PostSubtitle>{subtitle}</Styled.PostSubtitle>
             <Styled.PostDate>{date}</Styled.PostDate>
             <Styled.PostExcerpt>{excerpt}</Styled.PostExcerpt>
           </Link>
