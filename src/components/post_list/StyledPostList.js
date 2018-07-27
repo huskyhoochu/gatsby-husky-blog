@@ -15,8 +15,20 @@ const PostWrapper = styled.div`
 `;
 
 const PostBody = styled.article`
-  width: 22rem;
-  margin: 0 1rem;
+  max-width: 45%;
+  margin: 1rem;
+
+  @media (max-width: 1360px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 45%;
+  }
+
+  @media (max-width: 688px) {
+    max-width: 100%;
+  }
 `;
 
 const PostDate = styled.p`
