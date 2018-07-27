@@ -23,12 +23,12 @@ const BlogPost = ({ data }) => {
           rel="canonical"
           href={site.siteMetadata.siteUrl + markdownRemark.fields.slug}
         />
-        <meta name="description" content={markdownRemark.excerpt} />
+        <meta name="description" content={markdownRemark.frontmatter.excerpt} />
         <title>{`${markdownRemark.frontmatter.title} | ${
           site.siteMetadata.siteTitle
         }`}</title>
       </Helmet>
-      <ThemeProvider theme={{ main: file.publicURL }}>
+      <ThemeProvider theme={{ main: file.childImageSharp.fluid.src }}>
         <LeftSection>
           <Styled.ContentsWrapper>
             <PostInformation
@@ -54,25 +54,15 @@ const BlogPost = ({ data }) => {
 BlogPost.propTypes = {
   data: PropTypes.shape({
     file: PropTypes.shape({
-      publicURL: PropTypes.string.isRequired,
+      childImageSharp: PropTypes.object.isRequired,
     }).isRequired,
     site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        siteTitle: PropTypes.string.isRequired,
-        author: PropTypes.string.isRequired,
-        siteUrl: PropTypes.string.isRequired,
-      }).isRequired,
+      siteMetadata: PropTypes.object.isRequired,
     }).isRequired,
     markdownRemark: PropTypes.shape({
-      fields: PropTypes.shape({
-        slug: PropTypes.string.isRequired,
-      }).isRequired,
-      frontmatter: PropTypes.shape({
-        date: PropTypes.string,
-        title: PropTypes.string,
-      }).isRequired,
+      fields: PropTypes.object.isRequired,
+      frontmatter: PropTypes.object.isRequired,
       html: PropTypes.string.isRequired,
-      excerpt: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };
@@ -89,17 +79,22 @@ export const pageQuery = graphql`
       }
     }
     file(relativeDirectory: { regex: $slug }, name: { eq: "post_thumb" }) {
-      publicURL
+      childImageSharp {
+        fluid(quality: 100) {
+          src
+        }
+      }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      excerpt
       fields {
         slug
       }
       frontmatter {
-        title
         date(formatString: "YYYY-MM-DD")
+        excerpt
+        title
+        subtitle
       }
     }
   }
