@@ -15,7 +15,7 @@ const PostWrapper = styled.div`
 `;
 
 const PostBody = styled.article`
-  width: 20rem;
+  width: 22rem;
   margin: 0 1rem;
 `;
 
