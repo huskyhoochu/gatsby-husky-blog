@@ -26,22 +26,25 @@ class PostList extends React.Component {
 
     return _.map(_.zip(markdown, imgSharp), (item) => {
       const markdownItem = item[0].node;
-      const { date, title } = markdownItem.frontmatter;
+      const {
+        date, excerpt, title, subtitle,
+      } = markdownItem.frontmatter;
 
       const imgSharpItem = item[1].node;
-      const { publicURL, childImageSharp } = imgSharpItem;
+      const { fluid } = imgSharpItem.childImageSharp;
 
       return (
         <Styled.PostBody key={markdownItem.fields.slug}>
           <Link to={markdownItem.fields.slug}>
             <Styled.PostThumb
-              src={publicURL}
-              srcSet={childImageSharp.fluid.srcSet}
+              src={fluid.src}
+              srcSet={fluid.srcSet}
               alt="post-thumb"
             />
-            <h3>{title}</h3>
+            <Styled.PostTitle>{title}</Styled.PostTitle>
+            <Styled.PostSubtitle>{subtitle}</Styled.PostSubtitle>
             <Styled.PostDate>{date}</Styled.PostDate>
-            <Styled.PostExcerpt>{markdownItem.excerpt}</Styled.PostExcerpt>
+            <Styled.PostExcerpt>{excerpt}</Styled.PostExcerpt>
           </Link>
         </Styled.PostBody>
       );

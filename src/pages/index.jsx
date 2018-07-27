@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
+import '../utils/WebFontLoader';
 
 // CSS
 import 'minireset.css/minireset.min.css';
@@ -31,7 +32,7 @@ const BlogIndex = ({ data }) => {
           site.siteMetadata.siteTitleKorean
         }`}</title>
       </Helmet>
-      <ThemeProvider theme={{ main: file.publicURL }}>
+      <ThemeProvider theme={{ main: file.childImageSharp.fluid.src }}>
         <LeftSection>
           <StyledBlogPost.ContentsWrapper>
             <IndexInformation />
@@ -55,15 +56,10 @@ const BlogIndex = ({ data }) => {
 BlogIndex.propTypes = {
   data: PropTypes.shape({
     file: PropTypes.shape({
-      publicURL: PropTypes.string.isRequired,
+      childImageSharp: PropTypes.object.isRequired,
     }).isRequired,
     site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        siteTitle: PropTypes.string.isRequired,
-        siteTitleKorean: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        siteUrl: PropTypes.string.isRequired,
-      }).isRequired,
+      siteMetadata: PropTypes.object.isRequired,
     }).isRequired,
     allFile: PropTypes.shape({
       edges: PropTypes.arrayOf.isRequired,
@@ -92,9 +88,9 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          publicURL
           childImageSharp {
             fluid(maxWidth: 610) {
+              src
               srcSet
             }
           }
@@ -102,18 +98,23 @@ export const pageQuery = graphql`
       }
     }
     file(name: { eq: "thumb-min" }) {
-      publicURL
+      childImageSharp {
+        fluid(quality: 100) {
+          src
+        }
+      }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
           frontmatter {
-            title
             date(formatString: "YYYY-MM-DD")
+            excerpt
+            title
+            subtitle
           }
         }
       }
