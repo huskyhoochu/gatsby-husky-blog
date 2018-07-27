@@ -31,6 +31,20 @@ const PostBody = styled.article`
   }
 `;
 
+const PostThumb = styled.img.attrs({
+  className: 'thumbItem',
+})`
+  width: 100%;
+  height: auto;
+  background-color: rebeccapurple;
+  transition: 0.5s ease;
+
+  &.move {
+    opacity: 0.7;
+    transform: translateY(-0.5rem);
+  }
+`;
+
 const PostDate = styled.p`
   color: rebeccapurple;
 `;
@@ -43,6 +57,7 @@ export default {
   CategoryTitle,
   PostWrapper,
   PostBody,
+  PostThumb,
   PostDate,
   PostExcerpt,
 };
