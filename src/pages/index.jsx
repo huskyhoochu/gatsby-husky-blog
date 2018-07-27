@@ -18,7 +18,9 @@ import IndexInformation from '../components/index_information/IndexInformation';
 import PostList from '../components/post_list/PostList';
 
 const BlogIndex = ({ data }) => {
-  const { allMarkdownRemark, site, file } = data;
+  const {
+    allFile, allMarkdownRemark, site, file,
+  } = data;
 
   return (
     <Layout>
@@ -38,7 +40,12 @@ const BlogIndex = ({ data }) => {
       </ThemeProvider>
       <RightSection>
         <StyledBlogPost.ContentsWrapper>
-          <PostList edges={allMarkdownRemark.edges} />
+          <PostList
+            edges={{
+              markdown: allMarkdownRemark.edges,
+              imgSharp: allFile.edges,
+            }}
+          />
         </StyledBlogPost.ContentsWrapper>
       </RightSection>
     </Layout>
@@ -58,6 +65,9 @@ BlogIndex.propTypes = {
         siteUrl: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
+    allFile: PropTypes.shape({
+      edges: PropTypes.arrayOf.isRequired,
+    }).isRequired,
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.arrayOf.isRequired,
     }).isRequired,
@@ -74,6 +84,21 @@ export const pageQuery = graphql`
         siteTitleKorean
         description
         siteUrl
+      }
+    }
+    allFile(
+      sort: { fields: mtime, order: DESC }
+      filter: { name: { eq: "post_thumb" } }
+    ) {
+      edges {
+        node {
+          publicURL
+          childImageSharp {
+            fluid(maxWidth: 528) {
+              srcSet
+            }
+          }
+        }
       }
     }
     file(name: { eq: "thumb-min" }) {
