@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
+import '../utils/WebFontLoader';
 
 // CSS
 import 'minireset.css/minireset.min.css';
