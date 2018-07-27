@@ -29,14 +29,14 @@ class PostList extends React.Component {
       const { date, title } = markdownItem.frontmatter;
 
       const imgSharpItem = item[1].node;
-      const { publicURL, childImageSharp } = imgSharpItem;
+      const { fluid } = imgSharpItem.childImageSharp;
 
       return (
         <Styled.PostBody key={markdownItem.fields.slug}>
           <Link to={markdownItem.fields.slug}>
             <Styled.PostThumb
-              src={publicURL}
-              srcSet={childImageSharp.fluid.srcSet}
+              src={fluid.src}
+              srcSet={fluid.srcSet}
               alt="post-thumb"
             />
             <h3>{title}</h3>

@@ -87,9 +87,9 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          publicURL
           childImageSharp {
             fluid(maxWidth: 610) {
+              src
               srcSet
             }
           }
