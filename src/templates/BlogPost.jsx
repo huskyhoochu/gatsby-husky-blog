@@ -80,7 +80,7 @@ export const pageQuery = graphql`
     }
     file(relativeDirectory: { regex: $slug }, name: { eq: "post_thumb" }) {
       childImageSharp {
-        fluid(quality: 100) {
+        fluid {
           src
         }
       }

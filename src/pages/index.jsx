@@ -99,7 +99,7 @@ export const pageQuery = graphql`
     }
     file(name: { eq: "thumb_min" }) {
       childImageSharp {
-        fluid(quality: 100) {
+        fluid {
           src
         }
       }
