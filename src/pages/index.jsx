@@ -97,7 +97,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(name: { eq: "thumb-min" }) {
+    file(name: { eq: "thumb_min" }) {
       childImageSharp {
         fluid(quality: 100) {
           src
@@ -115,6 +115,18 @@ export const pageQuery = graphql`
             excerpt
             title
             subtitle
+          }
+        }
+      }
+    }
+    allImageSharp {
+      edges {
+        node {
+          ... on ImageSharp {
+            fluid {
+              src
+              srcSet
+            }
           }
         }
       }
