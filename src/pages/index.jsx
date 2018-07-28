@@ -119,5 +119,17 @@ export const pageQuery = graphql`
         }
       }
     }
+    allImageSharp {
+      edges {
+        node {
+          ... on ImageSharp {
+            fluid {
+              src
+              srcSet
+            }
+          }
+        }
+      }
+    }
   }
 `;
