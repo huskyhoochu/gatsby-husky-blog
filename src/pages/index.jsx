@@ -91,7 +91,6 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 610) {
               src
-              srcSet
             }
           }
         }
@@ -125,7 +124,6 @@ export const pageQuery = graphql`
           ... on ImageSharp {
             fluid {
               src
-              srcSet
             }
           }
         }

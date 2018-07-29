@@ -36,11 +36,7 @@ class PostList extends React.Component {
       return (
         <Styled.PostBody key={markdownItem.fields.slug}>
           <Link to={markdownItem.fields.slug}>
-            <Styled.PostThumb
-              src={fluid.src}
-              srcSet={fluid.srcSet}
-              alt="post-thumb"
-            />
+            <Styled.PostThumb src={fluid.src} alt="post-thumb" />
             <Styled.PostTitle>{title}</Styled.PostTitle>
             <Styled.PostSubtitle>{subtitle}</Styled.PostSubtitle>
             <Styled.PostDate>{date}</Styled.PostDate>
