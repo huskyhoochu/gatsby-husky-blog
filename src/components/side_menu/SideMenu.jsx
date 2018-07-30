@@ -26,10 +26,10 @@ export default () => (
       <Styled.MenuLabel>Literature</Styled.MenuLabel>
       <Styled.MenuList>
         <li>
-          <Link to="/">Essay</Link>
+          <Link to="/categories/essay">Essay</Link>
         </li>
         <li>
-          <Link to="/">Review</Link>
+          <Link to="/categories/review">Review</Link>
         </li>
       </Styled.MenuList>
       <Styled.MenuLabel>About</Styled.MenuLabel>

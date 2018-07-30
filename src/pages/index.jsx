@@ -2,21 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { ThemeProvider } from 'styled-components';
 import '../utils/WebFontLoader';
 
 // CSS
 import 'minireset.css/minireset.min.css';
 
-// Styled
-import StyledBlogPost from '../templates/StyledBlogPost';
-
 // Components
-import Layout from '../components/layout/Layout';
-import LeftSection from '../components/left_section/LeftSection';
-import RightSection from '../components/right_section/RightSection';
-import IndexInformation from '../components/index_information/IndexInformation';
-import PostList from '../components/post_list/PostList';
+import Layout from '../layouts/Layout';
 
 const BlogIndex = ({ data }) => {
   const {
@@ -24,7 +16,16 @@ const BlogIndex = ({ data }) => {
   } = data;
 
   return (
-    <Layout>
+    <Layout
+      query={{
+        itemList: {
+          markdown: allMarkdownRemark.edges,
+          imgSharp: allFile.edges,
+        },
+        markdownItem: {},
+        thumbnail: file.childImageSharp.fluid.src,
+      }}
+    >
       <Helmet>
         <link rel="canonical" href={site.siteMetadata.siteUrl} />
         <meta name="description" content={site.siteMetadata.description} />
@@ -32,23 +33,6 @@ const BlogIndex = ({ data }) => {
           site.siteMetadata.siteTitleKorean
         }`}</title>
       </Helmet>
-      <ThemeProvider theme={{ main: file.childImageSharp.fluid.src }}>
-        <LeftSection>
-          <StyledBlogPost.ContentsWrapper>
-            <IndexInformation />
-          </StyledBlogPost.ContentsWrapper>
-        </LeftSection>
-      </ThemeProvider>
-      <RightSection>
-        <StyledBlogPost.ContentsWrapper>
-          <PostList
-            edges={{
-              markdown: allMarkdownRemark.edges,
-              imgSharp: allFile.edges,
-            }}
-          />
-        </StyledBlogPost.ContentsWrapper>
-      </RightSection>
     </Layout>
   );
 };
@@ -91,7 +75,6 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 610) {
               src
-              srcSet
             }
           }
         }
@@ -99,7 +82,7 @@ export const pageQuery = graphql`
     }
     file(name: { eq: "thumb_min" }) {
       childImageSharp {
-        fluid(quality: 100) {
+        fluid {
           src
         }
       }
@@ -125,7 +108,6 @@ export const pageQuery = graphql`
           ... on ImageSharp {
             fluid {
               src
-              srcSet
             }
           }
         }

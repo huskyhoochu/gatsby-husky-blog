@@ -2,22 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { ThemeProvider } from 'styled-components';
-
-// Styled
-import Styled from './StyledBlogPost';
 
 // Component
-import Layout from '../components/layout/Layout';
-import LeftSection from '../components/left_section/LeftSection';
-import RightSection from '../components/right_section/RightSection';
-import PostInformation from '../components/post_information/PostInformation';
+import Layout from '../layouts/Layout';
 
 const BlogPost = ({ data }) => {
   const { markdownRemark, site, file } = data;
 
   return (
-    <Layout>
+    <Layout
+      query={{
+        itemList: {},
+        markdownItem: markdownRemark,
+        thumbnail: file.childImageSharp.fluid.src,
+      }}
+    >
       <Helmet>
         <link
           rel="canonical"
@@ -28,25 +27,6 @@ const BlogPost = ({ data }) => {
           site.siteMetadata.siteTitle
         }`}</title>
       </Helmet>
-      <ThemeProvider theme={{ main: file.childImageSharp.fluid.src }}>
-        <LeftSection>
-          <Styled.ContentsWrapper>
-            <PostInformation
-              content={{
-                frontmatter: markdownRemark.frontmatter,
-                author: site.siteMetadata.author,
-              }}
-            />
-          </Styled.ContentsWrapper>
-        </LeftSection>
-      </ThemeProvider>
-      <RightSection>
-        <Styled.ContentsWrapper>
-          <Styled.Content
-            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-          />
-        </Styled.ContentsWrapper>
-      </RightSection>
     </Layout>
   );
 };
@@ -80,7 +60,7 @@ export const pageQuery = graphql`
     }
     file(relativeDirectory: { regex: $slug }, name: { eq: "post_thumb" }) {
       childImageSharp {
-        fluid(quality: 100) {
+        fluid {
           src
         }
       }

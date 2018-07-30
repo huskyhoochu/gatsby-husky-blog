@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 // Styled
-import StyledGreyOut from '../grey_out/StyledGreyOut';
-import StyledHeader from '../header/StyledHeader';
+import StyledGreyOut from '../components/grey_out/StyledGreyOut';
+import StyledHeader from '../components/header/StyledHeader';
 
 const Canvas = styled.div`
   position: relative;
@@ -86,18 +86,7 @@ const App = styled.div.attrs({
   }
 `;
 
-const FlexWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  position: relative;
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-  }
-`;
-
 export default {
   App,
   Canvas,
-  FlexWrapper,
 };

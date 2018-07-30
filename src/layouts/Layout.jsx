@@ -1,17 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import config from '../../data/SiteConfig';
+import config from '../data/SiteConfig';
 
 // Styled
 import Styled from './StyledLayout';
 
 // Components
-import Header from '../header/Header';
-import SideMenu from '../side_menu/SideMenu';
-import GreyOut from '../grey_out/GreyOut';
+import Header from '../components/header/Header';
+import SideMenu from '../components/side_menu/SideMenu';
+import GreyOut from '../components/grey_out/GreyOut';
+import FlexWrapper from '../components/flex_wrapper/FlexWrapper';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, query }) => {
   const schemaOrgJSON = [
     {
       '@context': 'http://schema.org',
@@ -37,7 +38,8 @@ const Layout = ({ children }) => {
       <Styled.Canvas>
         <SideMenu />
         <Header />
-        <Styled.FlexWrapper>{children}</Styled.FlexWrapper>
+        <FlexWrapper query={query} />
+        {children}
         <GreyOut />
       </Styled.Canvas>
     </Styled.App>
@@ -45,7 +47,8 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  children: PropTypes.element.isRequired,
+  query: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
 };
 
 export default Layout;
