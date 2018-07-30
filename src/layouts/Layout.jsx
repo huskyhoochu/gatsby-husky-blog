@@ -10,8 +10,9 @@ import Styled from './StyledLayout';
 import Header from '../components/header/Header';
 import SideMenu from '../components/side_menu/SideMenu';
 import GreyOut from '../components/grey_out/GreyOut';
+import FlexWrapper from '../components/flex_wrapper/FlexWrapper';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, query }) => {
   const schemaOrgJSON = [
     {
       '@context': 'http://schema.org',
@@ -29,6 +30,10 @@ const Layout = ({ children }) => {
           name="google-site-verification"
           content={config.googleVerificationCode}
         />
+        <meta
+          name="naver-site-verification"
+          content={config.naverVerificationCode}
+        />
         <meta name="author" content={config.author} />
         <script type="application/ld+json">
           {JSON.stringify(schemaOrgJSON)}
@@ -37,6 +42,7 @@ const Layout = ({ children }) => {
       <Styled.Canvas>
         <SideMenu />
         <Header />
+        <FlexWrapper query={query} />
         {children}
         <GreyOut />
       </Styled.Canvas>
@@ -45,7 +51,8 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+  children: PropTypes.element.isRequired,
+  query: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
 };
 
 export default Layout;
