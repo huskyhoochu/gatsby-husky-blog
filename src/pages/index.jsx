@@ -27,8 +27,11 @@ const BlogIndex = ({ data }) => {
       </Helmet>
       <FlexWrapper
         query={{
-          markdown: allMarkdownRemark.edges,
-          imgSharp: allFile.edges,
+          itemList: {
+            markdown: allMarkdownRemark.edges,
+            imgSharp: allFile.edges,
+          },
+          markdownItem: {},
           thumbnail: file.childImageSharp.fluid.src,
         }}
       />
