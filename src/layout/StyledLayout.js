@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 // Styled
-import StyledGreyOut from '../grey_out/StyledGreyOut';
-import StyledHeader from '../header/StyledHeader';
+import StyledGreyOut from '../components/grey_out/StyledGreyOut';
+import StyledHeader from '../components/header/StyledHeader';
 
 const Canvas = styled.div`
   position: relative;

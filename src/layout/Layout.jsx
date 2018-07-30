@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import config from '../../data/SiteConfig';
+import config from '../data/SiteConfig';
 
 // Styled
 import Styled from './StyledLayout';
 
 // Components
-import Header from '../header/Header';
-import SideMenu from '../side_menu/SideMenu';
-import GreyOut from '../grey_out/GreyOut';
+import Header from '../components/header/Header';
+import SideMenu from '../components/side_menu/SideMenu';
+import GreyOut from '../components/grey_out/GreyOut';
 
 const Layout = ({ children }) => {
   const schemaOrgJSON = [

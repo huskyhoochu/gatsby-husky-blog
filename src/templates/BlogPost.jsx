@@ -8,7 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import Styled from './StyledBlogPost';
 
 // Component
-import Layout from '../components/layout/Layout';
+import Layout from '../layout/Layout';
 import LeftSection from '../components/left_section/LeftSection';
 import RightSection from '../components/right_section/RightSection';
 import PostInformation from '../components/post_information/PostInformation';

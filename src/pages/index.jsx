@@ -12,7 +12,7 @@ import 'minireset.css/minireset.min.css';
 import StyledBlogPost from '../templates/StyledBlogPost';
 
 // Components
-import Layout from '../components/layout/Layout';
+import Layout from '../layout/Layout';
 import LeftSection from '../components/left_section/LeftSection';
 import RightSection from '../components/right_section/RightSection';
 import IndexInformation from '../components/index_information/IndexInformation';
