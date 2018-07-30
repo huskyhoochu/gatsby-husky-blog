@@ -30,10 +30,6 @@ const Layout = ({ children, query }) => {
           name="google-site-verification"
           content={config.googleVerificationCode}
         />
-        <meta
-          name="naver-site-verification"
-          content={config.naverVerificationCode}
-        />
         <meta name="author" content={config.author} />
         <script type="application/ld+json">
           {JSON.stringify(schemaOrgJSON)}
