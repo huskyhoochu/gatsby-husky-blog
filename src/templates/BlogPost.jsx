@@ -5,13 +5,18 @@ import { graphql } from 'gatsby';
 
 // Component
 import Layout from '../layouts/Layout';
-import FlexWrapper from '../components/flex_wrapper/FlexWrapper';
 
 const BlogPost = ({ data }) => {
   const { markdownRemark, site, file } = data;
 
   return (
-    <Layout>
+    <Layout
+      query={{
+        itemList: {},
+        markdownItem: markdownRemark,
+        thumbnail: file.childImageSharp.fluid.src,
+      }}
+    >
       <Helmet>
         <link
           rel="canonical"
@@ -22,13 +27,6 @@ const BlogPost = ({ data }) => {
           site.siteMetadata.siteTitle
         }`}</title>
       </Helmet>
-      <FlexWrapper
-        query={{
-          itemList: {},
-          markdownItem: markdownRemark,
-          thumbnail: file.childImageSharp.fluid.src,
-        }}
-      />
     </Layout>
   );
 };
