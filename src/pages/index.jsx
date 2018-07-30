@@ -9,7 +9,6 @@ import 'minireset.css/minireset.min.css';
 
 // Components
 import Layout from '../layouts/Layout';
-import FlexWrapper from '../components/flex_wrapper/FlexWrapper';
 
 const BlogIndex = ({ data }) => {
   const {
@@ -17,7 +16,16 @@ const BlogIndex = ({ data }) => {
   } = data;
 
   return (
-    <Layout>
+    <Layout
+      query={{
+        itemList: {
+          markdown: allMarkdownRemark.edges,
+          imgSharp: allFile.edges,
+        },
+        markdownItem: {},
+        thumbnail: file.childImageSharp.fluid.src,
+      }}
+    >
       <Helmet>
         <link rel="canonical" href={site.siteMetadata.siteUrl} />
         <meta name="description" content={site.siteMetadata.description} />
@@ -25,16 +33,6 @@ const BlogIndex = ({ data }) => {
           site.siteMetadata.siteTitleKorean
         }`}</title>
       </Helmet>
-      <FlexWrapper
-        query={{
-          itemList: {
-            markdown: allMarkdownRemark.edges,
-            imgSharp: allFile.edges,
-          },
-          markdownItem: {},
-          thumbnail: file.childImageSharp.fluid.src,
-        }}
-      />
     </Layout>
   );
 };
