@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
       <Styled.Canvas>
         <SideMenu />
         <Header />
-        <Styled.FlexWrapper>{children}</Styled.FlexWrapper>
+        {children}
         <GreyOut />
       </Styled.Canvas>
     </Styled.App>
