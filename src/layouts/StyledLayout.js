@@ -86,18 +86,7 @@ const App = styled.div.attrs({
   }
 `;
 
-const FlexWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  position: relative;
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-  }
-`;
-
 export default {
   App,
   Canvas,
-  FlexWrapper,
 };
