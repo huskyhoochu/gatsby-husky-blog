@@ -2,16 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { ThemeProvider } from 'styled-components';
-
-// Styled
-import Styled from './StyledBlogPost';
 
 // Component
 import Layout from '../layouts/Layout';
-import LeftSection from '../components/left_section/LeftSection';
-import RightSection from '../components/right_section/RightSection';
-import PostInformation from '../components/post_information/PostInformation';
+import FlexWrapper from '../components/flex_wrapper/FlexWrapper';
 
 const BlogPost = ({ data }) => {
   const { markdownRemark, site, file } = data;
@@ -28,25 +22,13 @@ const BlogPost = ({ data }) => {
           site.siteMetadata.siteTitle
         }`}</title>
       </Helmet>
-      <ThemeProvider theme={{ main: file.childImageSharp.fluid.src }}>
-        <LeftSection>
-          <Styled.ContentsWrapper>
-            <PostInformation
-              content={{
-                frontmatter: markdownRemark.frontmatter,
-                author: site.siteMetadata.author,
-              }}
-            />
-          </Styled.ContentsWrapper>
-        </LeftSection>
-      </ThemeProvider>
-      <RightSection>
-        <Styled.ContentsWrapper>
-          <Styled.Content
-            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-          />
-        </Styled.ContentsWrapper>
-      </RightSection>
+      <FlexWrapper
+        query={{
+          itemList: {},
+          markdownItem: markdownRemark,
+          thumbnail: file.childImageSharp.fluid.src,
+        }}
+      />
     </Layout>
   );
 };
