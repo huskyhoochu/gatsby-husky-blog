@@ -61,10 +61,10 @@
     "@babel/types" "7.0.0-beta.52"
 
 "@babel/helper-annotate-as-pure@^7.0.0-beta.37":
-  version "7.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0-beta.54.tgz#1626126a3f9fc4ed280ac942372c7d39653d7121"
+  version "7.0.0-beta.55"
+  resolved "https://registry.yarnpkg.com/@babel/helper-annotate-as-pure/-/helper-annotate-as-pure-7.0.0-beta.55.tgz#3c3e4c00e14e7dea917938e35ed5d9156cdd35ce"
   dependencies:
-    "@babel/types" "7.0.0-beta.54"
+    "@babel/types" "7.0.0-beta.55"
 
 "@babel/helper-builder-binary-assignment-operator-visitor@7.0.0-beta.52":
   version "7.0.0-beta.52"
@@ -706,12 +706,12 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
-"@babel/types@7.0.0-beta.54":
-  version "7.0.0-beta.54"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.54.tgz#025ad68492fed542c13f14c579a44c848e531063"
+"@babel/types@7.0.0-beta.55":
+  version "7.0.0-beta.55"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.55.tgz#7755c9d2e58315a64f05d8cf3322379be16d9199"
   dependencies:
     esutils "^2.0.2"
-    lodash "^4.17.5"
+    lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
@@ -3512,10 +3512,11 @@ each-async@^1.0.0, each-async@^1.1.1:
     set-immediate-shim "^1.0.0"
 
 ecc-jsbn@~0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz#3a83a904e54353287874c564b7549386849a98c9"
   dependencies:
     jsbn "~0.1.0"
+    safer-buffer "^2.1.0"
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -4597,7 +4598,7 @@ gatsby-link@^2.0.0-beta.5:
     react-lifecycles-compat "^3.0.2"
     ric "^1.3.0"
 
-gatsby-plugin-offline@^2.0.0-beta.5:
+gatsby-plugin-offline@next:
   version "2.0.0-beta.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.0-beta.5.tgz#51c2c44ef13b0ae8dbd026f54f34440807433063"
   dependencies:
@@ -4618,13 +4619,13 @@ gatsby-plugin-page-creator@^2.0.0-beta.5:
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
-gatsby-plugin-react-helmet@^3.0.0-beta.4:
+gatsby-plugin-react-helmet@next:
   version "3.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.0.0-beta.4.tgz#065bb67fec37e86db536c51d7a5006eee2ce89b9"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
 
-gatsby-plugin-sharp@^2.0.0-beta.7:
+gatsby-plugin-sharp@next:
   version "2.0.0-beta.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.0-beta.7.tgz#3a185451ccde6c8a0badff82e449b42da162b6ad"
   dependencies:
@@ -4664,7 +4665,7 @@ gatsby-react-router-scroll@^2.0.0-beta.3:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-copy-linked-files@^2.0.0-beta.3:
+gatsby-remark-copy-linked-files@next:
   version "2.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.0.0-beta.3.tgz#fe21e5f0ded178d559c99ddfaac61ec081d2fa89"
   dependencies:
@@ -4677,7 +4678,7 @@ gatsby-remark-copy-linked-files@^2.0.0-beta.3:
     probe-image-size "^4.0.0"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-images@^2.0.1-beta.9:
+gatsby-remark-images@next:
   version "2.0.1-beta.9"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-2.0.1-beta.9.tgz#8b27fbad11a61d283655539845785f274a0d0dc5"
   dependencies:
@@ -4688,7 +4689,7 @@ gatsby-remark-images@^2.0.1-beta.9:
     slash "^1.0.0"
     unist-util-select "^1.5.0"
 
-gatsby-source-filesystem@^2.0.1-beta.10:
+gatsby-source-filesystem@next:
   version "2.0.1-beta.10"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.1-beta.10.tgz#f357ac909bc97aea2a99e8cca9d6bd31da8bdc2b"
   dependencies:
@@ -4705,7 +4706,7 @@ gatsby-source-filesystem@^2.0.1-beta.10:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-transformer-remark@^2.1.1-beta.5:
+gatsby-transformer-remark@next:
   version "2.1.1-beta.5"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.1.1-beta.5.tgz#e1cbf58d24695e21f04e223227adffd471ab032b"
   dependencies:
@@ -4729,7 +4730,7 @@ gatsby-transformer-remark@^2.1.1-beta.5:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.3.0"
 
-gatsby-transformer-sharp@^2.1.1-beta.6:
+gatsby-transformer-sharp@next:
   version "2.1.1-beta.6"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.1.1-beta.6.tgz#011800ac19c646e6e2527c3cc0fde45ac4bb748a"
   dependencies:
@@ -4738,7 +4739,7 @@ gatsby-transformer-sharp@^2.1.1-beta.6:
     fs-extra "^4.0.2"
     probe-image-size "^4.0.0"
 
-gatsby@^2.0.0-beta.61:
+gatsby@next:
   version "2.0.0-beta.61"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-beta.61.tgz#e48c4f1619e5fb2e276e36985e344e63adc0248c"
   dependencies:
@@ -9303,7 +9304,7 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
-"safer-buffer@>= 2.1.2 < 3", safer-buffer@^2.0.2:
+"safer-buffer@>= 2.1.2 < 3", safer-buffer@^2.0.2, safer-buffer@^2.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
 
@@ -10745,8 +10746,8 @@ url-parse-lax@^1.0.0:
     prepend-http "^1.0.1"
 
 url-parse@^1.1.8, url-parse@~1.4.0:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.1.tgz#4dec9dad3dc8585f862fed461d2e19bbf623df30"
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.3.tgz#bfaee455c889023219d757e045fa6a684ec36c15"
   dependencies:
     querystringify "^2.0.0"
     requires-port "^1.0.0"
