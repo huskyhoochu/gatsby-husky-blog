@@ -2,21 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { ThemeProvider } from 'styled-components';
 import '../utils/WebFontLoader';
 
 // CSS
 import 'minireset.css/minireset.min.css';
 
-// Styled
-import StyledBlogPost from '../templates/StyledBlogPost';
-
 // Components
 import Layout from '../layouts/Layout';
-import LeftSection from '../components/left_section/LeftSection';
-import RightSection from '../components/right_section/RightSection';
-import IndexInformation from '../components/index_information/IndexInformation';
-import PostList from '../components/post_list/PostList';
+import FlexWrapper from '../components/flex_wrapper/FlexWrapper';
 
 const BlogIndex = ({ data }) => {
   const {
@@ -32,23 +25,13 @@ const BlogIndex = ({ data }) => {
           site.siteMetadata.siteTitleKorean
         }`}</title>
       </Helmet>
-      <ThemeProvider theme={{ main: file.childImageSharp.fluid.src }}>
-        <LeftSection>
-          <StyledBlogPost.ContentsWrapper>
-            <IndexInformation />
-          </StyledBlogPost.ContentsWrapper>
-        </LeftSection>
-      </ThemeProvider>
-      <RightSection>
-        <StyledBlogPost.ContentsWrapper>
-          <PostList
-            edges={{
-              markdown: allMarkdownRemark.edges,
-              imgSharp: allFile.edges,
-            }}
-          />
-        </StyledBlogPost.ContentsWrapper>
-      </RightSection>
+      <FlexWrapper
+        query={{
+          markdown: allMarkdownRemark.edges,
+          imgSharp: allFile.edges,
+          thumbnail: file.childImageSharp.fluid.src,
+        }}
+      />
     </Layout>
   );
 };
