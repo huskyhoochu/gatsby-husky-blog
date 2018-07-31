@@ -36,6 +36,7 @@ const SearchIcon = styled.object.attrs({
 const Burger = styled.button.attrs({
   id: 'burger',
   type: 'button',
+  'aria-label': 'menu',
 })`
   width: 1rem;
   height: 1rem;

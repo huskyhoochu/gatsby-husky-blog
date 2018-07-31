@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import '../utils/WebFontLoader';
 
@@ -9,6 +8,7 @@ import 'minireset.css/minireset.min.css';
 
 // Components
 import Layout from '../layouts/Layout';
+import SEOHelmet from '../components/seo_helmet/SEOHelmet';
 
 const BlogIndex = ({ data }) => {
   const {
@@ -27,13 +27,15 @@ const BlogIndex = ({ data }) => {
         category: 'Latest',
       }}
     >
-      <Helmet>
-        <link rel="canonical" href={site.siteMetadata.siteUrl} />
-        <meta name="description" content={site.siteMetadata.description} />
-        <title>{`${site.siteMetadata.siteTitle} | ${
-          site.siteMetadata.siteTitleKorean
-        }`}</title>
-      </Helmet>
+      <SEOHelmet
+        content={{
+          canonical: site.siteMetadata.siteUrl,
+          description: site.siteMetadata.description,
+          title: `${site.siteMetadata.siteTitle} | ${
+            site.siteMetadata.siteTitleKorean
+          }`,
+        }}
+      />
     </Layout>
   );
 };

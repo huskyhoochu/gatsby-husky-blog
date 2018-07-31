@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 // Components
 import Layout from '../layouts/Layout';
+import SEOHelmet from '../components/seo_helmet/SEOHelmet';
 
 const CategoryList = ({ data, pathContext }) => {
   const {
@@ -25,17 +25,17 @@ const CategoryList = ({ data, pathContext }) => {
         category,
       }}
     >
-      <Helmet>
-        <link
-          rel="canonical"
-          href={`${site.siteMetadata.siteUrl}/categories/${_.kebabCase(
+      <SEOHelmet
+        content={{
+          canonical: `${site.siteMetadata.siteUrl}/categories/${_.kebabCase(
             category,
-          )}`}
-        />
-        <title>{`Category as "${category}"| ${
-          site.siteMetadata.siteTitle
-        }`}</title>
-      </Helmet>
+          )}`,
+          description: _.startCase(_.kebabCase(category)),
+          title: `Category as "${_.startCase(_.kebabCase(category))}" | ${
+            site.siteMetadata.siteTitle
+          }`,
+        }}
+      />
     </Layout>
   );
 };

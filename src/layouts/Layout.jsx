@@ -34,6 +34,44 @@ const Layout = ({ children, query }) => {
         <script type="application/ld+json">
           {JSON.stringify(schemaOrgJSON)}
         </script>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon_package/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon_package/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/favicon_package/android-chrome-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon_package/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/favicon_package/site.webmanifest.json" />
+        <link
+          rel="mask-icon"
+          href="/favicon_package/safari-pinned-tab.svg"
+          color="#663399"
+        />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+          name="msapplication-TileImage"
+          content="/favicon_package/mstile-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <meta property="og:image" content="/favicon_package/og-image.jpg" />
+        <meta property="og:image:width" content="279" />
+        <meta property="og:image:height" content="279" />
       </Helmet>
       <Styled.Canvas>
         <SideMenu />

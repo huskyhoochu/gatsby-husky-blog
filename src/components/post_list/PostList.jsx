@@ -17,9 +17,15 @@ class PostList extends React.Component {
   componentDidMount() {
     const el = document.querySelectorAll('.thumbItem');
     _.forEach(el, (node) => {
-      node.addEventListener('touchstart', PostList.handleTouch, false);
-      node.addEventListener('mouseenter', PostList.handleTouch, false);
-      node.addEventListener('mouseleave', PostList.handleTouch, false);
+      node.addEventListener('touchstart', PostList.handleTouch, {
+        passive: true,
+      });
+      node.addEventListener('mouseenter', PostList.handleTouch, {
+        passive: true,
+      });
+      node.addEventListener('mouseleave', PostList.handleTouch, {
+        passive: true,
+      });
     });
   }
 

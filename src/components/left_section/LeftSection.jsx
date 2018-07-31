@@ -11,9 +11,15 @@ class LeftSection extends React.Component {
 
   componentDidMount() {
     const el = document.getElementById('left');
-    el.addEventListener('touchstart', LeftSection.handleTouch, false);
-    el.addEventListener('mouseenter', LeftSection.handleTouch, false);
-    el.addEventListener('mouseleave', LeftSection.handleTouch, false);
+    el.addEventListener('touchstart', LeftSection.handleTouch, {
+      passive: true,
+    });
+    el.addEventListener('mouseenter', LeftSection.handleTouch, {
+      passive: true,
+    });
+    el.addEventListener('mouseleave', LeftSection.handleTouch, {
+      passive: true,
+    });
   }
 
   render() {
