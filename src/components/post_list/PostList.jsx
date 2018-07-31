@@ -9,7 +9,7 @@ import Styled from './StyledPostList';
 // Methods
 import splitSlug from '../../utils/SplitSlugToFilePath';
 
-class PostList extends React.Component {
+class PostList extends React.PureComponent {
   static handleTouch(e) {
     e.currentTarget.classList.toggle('move');
   }

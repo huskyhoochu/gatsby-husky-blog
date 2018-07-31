@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // Styled
 import Styled from './StyledLeftSection';
 
-class LeftSection extends React.Component {
+class LeftSection extends React.PureComponent {
   static handleTouch(e) {
     e.currentTarget.classList.toggle('move');
   }
