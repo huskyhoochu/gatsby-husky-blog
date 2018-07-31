@@ -22,6 +22,7 @@ const CategoryList = ({ data, pathContext }) => {
         },
         markdownItem: {},
         thumbnail: file.childImageSharp.fluid.src,
+        category,
       }}
     >
       <Helmet>
