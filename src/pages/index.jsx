@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import '../utils/WebFontLoader';
+import '../utils/GoogleAdSense';
 
 // CSS
 import 'minireset.css/minireset.min.css';
