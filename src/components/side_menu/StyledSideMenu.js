@@ -6,7 +6,6 @@ const MenuWrapper = styled.aside`
   height: 100vh;
   top: 0;
   left: 0;
-  border: 1px solid salmon;
   transform: translate3d(-100%, 0, 0);
 `;
 

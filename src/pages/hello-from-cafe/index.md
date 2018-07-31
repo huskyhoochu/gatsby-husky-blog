@@ -1,7 +1,7 @@
 ---
 title: '안녕 친구들'
 subtitle: '허스키의 산전수전 공중전 블로그 제작기'
-category: 'Essay'
+category: 'essay'
 excerpt: '프로그래밍을 시작한 지 이제 1년, 워드프레스에서 시작해 온갖 삽질을 거쳐 Gatsby.JS 에서 안식을 얻은 이야기를 소개한다.'
 date: '2018-07-19'
 ---

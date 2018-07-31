@@ -59,7 +59,7 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/categories/${_.kebabCase(category)}`,
             component: categoryPage,
             context: {
-              category,
+              category: `/${category}/`,
             },
           });
         });
