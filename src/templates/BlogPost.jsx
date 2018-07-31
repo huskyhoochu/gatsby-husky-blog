@@ -65,7 +65,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { regex: $slug } }) {
       html
       fields {
         slug
