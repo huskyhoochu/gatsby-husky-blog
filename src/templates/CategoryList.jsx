@@ -8,11 +8,22 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/Layout';
 
 const CategoryList = ({ data, pathContext }) => {
-  const { site } = data;
+  const {
+    allFile, allMarkdownRemark, file, site,
+  } = data;
   const { category } = pathContext;
 
   return (
-    <Layout>
+    <Layout
+      query={{
+        itemList: {
+          markdown: allMarkdownRemark.edges,
+          imgSharp: allFile.edges,
+        },
+        markdownItem: {},
+        thumbnail: file.childImageSharp.fluid.src,
+      }}
+    >
       <Helmet>
         <link
           rel="canonical"
@@ -30,7 +41,15 @@ const CategoryList = ({ data, pathContext }) => {
 
 CategoryList.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.object.isRequired,
+    allFile: PropTypes.shape({
+      edges: PropTypes.arrayOf.isRequired,
+    }).isRequired,
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf.isRequired,
+    }).isRequired,
+    file: PropTypes.shape({
+      childImageSharp: PropTypes.object.isRequired,
+    }).isRequired,
     site: PropTypes.shape({
       siteMetadata: PropTypes.object.isRequired,
     }).isRequired,
@@ -50,9 +69,30 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
+    allFile(
+      sort: { fields: mtime, order: DESC }
+      filter: { name: { regex: $category } }
+    ) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 610) {
+              src
+            }
+          }
+        }
+      }
+    }
+    file(name: { eq: "thumb_min" }) {
+      childImageSharp {
+        fluid {
+          src
+        }
+      }
+    }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: $category } } }
+      filter: { frontmatter: { category: { regex: $category } } }
     ) {
       edges {
         node {
