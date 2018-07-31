@@ -10,6 +10,9 @@ const SEOHelmet = ({ content }) => {
       <link rel="canonical" href={canonical} />
       <meta name="description" content={description} />
       <title>{title}</title>
+      <meta property="og:url" content={canonical} />
+      <meta property="og:description" content={description} />
+      <meta property="og:title" content={title} />
     </Helmet>
   );
 };

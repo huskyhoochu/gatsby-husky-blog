@@ -69,6 +69,12 @@ const Layout = ({ children, query }) => {
           content="/favicon_package/mstile-144x144.png"
         />
         <meta name="theme-color" content="#ffffff" />
+        <meta
+          property="og:image"
+          content="/favicon_package/android-chrome-512x512.png"
+        />
+        <meta property="og:image:width" content="280" />
+        <meta property="og:image:height" content="280" />
       </Helmet>
       <Styled.Canvas>
         <SideMenu />
