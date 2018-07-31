@@ -37,7 +37,7 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 600,
-              withWebp: true,
+              backgroundColor: 'rebeccapurple',
             },
           },
           'gatsby-remark-copy-linked-files',
