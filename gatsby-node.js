@@ -2,6 +2,7 @@ const _ = require('lodash');
 const Promise = require('bluebird');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
+const splitSlug = require('./src/utils/SplitSlugToFilePath');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -41,15 +42,17 @@ exports.createPages = ({ graphql, actions }) => {
         const categorySet = new Set();
 
         _.forEach(posts, ({ node }) => {
-          categorySet.add(node.frontmatter.category);
+          const newSlug = splitSlug(node.fields.slug);
 
           createPage({
-            path: node.fields.slug,
+            path: newSlug,
             component: blogPost,
             context: {
-              slug: node.fields.slug,
+              slug: newSlug,
             },
           });
+
+          categorySet.add(node.frontmatter.category);
         });
 
         const categoryList = Array.from(categorySet);
@@ -73,6 +76,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === 'MarkdownRemark') {
     const value = createFilePath({ node, getNode });
+
     createNodeField({
       name: 'slug',
       node,

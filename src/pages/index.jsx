@@ -68,7 +68,7 @@ export const pageQuery = graphql`
       }
     }
     allFile(
-      sort: { fields: mtime, order: DESC }
+      sort: { fields: relativeDirectory, order: DESC }
       filter: { name: { regex: "/post_thumb/" } }
     ) {
       edges {
