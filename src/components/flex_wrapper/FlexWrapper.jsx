@@ -14,7 +14,9 @@ import PostInformation from '../post_information/PostInformation';
 import PostList from '../post_list/PostList';
 
 const FlexWrapper = ({ query }) => {
-  const { itemList, markdownItem, thumbnail } = query;
+  const {
+    itemList, markdownItem, thumbnail, category,
+  } = query;
 
   return (
     <Styled.FlexWrapper>
@@ -45,6 +47,7 @@ const FlexWrapper = ({ query }) => {
               edges={{
                 markdown: itemList.markdown,
                 imgSharp: itemList.imgSharp,
+                category,
               }}
             />
           )}
@@ -59,6 +62,7 @@ FlexWrapper.propTypes = {
     itemList: PropTypes.object.isRequired,
     markdownItem: PropTypes.object.isRequired,
     thumbnail: PropTypes.string.isRequired,
+    category: PropTypes.string,
   }).isRequired,
 };
 
