@@ -5,46 +5,58 @@ import { Link } from 'gatsby';
 import Styled from './StyledSideMenu';
 
 // Methods
-import { callSidebar } from '../header/Header';
+import { Hamburger } from '../header/Header';
 
-export default () => (
-  <Styled.MenuWrapper>
-    <Styled.Menu>
-      <Styled.MenuList>
-        <li>
-          <Link to="/" onClick={() => callSidebar()}>
-            Latest
-          </Link>
-        </li>
-      </Styled.MenuList>
-      <Styled.MenuLabel>Programming</Styled.MenuLabel>
-      <Styled.MenuList>
-        <li>
-          <Link to="/">Frontend</Link>
-        </li>
-        <li>
-          <Link to="/">Backend</Link>
-        </li>
-      </Styled.MenuList>
-      <Styled.MenuLabel>Literature</Styled.MenuLabel>
-      <Styled.MenuList>
-        <li>
-          <Link to="/categories/essay" onClick={() => callSidebar()}>
-            Essay
-          </Link>
-        </li>
-        <li>
-          <Link to="/categories/review" onClick={() => callSidebar()}>
-            Review
-          </Link>
-        </li>
-      </Styled.MenuList>
-      <Styled.MenuLabel>About</Styled.MenuLabel>
-      <Styled.MenuList>
-        <li>
-          <Link to="/">About Me</Link>
-        </li>
-      </Styled.MenuList>
-    </Styled.Menu>
-  </Styled.MenuWrapper>
-);
+class SideMenu extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.callSidebar = Hamburger.callSidebar.bind(this);
+  }
+
+  render() {
+    return (
+      <Styled.MenuWrapper>
+        <Styled.Menu>
+          <Styled.MenuList>
+            <li>
+              <Link to="/" onClick={this.callSidebar}>
+                Latest
+              </Link>
+            </li>
+          </Styled.MenuList>
+          <Styled.MenuLabel>Programming</Styled.MenuLabel>
+          <Styled.MenuList>
+            <li>
+              <Link to="/">Frontend</Link>
+            </li>
+            <li>
+              <Link to="/">Backend</Link>
+            </li>
+          </Styled.MenuList>
+          <Styled.MenuLabel>Literature</Styled.MenuLabel>
+          <Styled.MenuList>
+            <li>
+              <Link to="/categories/essay" onClick={this.callSidebar}>
+                Essay
+              </Link>
+            </li>
+            <li>
+              <Link to="/categories/review" onClick={this.callSidebar}>
+                Review
+              </Link>
+            </li>
+          </Styled.MenuList>
+          <Styled.MenuLabel>About</Styled.MenuLabel>
+          <Styled.MenuList>
+            <li>
+              <Link to="/">About Me</Link>
+            </li>
+          </Styled.MenuList>
+        </Styled.Menu>
+      </Styled.MenuWrapper>
+    );
+  }
+}
+
+export default SideMenu;
