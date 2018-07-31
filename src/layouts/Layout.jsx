@@ -57,7 +57,7 @@ const Layout = ({ children, query }) => {
           sizes="16x16"
           href="/favicon_package/favicon-16x16.png"
         />
-        <link rel="manifest" href="/favicon_package/site.webmanifest" />
+        <link rel="manifest" href="/favicon_package/site.webmanifest.json" />
         <link
           rel="mask-icon"
           href="/favicon_package/safari-pinned-tab.svg"
