@@ -7,8 +7,8 @@ import Styled from './StyledGreyOut';
 import { Hamburger } from '../header/Header';
 
 class GreyOut extends React.PureComponent {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.callSidebar = Hamburger.callSidebar.bind(this);
   }
