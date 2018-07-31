@@ -4598,7 +4598,7 @@ gatsby-link@^2.0.0-beta.5:
     react-lifecycles-compat "^3.0.2"
     ric "^1.3.0"
 
-gatsby-plugin-google-analytics@^2.0.0-beta.3:
+gatsby-plugin-google-analytics@next:
   version "2.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.0-beta.3.tgz#4a4ca7a58c9175cb6048d364f3dcbeaf58f44052"
   dependencies:
