@@ -34,6 +34,7 @@ const Layout = ({ children, query }) => {
         <script type="application/ld+json">
           {JSON.stringify(schemaOrgJSON)}
         </script>
+        <script async src={config.googleAdSenseEndpoint} />
         <link
           rel="apple-touch-icon"
           sizes="180x180"

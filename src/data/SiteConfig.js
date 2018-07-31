@@ -6,6 +6,9 @@ module.exports = {
   siteUrl: 'https://www.huskyhoochu.com',
   author: 'husky',
   googleAnalyticsId: 'UA-100360993-4',
+  googleAdSenseEndpoint:
+    '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+  googleAdSenseClientId: 'ca-pub-7714688207671069',
   googleVerificationCode: 'GgxdKaAIavUipoP0qqmrusNSygoGsdMVZgMtzowaZCo',
   welcomeMessage:
     '"장은 어리석은 질문이야말로 유일하게 가치 있는 질문이라고 믿었다. 어리석은 질문에는 답이 없거나 틀린 답만이 존재할 뿐이며, 이로써 질문은'
