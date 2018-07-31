@@ -50,7 +50,9 @@ class PostList extends React.Component {
 
 const PostWrapper = ({ edges }) => (
   <Fragment>
-    <Styled.CategoryTitle>Latest</Styled.CategoryTitle>
+    <Styled.CategoryTitle>
+      {_.startCase(_.kebabCase(edges.category))}
+    </Styled.CategoryTitle>
     <Styled.PostWrapper>
       <PostList content={edges} />
     </Styled.PostWrapper>
@@ -68,6 +70,7 @@ PostWrapper.propTypes = {
   edges: PropTypes.shape({
     markdown: PropTypes.array.isRequired,
     imgSharp: PropTypes.array.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
