@@ -68,7 +68,7 @@ export const pageQuery = graphql`
     }
     allFile(
       sort: { fields: mtime, order: DESC }
-      filter: { name: { eq: "post_thumb" } }
+      filter: { name: { regex: "/post_thumb/" } }
     ) {
       edges {
         node {
