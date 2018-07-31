@@ -6,6 +6,9 @@ import { Link } from 'gatsby';
 // Styled
 import Styled from './StyledPostList';
 
+// Methods
+import splitSlug from '../../utils/SplitSlugToFilePath';
+
 class PostList extends React.Component {
   static handleTouch(e) {
     e.currentTarget.classList.toggle('move');
@@ -35,7 +38,7 @@ class PostList extends React.Component {
 
       return (
         <Styled.PostBody key={markdownItem.fields.slug}>
-          <Link to={markdownItem.fields.slug}>
+          <Link to={splitSlug(markdownItem.fields.slug)}>
             <Styled.PostThumb src={fluid.src} alt="post-thumb" />
             <Styled.PostTitle>{title}</Styled.PostTitle>
             <Styled.PostSubtitle>{subtitle}</Styled.PostSubtitle>
