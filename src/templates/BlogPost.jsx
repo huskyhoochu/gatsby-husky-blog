@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 
 // Component
 import Layout from '../layouts/Layout';
+import SEOHelmet from '../components/seo_helmet/SEOHelmet';
 
 const BlogPost = ({ data }) => {
   const { markdownRemark, site, file } = data;
@@ -17,16 +17,15 @@ const BlogPost = ({ data }) => {
         thumbnail: file.childImageSharp.fluid.src,
       }}
     >
-      <Helmet>
-        <link
-          rel="canonical"
-          href={site.siteMetadata.siteUrl + markdownRemark.fields.slug}
-        />
-        <meta name="description" content={markdownRemark.frontmatter.excerpt} />
-        <title>{`${markdownRemark.frontmatter.title} | ${
-          site.siteMetadata.siteTitle
-        }`}</title>
-      </Helmet>
+      <SEOHelmet
+        content={{
+          canonical: site.siteMetadata.siteUrl + markdownRemark.fields.slug,
+          description: markdownRemark.frontmatter.excerpt,
+          title: `${markdownRemark.frontmatter.title} | ${
+            site.siteMetadata.siteTitle
+          }`,
+        }}
+      />
     </Layout>
   );
 };
