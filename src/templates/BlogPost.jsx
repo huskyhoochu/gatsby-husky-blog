@@ -58,7 +58,7 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    file(relativeDirectory: { regex: $slug }, name: { eq: "post_thumb" }) {
+    file(relativeDirectory: { regex: $slug }, name: { regex: "/post_thumb/" }) {
       childImageSharp {
         fluid {
           src
