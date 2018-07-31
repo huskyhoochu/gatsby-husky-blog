@@ -24,6 +24,7 @@ const BlogIndex = ({ data }) => {
         },
         markdownItem: {},
         thumbnail: file.childImageSharp.fluid.src,
+        category: 'Latest',
       }}
     >
       <Helmet>
