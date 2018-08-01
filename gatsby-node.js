@@ -48,7 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
             path: newSlug,
             component: blogPost,
             context: {
-              slug: newSlug,
+              slug: `/${newSlug}/`,
             },
           });
 

@@ -1,5 +1,5 @@
 const _ = require('lodash');
 
 module.exports = function splitSlug(filePath) {
-  return `/${_.split(filePath, '.', 2)[1]}`;
+  return _.kebabCase(_.split(filePath, '.', 2)[1]);
 };
