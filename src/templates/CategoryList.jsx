@@ -71,7 +71,7 @@ export const pageQuery = graphql`
       }
     }
     allFile(
-      sort: { fields: mtime, order: DESC }
+      sort: { fields: relativeDirectory, order: DESC }
       filter: {
         relativeDirectory: { ne: "images" }
         name: { regex: $category }
