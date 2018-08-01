@@ -44,7 +44,7 @@ class PostList extends React.PureComponent {
 
       return (
         <Styled.PostBody key={markdownItem.fields.slug}>
-          <Link to={splitSlug(markdownItem.fields.slug)}>
+          <Link to={`/${splitSlug(markdownItem.fields.slug)}`}>
             <Styled.PostThumb src={fluid.src} alt="post-thumb" />
             <Styled.PostTitle>{title}</Styled.PostTitle>
             <Styled.PostSubtitle>{subtitle}</Styled.PostSubtitle>
