@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import MainThumb from '../../assets/images/thumb_min.jpg';
+import MainThumb from '../../assets/images/thumb_index.jpg';
 
 // Styled
-import StyledIndexInformation from '../index_information/StyledIndexInformation';
+import StyledFlexWrpper from '../flex_wrapper/StyledFlexWrapper';
 
 const GreyOut = styled.div`
   position: absolute;
@@ -32,7 +32,7 @@ const LeftSection = styled.section.attrs({
       opacity: 1;
     }
 
-    ${StyledIndexInformation.InfoWrapper} {
+    ${StyledFlexWrpper.InfoWrapper} {
       transform: translateY(-1rem);
     }
   }

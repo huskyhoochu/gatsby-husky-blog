@@ -22,8 +22,9 @@ const BlogPost = ({ data }) => {
     >
       <SEOHelmet
         content={{
-          canonical:
-            site.siteMetadata.siteUrl + splitSlug(markdownRemark.fields.slug),
+          canonical: `${site.siteMetadata.siteUrl}/${splitSlug(
+            markdownRemark.fields.slug,
+          )}`,
           description: markdownRemark.frontmatter.excerpt,
           title: `${markdownRemark.frontmatter.title} | ${
             site.siteMetadata.siteTitle

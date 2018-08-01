@@ -71,8 +71,11 @@ export const pageQuery = graphql`
       }
     }
     allFile(
-      sort: { fields: mtime, order: DESC }
-      filter: { name: { regex: $category } }
+      sort: { fields: relativeDirectory, order: DESC }
+      filter: {
+        relativeDirectory: { ne: "images" }
+        name: { regex: $category }
+      }
     ) {
       edges {
         node {
@@ -84,7 +87,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(name: { eq: "thumb_min" }) {
+    file(relativeDirectory: { eq: "images" }, name: { regex: $category }) {
       childImageSharp {
         fluid {
           src

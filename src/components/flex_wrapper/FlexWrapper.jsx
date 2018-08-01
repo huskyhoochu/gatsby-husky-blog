@@ -9,7 +9,7 @@ import Styled from './StyledFlexWrapper';
 // Components
 import LeftSection from '../left_section/LeftSection';
 import RightSection from '../right_section/RightSection';
-import IndexInformation from '../index_information/IndexInformation';
+import CategoryInformation from '../category_information/CategoryInformation';
 import PostInformation from '../post_information/PostInformation';
 import PostList from '../post_list/PostList';
 
@@ -18,40 +18,52 @@ const FlexWrapper = ({ query }) => {
     itemList, markdownItem, thumbnail, category,
   } = query;
 
+  const whatInformation = () => {
+    if (Object.keys(markdownItem).length !== 0) {
+      return (
+        <PostInformation
+          content={{
+            frontmatter: markdownItem.frontmatter,
+            author: config.author,
+          }}
+        />
+      );
+    }
+    return <CategoryInformation category={category} />;
+  };
+
+  const whatPage = () => {
+    if (Object.keys(markdownItem).length !== 0) {
+      return (
+        <Styled.Content
+          dangerouslySetInnerHTML={{ __html: markdownItem.html }}
+        />
+      );
+    }
+    return (
+      <PostList
+        edges={{
+          markdown: itemList.markdown,
+          imgSharp: itemList.imgSharp,
+          category,
+        }}
+      />
+    );
+  };
+
   return (
     <Styled.FlexWrapper>
       <ThemeProvider theme={{ main: thumbnail }}>
         <LeftSection>
           <Styled.ContentsWrapper>
-            {Object.keys(markdownItem).length !== 0 ? (
-              <PostInformation
-                content={{
-                  frontmatter: markdownItem.frontmatter,
-                  author: config.author,
-                }}
-              />
-            ) : (
-              <IndexInformation />
-            )}
+            <Styled.InfoWrapper>
+              <Styled.InfoInner>{whatInformation()}</Styled.InfoInner>
+            </Styled.InfoWrapper>
           </Styled.ContentsWrapper>
         </LeftSection>
       </ThemeProvider>
       <RightSection>
-        <Styled.ContentsWrapper>
-          {Object.keys(markdownItem).length !== 0 ? (
-            <Styled.Content
-              dangerouslySetInnerHTML={{ __html: markdownItem.html }}
-            />
-          ) : (
-            <PostList
-              edges={{
-                markdown: itemList.markdown,
-                imgSharp: itemList.imgSharp,
-                category,
-              }}
-            />
-          )}
-        </Styled.ContentsWrapper>
+        <Styled.ContentsWrapper>{whatPage()}</Styled.ContentsWrapper>
       </RightSection>
     </Styled.FlexWrapper>
   );
