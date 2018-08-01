@@ -9,7 +9,7 @@ import Styled from './StyledFlexWrapper';
 // Components
 import LeftSection from '../left_section/LeftSection';
 import RightSection from '../right_section/RightSection';
-import IndexInformation from '../index_information/IndexInformation';
+import CategoryInformation from '../category_information/CategoryInformation';
 import PostInformation from '../post_information/PostInformation';
 import PostList from '../post_list/PostList';
 
@@ -29,7 +29,7 @@ const FlexWrapper = ({ query }) => {
         />
       );
     }
-    return <IndexInformation />;
+    return <CategoryInformation />;
   };
 
   const whatPage = () => {

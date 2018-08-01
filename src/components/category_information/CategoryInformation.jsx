@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import config from '../../data/SiteConfig';
 
 // Styled
-import Styled from './StyledIndexInformation';
+import Styled from './StyledCategoryInformation';
 
 export default () => (
   <Fragment>
