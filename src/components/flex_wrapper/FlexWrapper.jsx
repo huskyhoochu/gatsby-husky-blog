@@ -8,7 +8,6 @@ import Styled from './StyledFlexWrapper';
 
 // Components
 import LeftSection from '../left_section/LeftSection';
-import RightSection from '../right_section/RightSection';
 import CategoryInformation from '../category_information/CategoryInformation';
 import PostInformation from '../post_information/PostInformation';
 import PostList from '../post_list/PostList';
@@ -62,9 +61,9 @@ const FlexWrapper = ({ query }) => {
           </Styled.ContentsWrapper>
         </LeftSection>
       </ThemeProvider>
-      <RightSection>
+      <Styled.RightSection>
         <Styled.ContentsWrapper>{whatPage()}</Styled.ContentsWrapper>
-      </RightSection>
+      </Styled.RightSection>
     </Styled.FlexWrapper>
   );
 };
