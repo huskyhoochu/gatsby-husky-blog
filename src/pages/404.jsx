@@ -8,7 +8,6 @@ import Logo from '../../static/favicon_package/android-chrome-512x512.png';
 
 // Styled
 import StyledLayout from '../layouts/StyledLayout';
-import StyledIndexInformation from '../components/index_information/StyledIndexInformation';
 import StyledFlexWrapper from '../components/flex_wrapper/StyledFlexWrapper';
 
 export default () => (
@@ -17,8 +16,8 @@ export default () => (
       <title>{`Page not found | ${config.siteTitle}`}</title>
     </Helmet>
     <StyledLayout.Canvas>
-      <StyledIndexInformation.InfoWrapper style={{ height: '100vh' }}>
-        <StyledIndexInformation.InfoInner style={{ color: '#263238' }}>
+      <StyledFlexWrapper.InfoWrapper style={{ height: '100vh' }}>
+        <StyledFlexWrapper.InfoInner style={{ color: '#263238' }}>
           <StyledFlexWrapper.ContentsWrapper>
             <img
               src={Logo}
@@ -31,8 +30,8 @@ export default () => (
               <strong>홈으로 돌아가기</strong>
             </Link>
           </StyledFlexWrapper.ContentsWrapper>
-        </StyledIndexInformation.InfoInner>
-      </StyledIndexInformation.InfoWrapper>
+        </StyledFlexWrapper.InfoInner>
+      </StyledFlexWrapper.InfoWrapper>
     </StyledLayout.Canvas>
   </StyledLayout.App>
 );
