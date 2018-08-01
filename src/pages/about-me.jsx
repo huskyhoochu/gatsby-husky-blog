@@ -7,14 +7,14 @@ import Layout from '../layouts/Layout';
 import SEOHelmet from '../components/seo_helmet/SEOHelmet';
 
 const AboutMe = ({ data, location }) => {
-  const { site, file } = data;
+  const { markdownRemark, site, file } = data;
   const { pathname } = location;
 
   return (
     <Layout
       query={{
         itemList: {},
-        markdownItem: {},
+        markdownItem: markdownRemark,
         thumbnail: file.childImageSharp.fluid.src,
       }}
     >
@@ -22,7 +22,9 @@ const AboutMe = ({ data, location }) => {
         content={{
           canonical: site.siteMetadata.siteUrl + pathname,
           description: '안뇽',
-          title: `About Me | ${site.siteMetadata.siteTitle}`,
+          title: `${markdownRemark.frontmatter.title} | ${
+            site.siteMetadata.siteTitle
+          }`,
         }}
       />
     </Layout>
@@ -36,6 +38,10 @@ AboutMe.propTypes = {
     }).isRequired,
     site: PropTypes.shape({
       siteMetadata: PropTypes.object.isRequired,
+    }).isRequired,
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object.isRequired,
+      html: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
   location: PropTypes.shape({
@@ -58,6 +64,14 @@ export const pageQuery = graphql`
         fluid {
           src
         }
+      }
+    }
+    markdownRemark(frontmatter: { title: { eq: "About Me" } }) {
+      html
+      frontmatter {
+        date(formatString: "YYYY-MM-DD")
+        title
+        subtitle
       }
     }
   }
