@@ -61,7 +61,11 @@ const FlexWrapper = ({ query }) => {
     <Styled.FlexWrapper>
       <ThemeProvider theme={{ main: thumbnail }}>
         <LeftSection>
-          <Styled.ContentsWrapper>{whatInformation()}</Styled.ContentsWrapper>
+          <Styled.ContentsWrapper>
+            <Styled.InfoWrapper>
+              <Styled.InfoInner>{whatInformation()}</Styled.InfoInner>
+            </Styled.InfoWrapper>
+          </Styled.ContentsWrapper>
         </LeftSection>
       </ThemeProvider>
       <RightSection>
