@@ -18,40 +18,54 @@ const FlexWrapper = ({ query }) => {
     itemList, markdownItem, thumbnail, category,
   } = query;
 
+  const whatInformation = () => {
+    if (Object.keys(markdownItem).length !== 0) {
+      return (
+        <PostInformation
+          content={{
+            frontmatter: markdownItem.frontmatter,
+            author: config.author,
+          }}
+        />
+      );
+    }
+    if (Object.keys(itemList).length !== 0) {
+      return <IndexInformation />;
+    }
+    return <div>about me</div>;
+  };
+
+  const whatPage = () => {
+    if (Object.keys(markdownItem).length !== 0) {
+      return (
+        <Styled.Content
+          dangerouslySetInnerHTML={{ __html: markdownItem.html }}
+        />
+      );
+    }
+    if (Object.keys(itemList).length !== 0) {
+      return (
+        <PostList
+          edges={{
+            markdown: itemList.markdown,
+            imgSharp: itemList.imgSharp,
+            category,
+          }}
+        />
+      );
+    }
+    return <div>about me</div>;
+  };
+
   return (
     <Styled.FlexWrapper>
       <ThemeProvider theme={{ main: thumbnail }}>
         <LeftSection>
-          <Styled.ContentsWrapper>
-            {Object.keys(markdownItem).length !== 0 ? (
-              <PostInformation
-                content={{
-                  frontmatter: markdownItem.frontmatter,
-                  author: config.author,
-                }}
-              />
-            ) : (
-              <IndexInformation />
-            )}
-          </Styled.ContentsWrapper>
+          <Styled.ContentsWrapper>{whatInformation()}</Styled.ContentsWrapper>
         </LeftSection>
       </ThemeProvider>
       <RightSection>
-        <Styled.ContentsWrapper>
-          {Object.keys(markdownItem).length !== 0 ? (
-            <Styled.Content
-              dangerouslySetInnerHTML={{ __html: markdownItem.html }}
-            />
-          ) : (
-            <PostList
-              edges={{
-                markdown: itemList.markdown,
-                imgSharp: itemList.imgSharp,
-                category,
-              }}
-            />
-          )}
-        </Styled.ContentsWrapper>
+        <Styled.ContentsWrapper>{whatPage()}</Styled.ContentsWrapper>
       </RightSection>
     </Styled.FlexWrapper>
   );
