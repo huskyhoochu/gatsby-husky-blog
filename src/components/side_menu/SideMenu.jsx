@@ -50,7 +50,7 @@ class SideMenu extends React.PureComponent {
           <Styled.MenuLabel>About</Styled.MenuLabel>
           <Styled.MenuList>
             <li>
-              <Link to="/">About Me</Link>
+              <Link to="/about-me/">About Me</Link>
             </li>
           </Styled.MenuList>
         </Styled.Menu>
