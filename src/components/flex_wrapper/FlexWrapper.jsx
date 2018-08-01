@@ -29,7 +29,7 @@ const FlexWrapper = ({ query }) => {
         />
       );
     }
-    return <CategoryInformation />;
+    return <CategoryInformation category={category} />;
   };
 
   const whatPage = () => {
