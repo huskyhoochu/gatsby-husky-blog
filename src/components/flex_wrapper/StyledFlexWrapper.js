@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+const RightSection = styled.section`
+  background-color: white;
+  position: relative;
+  z-index: 4;
+  flex: 1;
+`;
+
 const FlexWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -90,6 +97,7 @@ const Content = styled.article`
 `;
 
 export default {
+  RightSection,
   FlexWrapper,
   ContentsWrapper,
   InfoWrapper,
