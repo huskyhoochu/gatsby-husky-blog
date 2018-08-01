@@ -8,8 +8,8 @@ import Styled from './StyledSideMenu';
 import { Hamburger } from '../header/Header';
 
 class SideMenu extends React.PureComponent {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.callSidebar = Hamburger.callSidebar.bind(this);
   }
