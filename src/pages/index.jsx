@@ -84,7 +84,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativeDirectory: { eq: "images" }, name: { eq: "thumb_index" }) {
+    file(relativeDirectory: { eq: "images" }, name: { eq: "category_index" }) {
       childImageSharp {
         fluid {
           src
