@@ -18,6 +18,39 @@ const ContentsWrapper = styled.div`
   }
 `;
 
+const InfoWrapper = styled.div`
+  position: relative;
+  z-index: 3;
+  color: floralwhite;
+  margin: 0 7rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+
+  @media (max-width: 414px) {
+    margin: 0 1rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+`;
+
+const InfoInner = styled.article`
+  align-self: center;
+  text-align: center;
+`;
+
 const Content = styled.article`
   margin: 1rem;
   line-height: 1.75;
@@ -59,5 +92,7 @@ const Content = styled.article`
 export default {
   FlexWrapper,
   ContentsWrapper,
+  InfoWrapper,
+  InfoInner,
   Content,
 };
