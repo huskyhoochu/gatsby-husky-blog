@@ -29,10 +29,7 @@ const FlexWrapper = ({ query }) => {
         />
       );
     }
-    if (Object.keys(itemList).length !== 0) {
-      return <IndexInformation />;
-    }
-    return <div>about me</div>;
+    return <IndexInformation />;
   };
 
   const whatPage = () => {
@@ -43,18 +40,15 @@ const FlexWrapper = ({ query }) => {
         />
       );
     }
-    if (Object.keys(itemList).length !== 0) {
-      return (
-        <PostList
-          edges={{
-            markdown: itemList.markdown,
-            imgSharp: itemList.imgSharp,
-            category,
-          }}
-        />
-      );
-    }
-    return <div>about me</div>;
+    return (
+      <PostList
+        edges={{
+          markdown: itemList.markdown,
+          imgSharp: itemList.imgSharp,
+          category,
+        }}
+      />
+    );
   };
 
   return (
