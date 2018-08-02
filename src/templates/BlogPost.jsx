@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
 // CSS
-import 'prismjs/themes/prism-solarizedlight.css';
+import '../assets/css/prismjs-minified.css';
 
 // Component
 import Layout from '../layouts/Layout';
