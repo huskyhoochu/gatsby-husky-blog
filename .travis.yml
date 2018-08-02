@@ -10,3 +10,4 @@ node_js:
 
 script:
   - yarn lint ./src/**/*.{js,jsx}
+  - yarn build
