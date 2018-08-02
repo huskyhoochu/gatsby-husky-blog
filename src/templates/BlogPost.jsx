@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
+// CSS
+import 'prismjs/themes/prism-solarizedlight.css';
+
 // Component
 import Layout from '../layouts/Layout';
 import SEOHelmet from '../components/seo_helmet/SEOHelmet';
