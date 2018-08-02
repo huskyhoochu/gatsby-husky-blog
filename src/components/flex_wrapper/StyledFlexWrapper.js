@@ -78,6 +78,12 @@ const Content = styled.article`
     text-indent: 0;
   }
 
+  pre {
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   pre,
   code {
     font-family: 'Source Code Pro', monospace;
