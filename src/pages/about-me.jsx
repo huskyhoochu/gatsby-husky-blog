@@ -6,10 +6,7 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/Layout';
 import SEOHelmet from '../components/seo_helmet/SEOHelmet';
 
-// Methods
-import splitSlug from '../utils/SplitSlugToFilePath';
-
-const BlogPost = ({ data }) => {
+const AboutMe = ({ data }) => {
   const { markdownRemark, site, file } = data;
 
   return (
@@ -22,9 +19,7 @@ const BlogPost = ({ data }) => {
     >
       <SEOHelmet
         content={{
-          canonical: `${site.siteMetadata.siteUrl}/${splitSlug(
-            markdownRemark.fields.slug,
-          )}`,
+          canonical: `${site.siteMetadata.siteUrl}/about-me`,
           description: markdownRemark.frontmatter.excerpt,
           title: `${markdownRemark.frontmatter.title} | ${
             site.siteMetadata.siteTitle
@@ -35,7 +30,7 @@ const BlogPost = ({ data }) => {
   );
 };
 
-BlogPost.propTypes = {
+AboutMe.propTypes = {
   data: PropTypes.shape({
     file: PropTypes.shape({
       childImageSharp: PropTypes.object.isRequired,
@@ -44,36 +39,31 @@ BlogPost.propTypes = {
       siteMetadata: PropTypes.object.isRequired,
     }).isRequired,
     markdownRemark: PropTypes.shape({
-      fields: PropTypes.object.isRequired,
       frontmatter: PropTypes.object.isRequired,
       html: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };
 
-export default BlogPost;
+export default AboutMe;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query AboutMeQuery {
     site {
       siteMetadata {
         siteTitle
-        author
         siteUrl
       }
     }
-    file(relativeDirectory: { regex: $slug }, name: { regex: "/post/" }) {
+    file(relativeDirectory: { eq: "images" }, name: { eq: "about_me" }) {
       childImageSharp {
         fluid {
           src
         }
       }
     }
-    markdownRemark(fields: { slug: { regex: $slug } }) {
+    markdownRemark(frontmatter: { title: { eq: "About Me" } }) {
       html
-      fields {
-        slug
-      }
       frontmatter {
         date(formatString: "YYYY-MM-DD")
         excerpt

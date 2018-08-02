@@ -19,13 +19,13 @@ const SEOHelmet = ({ content }) => {
       <html lang="ko" />
       <meta
         name="google-site-verification"
-        content={config.googleVerificationCode}
+        content={config.google.verificationCode}
       />
       <meta name="author" content={config.author} />
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSON)}
       </script>
-      <script async src={config.googleAdSenseEndpoint} />
+      <script async src={config.google.adSense.endpoint} />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
