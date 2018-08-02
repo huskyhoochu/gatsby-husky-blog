@@ -28,7 +28,9 @@ class SideMenu extends React.PureComponent {
           <Styled.MenuLabel>Programming</Styled.MenuLabel>
           <Styled.MenuList>
             <li>
-              <Link to="/">Frontend</Link>
+              <Link to="/categories/frontend" onClick={this.callSidebar}>
+                Frontend
+              </Link>
             </li>
             <li>
               <Link to="/">Backend</Link>
