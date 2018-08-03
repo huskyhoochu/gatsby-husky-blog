@@ -71,7 +71,7 @@ export const pageQuery = graphql`
     }
     allFile(
       sort: { fields: relativeDirectory, order: DESC }
-      filter: { name: { regex: "/post/", ne: "post_none" } }
+      filter: { name: { regex: "/post/" } }
     ) {
       edges {
         node {
