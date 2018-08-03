@@ -15,7 +15,7 @@ import PostList from '../post_list/PostList';
 
 const FlexWrapper = ({ query }) => {
   const {
-    itemList, markdownItem, thumbnail, category,
+    itemList, markdownItem, thumbnail, location, category,
   } = query;
 
   const whatInformation = () => {
@@ -25,6 +25,7 @@ const FlexWrapper = ({ query }) => {
           content={{
             frontmatter: markdownItem.frontmatter,
             author: config.author,
+            location,
           }}
         />
       );
@@ -83,6 +84,7 @@ FlexWrapper.propTypes = {
     itemList: PropTypes.object.isRequired,
     markdownItem: PropTypes.object.isRequired,
     thumbnail: PropTypes.string.isRequired,
+    location: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,
 };

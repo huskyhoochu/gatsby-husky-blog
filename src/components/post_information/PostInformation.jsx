@@ -1,5 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import FacebookProvider, { Share } from 'react-facebook';
+import config from '../../data/SiteConfig';
+
+// CSS
+import faFacebook from '../../assets/icons/facebook.svg';
+
+// Styled
+import Styled from './StyledPostInformation';
 
 const PostInformation = ({ content }) => (
   <Fragment>
@@ -10,6 +18,17 @@ const PostInformation = ({ content }) => (
       <span>&nbsp;|&nbsp;</span>
       <strong>{content.author}</strong>
     </p>
+    {content.location ? (
+      <p>
+        <FacebookProvider appId={config.facebookAppId}>
+          <Share href={`${config.siteUrl}/${content.location}`}>
+            <Styled.IconButton>
+              <Styled.Icon src={faFacebook} />
+            </Styled.IconButton>
+          </Share>
+        </FacebookProvider>
+      </p>
+    ) : null}
   </Fragment>
 );
 
@@ -21,6 +40,7 @@ PostInformation.propTypes = {
       date: PropTypes.string.isRequired,
     }).isRequired,
     author: PropTypes.string.isRequired,
+    location: PropTypes.string,
   }).isRequired,
 };
 

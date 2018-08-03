@@ -9,7 +9,7 @@ import '../assets/css/prismjs-minified.css';
 import Layout from '../layouts/Layout';
 import SEOHelmet from '../components/seo_helmet/SEOHelmet';
 
-// Methods
+// Method
 import splitSlug from '../utils/SplitSlugToFilePath';
 
 const BlogPost = ({ data }) => {
@@ -21,6 +21,7 @@ const BlogPost = ({ data }) => {
         itemList: {},
         markdownItem: markdownRemark,
         thumbnail: file.childImageSharp.fluid.src,
+        location: splitSlug(markdownRemark.fields.slug),
       }}
     >
       <SEOHelmet
