@@ -18,6 +18,7 @@ const BlogPost = ({ data, location }) => {
         itemList: {},
         markdownItem: markdownRemark,
         thumbnail: file.childImageSharp.fluid.src,
+        location: location.pathname,
       }}
     >
       <SEOHelmet
