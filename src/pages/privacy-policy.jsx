@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/Layout';
 import SEOHelmet from '../components/seo_helmet/SEOHelmet';
 
-const AboutMe = ({ data }) => {
+const AboutMe = ({ data, location }) => {
   const { markdownRemark, site, file } = data;
 
   return (
@@ -19,7 +19,7 @@ const AboutMe = ({ data }) => {
     >
       <SEOHelmet
         content={{
-          canonical: `${site.siteMetadata.siteUrl}/privacy-policy`,
+          canonical: `${site.siteMetadata.siteUrl}${location.pathname}`,
           description: markdownRemark.frontmatter.excerpt,
           title: `${markdownRemark.frontmatter.title} | ${
             site.siteMetadata.siteTitle
@@ -42,6 +42,9 @@ AboutMe.propTypes = {
       frontmatter: PropTypes.object.isRequired,
       html: PropTypes.string.isRequired,
     }).isRequired,
+  }).isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
   }).isRequired,
 };
 

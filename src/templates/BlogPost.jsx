@@ -9,10 +9,7 @@ import '../assets/css/prismjs-minified.css';
 import Layout from '../layouts/Layout';
 import SEOHelmet from '../components/seo_helmet/SEOHelmet';
 
-// Methods
-import splitSlug from '../utils/SplitSlugToFilePath';
-
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, location }) => {
   const { markdownRemark, site, file } = data;
 
   return (
@@ -25,9 +22,7 @@ const BlogPost = ({ data }) => {
     >
       <SEOHelmet
         content={{
-          canonical: `${site.siteMetadata.siteUrl}/${splitSlug(
-            markdownRemark.fields.slug,
-          )}`,
+          canonical: `${site.siteMetadata.siteUrl}${location.pathname}`,
           description: markdownRemark.frontmatter.excerpt,
           title: `${markdownRemark.frontmatter.title} | ${
             site.siteMetadata.siteTitle
@@ -51,6 +46,9 @@ BlogPost.propTypes = {
       frontmatter: PropTypes.object.isRequired,
       html: PropTypes.string.isRequired,
     }).isRequired,
+  }).isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
   }).isRequired,
 };
 
