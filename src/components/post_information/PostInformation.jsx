@@ -21,7 +21,7 @@ const PostInformation = ({ content }) => (
     {content.location ? (
       <p>
         <FacebookProvider appId={config.facebookAppId}>
-          <Share href={`${config.siteUrl}${content.location}`}>
+          <Share href={`${config.siteUrl}/${content.location}`}>
             <Styled.IconButton>
               <Styled.Icon src={faFacebook} />
             </Styled.IconButton>

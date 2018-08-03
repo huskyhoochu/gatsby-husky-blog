@@ -7,7 +7,7 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/Layout';
 import SEOHelmet from '../components/seo_helmet/SEOHelmet';
 
-const CategoryList = ({ data, pathContext, location }) => {
+const CategoryList = ({ data, pathContext }) => {
   const {
     allFile, allMarkdownRemark, file, site,
   } = data;
@@ -27,7 +27,9 @@ const CategoryList = ({ data, pathContext, location }) => {
     >
       <SEOHelmet
         content={{
-          canonical: `${site.siteMetadata.siteUrl}${location.pathname}`,
+          canonical: `${site.siteMetadata.siteUrl}/categories/${_.kebabCase(
+            category,
+          )}`,
           description: _.startCase(_.kebabCase(category)),
           title: `Category as "${_.startCase(_.kebabCase(category))}" | ${
             site.siteMetadata.siteTitle
@@ -55,9 +57,6 @@ CategoryList.propTypes = {
   }).isRequired,
   pathContext: PropTypes.shape({
     category: PropTypes.string.isRequired,
-  }).isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string.isRequired,
   }).isRequired,
 };
 
