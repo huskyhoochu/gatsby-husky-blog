@@ -52,7 +52,14 @@ class SideMenu extends React.PureComponent {
           <Styled.MenuLabel>About</Styled.MenuLabel>
           <Styled.MenuList>
             <li>
-              <Link to="/about-me">About Me</Link>
+              <Link to="/about-me" onClick={this.callSidebar}>
+                About Me
+              </Link>
+            </li>
+            <li>
+              <Link to="/privacy-policy" onClick={this.callSidebar}>
+                Privacy Policy
+              </Link>
             </li>
           </Styled.MenuList>
         </Styled.Menu>

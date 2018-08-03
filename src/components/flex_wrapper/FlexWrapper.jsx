@@ -43,6 +43,7 @@ const FlexWrapper = ({ query }) => {
             <AdSense.Google
               client={config.google.adSense.clientId}
               slot={config.google.adSense.clientSlot}
+              layout="in-article"
             />
           </Styled.Content>
         </Fragment>

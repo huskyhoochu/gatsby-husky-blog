@@ -71,7 +71,7 @@ export const pageQuery = graphql`
     }
     allFile(
       sort: { fields: relativeDirectory, order: DESC }
-      filter: { name: { regex: "/post/", ne: "post_none" } }
+      filter: { name: { regex: "/post/" } }
     ) {
       edges {
         node {
@@ -92,7 +92,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { title: { ne: "About Me" } } }
+      filter: { frontmatter: { published: { ne: "false" } } }
     ) {
       edges {
         node {
