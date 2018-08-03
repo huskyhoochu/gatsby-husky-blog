@@ -78,6 +78,10 @@ const Content = styled.article`
     text-indent: 0;
   }
 
+  hr {
+    margin: 2rem 0;
+  }
+
   pre {
     max-width: 45rem;
     margin-left: auto;
@@ -96,6 +100,10 @@ const Content = styled.article`
     margin: 1rem 1rem 1rem 0;
     padding: 0.4rem 0.8rem;
     font-size: 1.1rem;
+
+    p {
+      margin: 0.5rem 0;
+    }
   }
 
   @media (max-width: 414px) {
