@@ -55,7 +55,7 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    file(relativeDirectory: { eq: "images" }, name: { eq: "about_me" }) {
+    file(relativeDirectory: { eq: "images" }, name: { eq: "privacy_policy" }) {
       childImageSharp {
         fluid {
           src
