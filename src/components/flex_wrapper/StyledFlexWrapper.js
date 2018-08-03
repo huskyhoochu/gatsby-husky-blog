@@ -5,6 +5,11 @@ const RightSection = styled.section`
   position: relative;
   z-index: 4;
   flex: 1;
+  width: 50vw;
+
+  @media (max-width: 1024px) {
+    width: 100vw;
+  }
 `;
 
 const FlexWrapper = styled.div`
@@ -73,9 +78,17 @@ const Content = styled.article`
     text-indent: 0;
   }
 
+  pre {
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  pre,
   code {
     font-family: 'Source Code Pro', monospace;
     font-weight: 400;
+    text-indent: 0;
   }
 
   blockquote {

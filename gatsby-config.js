@@ -53,6 +53,9 @@ module.exports = {
               backgroundColor: 'rebeccapurple',
             },
           },
+          {
+            resolve: 'gatsby-remark-prismjs',
+          },
           'gatsby-remark-copy-linked-files',
         ],
       },
