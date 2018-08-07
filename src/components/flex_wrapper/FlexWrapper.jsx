@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import AdSense from 'react-adsense';
 import { ThemeProvider } from 'styled-components';
@@ -36,18 +36,9 @@ const FlexWrapper = ({ query }) => {
   const whatPage = () => {
     if (Object.keys(markdownItem).length !== 0) {
       return (
-        <Fragment>
-          <Styled.Content
-            dangerouslySetInnerHTML={{ __html: markdownItem.html }}
-          />
-          <Styled.Content>
-            <AdSense.Google
-              client={config.google.adSense.clientId}
-              slot={config.google.adSense.clientSlot}
-              layout="in-article"
-            />
-          </Styled.Content>
-        </Fragment>
+        <Styled.Content
+          dangerouslySetInnerHTML={{ __html: markdownItem.html }}
+        />
       );
     }
     return (
@@ -73,7 +64,16 @@ const FlexWrapper = ({ query }) => {
         </LeftSection>
       </ThemeProvider>
       <Styled.RightSection>
-        <Styled.ContentsWrapper>{whatPage()}</Styled.ContentsWrapper>
+        <Styled.ContentsWrapper>
+          {whatPage()}
+          <Styled.Content>
+            <AdSense.Google
+              client={config.google.adSense.clientId}
+              slot={config.google.adSense.clientSlot}
+              layout="in-article"
+            />
+          </Styled.Content>
+        </Styled.ContentsWrapper>
       </Styled.RightSection>
     </Styled.FlexWrapper>
   );
