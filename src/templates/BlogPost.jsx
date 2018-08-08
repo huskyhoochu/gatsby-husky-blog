@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import '../utils/GoogleAdSense';
 
 // CSS
 import '../assets/css/prismjs-minified.css';
@@ -22,6 +23,7 @@ const BlogPost = ({ data }) => {
         markdownItem: markdownRemark,
         thumbnail: file.childImageSharp.fluid.src,
         location: splitSlug(markdownRemark.fields.slug),
+        category: markdownRemark.frontmatter.category,
       }}
     >
       <SEOHelmet
@@ -83,6 +85,7 @@ export const pageQuery = graphql`
         excerpt
         title
         subtitle
+        category
       }
     }
   }

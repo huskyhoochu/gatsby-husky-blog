@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AdSense from 'react-adsense';
 import { ThemeProvider } from 'styled-components';
 import config from '../../data/SiteConfig';
 
@@ -12,6 +11,7 @@ import LeftSection from '../left_section/LeftSection';
 import CategoryInformation from '../category_information/CategoryInformation';
 import PostInformation from '../post_information/PostInformation';
 import PostList from '../post_list/PostList';
+import PostDetail from '../post_detail/PostDetail';
 
 const FlexWrapper = ({ query }) => {
   const {
@@ -36,8 +36,11 @@ const FlexWrapper = ({ query }) => {
   const whatPage = () => {
     if (Object.keys(markdownItem).length !== 0) {
       return (
-        <Styled.Content
-          dangerouslySetInnerHTML={{ __html: markdownItem.html }}
+        <PostDetail
+          edges={{
+            markdownItem,
+            category,
+          }}
         />
       );
     }
@@ -64,16 +67,7 @@ const FlexWrapper = ({ query }) => {
         </LeftSection>
       </ThemeProvider>
       <Styled.RightSection>
-        <Styled.ContentsWrapper>
-          {whatPage()}
-          <Styled.Content>
-            <AdSense.Google
-              client={config.google.adSense.clientId}
-              slot={config.google.adSense.clientSlot}
-              layout="in-article"
-            />
-          </Styled.Content>
-        </Styled.ContentsWrapper>
+        <Styled.ContentsWrapper>{whatPage()}</Styled.ContentsWrapper>
       </Styled.RightSection>
     </Styled.FlexWrapper>
   );
