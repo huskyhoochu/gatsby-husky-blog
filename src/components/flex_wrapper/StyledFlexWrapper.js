@@ -3,12 +3,13 @@ import styled from 'styled-components';
 const RightSection = styled.section`
   background-color: white;
   position: relative;
-  z-index: 4;
+  z-index: 0;
   flex: 1;
-  width: 50vw;
+  width: 50%;
 
   @media (max-width: 1024px) {
-    width: 100vw;
+    width: 100%;
+    z-index: 4;
   }
 `;
 
