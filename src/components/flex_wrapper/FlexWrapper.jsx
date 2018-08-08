@@ -1,7 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import AdSense from 'react-adsense';
 import { ThemeProvider } from 'styled-components';
 import config from '../../data/SiteConfig';
 
@@ -13,6 +11,7 @@ import LeftSection from '../left_section/LeftSection';
 import CategoryInformation from '../category_information/CategoryInformation';
 import PostInformation from '../post_information/PostInformation';
 import PostList from '../post_list/PostList';
+import PostDetail from '../post_detail/PostDetail';
 
 const FlexWrapper = ({ query }) => {
   const {
@@ -37,35 +36,12 @@ const FlexWrapper = ({ query }) => {
   const whatPage = () => {
     if (Object.keys(markdownItem).length !== 0) {
       return (
-        <Fragment>
-          <Styled.Content
-            dangerouslySetInnerHTML={{ __html: markdownItem.html }}
-          />
-          <Styled.Content>
-            <hr />
-          </Styled.Content>
-          <Styled.Content style={{ textAlign: 'center' }}>
-            {category !== undefined ? (
-              <Link
-                to={`/categories/${category}`}
-                style={{ color: 'rebeccapurple' }}
-              >
-                <h5>List</h5>
-              </Link>
-            ) : (
-              <Link to="/" style={{ color: 'rebeccapurple' }}>
-                <h5>Home</h5>
-              </Link>
-            )}
-          </Styled.Content>
-          <Styled.Content>
-            <AdSense.Google
-              client={config.google.adSense.clientId}
-              slot={config.google.adSense.clientSlot}
-              layout="in-article"
-            />
-          </Styled.Content>
-        </Fragment>
+        <PostDetail
+          edges={{
+            markdownItem,
+            category,
+          }}
+        />
       );
     }
     return (
