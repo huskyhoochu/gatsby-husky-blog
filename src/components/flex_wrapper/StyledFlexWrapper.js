@@ -79,6 +79,15 @@ const Content = styled.article`
     text-indent: 0;
   }
 
+  a {
+    font-weight: 600;
+    color: rebeccapurple !important;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   hr {
     margin: 2rem 0;
   }
