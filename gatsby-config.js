@@ -10,19 +10,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Josefin Sans:300,300i,400,600,600i', 'Source Code Pro'],
-        },
-
-        custom: {
-          families: ['Noto Sans KR'],
-          urls: ['https://fonts.googleapis.com/earlyaccess/notosanskr.css'],
-        },
-      },
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
