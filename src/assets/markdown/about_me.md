@@ -66,7 +66,10 @@ published: 'false'
 패스트캠퍼스에서 Django를 이용한 백엔드 어플리케이션 개발을 배우고, 수료한 다음에는 독학으로 프론트엔드 환경을 배우면서 React를 익혔습니다.
 이 블로그는 React 기반 정적 웹사이트 생성기인 <a href="https://next.gatsbyjs.org/" target="_blank">Gatsby</a>로 만들었습니다. 기존의 정적 웹사이트 생성기와 달리 거추장스러운 템플릿 엔진이 없고,
 따로 서버를 두지 않는데도 페이지 컨텐츠를 XHR로 받아오도록 컴파일해줍니다!
-그래서 보통 React를 다루듯 완전히 자유롭게 사이트를 설계하면서도 그냥 마크다운 파일을 포함시키는 것만으로 간편하게 컨텐츠 관리를 할 수 있습니다. (Gatsby는 다른 포스트에서 따로 소개해보도록 하겠습니다)
+그래서 보통 React를 다루듯 완전 자유롭게 사이트를 설계하면서도 그냥 마크다운 파일을 포함시키는 것만으로 간편하게 컨텐츠 관리를 할 수 있습니다. 만세!
+
+![gatsby-react-meme](./gatsby_react_meme.jpg)
+<p style="text-align: center;">물론 리액트가 전부는 아니죠 ㅎㅎ... 프론트엔드는 취존입니다</p>
 
 저장소 주소는 <a href="https://github.com/huskyhoochu/gatsby-husky-blog" target="_blank">이겁니다.</a>
 
