@@ -15,6 +15,7 @@ const AboutMe = ({ data }) => {
         itemList: {},
         markdownItem: markdownRemark,
         thumbnail: file.childImageSharp.fluid.src,
+        location: 'about-me',
       }}
     >
       <SEOHelmet
