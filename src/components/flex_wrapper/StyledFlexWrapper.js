@@ -125,6 +125,12 @@ const Content = styled.article`
       font-size: 0.9rem;
     }
   }
+
+  .caption {
+    text-align: center;
+    color: dimgrey;
+    font-size: 1rem;
+  }
 `;
 
 export default {

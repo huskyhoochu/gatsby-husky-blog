@@ -37,7 +37,7 @@ published: 'false'
 괜히 CLI 환경도 다뤄보고 싶어서 iTerm, oh-my-zsh, Homebrew 같은 것들을 쓸 줄도 모르면서 설치해댔죠. 도스 창 같은 화면에서 글씨가 주르륵 흘러가는 모습을 흐뭇하게 지켜보는 게 낙이었습니다.
 
 <img src="https://media.giphy.com/media/FHCHRtwAZgGFq/giphy.gif" style="max-width: 600px; display: block; margin: 1rem auto;" alt="pepe" />
-<p style="text-align: center;">뭐 이런 느낌이랄까요... <a href="http://gph.is/1LnNGzI" target="_blank">via GIPHY</a></p>
+<p class="caption">뭐 이런 느낌이랄까요... <a href="http://gph.is/1LnNGzI" target="_blank">via GIPHY</a></p>
 
 소설가가 되는 건 오랜 꿈이었지만 졸업이 다가올수록 그만둬야 한다는 확신이 강해졌습니다. 일단 생계 유지가 어렵다는 건 당연한 사실이었죠.
 본업을 따로 갖춘 다음 부업으로 글을 써야만 했는데, 글쓰기와 전혀 상관 없는 일을 하게 되면 (글만 써 온 녀석이 그런 일을 찾는 것도 쉽지 않겠지만) 차츰차츰 글을 놓게 된다는 주변 사람들의 조언이 마음에 걸렸습니다.
@@ -46,7 +46,7 @@ published: 'false'
 스토리 마케팅 회사는... 3개월 만에 엎어졌습니다ㅎ.
 
 ![boom](./boom.jpeg)
-<p style="text-align: center; text-decoration: line-through;">흔한 스타트업의 최후.jpg</p>
+<p class="caption" style="text-decoration: line-through;">흔한 스타트업의 최후.jpg</p>
 
 '글쓰기를 지속하기 위한 직업을 구하지 못했다' 가 작가의 꿈을 접는 진짜 이유는 아니겠죠. 돌아보자면, 우선은 글을 쓸수록 저와 주변 사람들의 삶을 작품을 위한 소재로 보게 된다는 점이 싫어졌습니다.
 또 저는 소설로 제 삶을 풀어내면 사람들이 저 자신을 이해해 줄 거라고 믿었고, 또 그래주기를 바랐거든요. 그런데 소설뿐만 아니라 무슨 일을 하든지 일의 결과물로 자기를 대변하려고 해서는 안 된다는 걸 깨달았습니다.
@@ -59,7 +59,7 @@ published: 'false'
 
 그럼에도 결국 개발을 선택한 이유는, **프로그래밍은 '기술'에 속하기 때문에 내가 아닌 다른 사람을 위한 결과물을 남기게 되리란 기대가 있어서였고** ('예술'은 그렇게 되지 않을 확률이 높죠),
 **개발자들의 세계는 작가들의 세계보다 훨씬 소통의 범위가 넓고 객관적인 평가 체계가 돌아가고 있다는 확신이 들어서였습니다.** 멍청한 비유이긴 하지만 한국어를 쓰는 사람보다 자바스크립트를 쓸 줄 아는 사람이 세상에는 더 많아 보이기도 하구요.
-아무도 읽지 않을 원고를 상자에 쌓아가는 것보다는 멍청이 같은 코드라도 깃헙에 올려 놓고 차근차근 리팩토링하는 게 제가 발전하고 있는지를 알아보기 좋아 보이기도 했습니다.
+아무도 읽지 않을 원고를 상자에 쌓아가는 것보다는 멍청이 같은 코드라도 깃헙에 올려 놓고 차근차근 리팩토링하는 게 제가 발전하고 있는지를 알아보기 좋아보이기도 했습니다.
 
 #### 마치며: 결국 이 블로그는 어떻게 만들었니?
 
@@ -69,7 +69,7 @@ published: 'false'
 그래서 보통 React를 다루듯 완전 자유롭게 사이트를 설계하면서도 그냥 마크다운 파일을 포함시키는 것만으로 간편하게 컨텐츠 관리를 할 수 있습니다. 만세!
 
 ![gatsby-react-meme](./gatsby_react_meme.jpg)
-<p style="text-align: center;">물론 리액트가 전부는 아니죠 ㅎㅎ... 프론트엔드는 취존입니다</p>
+<p class="caption">물론 리액트가 전부는 아니죠 ㅎㅎ 프론트엔드는 취존입니다</p>
 
 저장소 주소는 <a href="https://github.com/huskyhoochu/gatsby-husky-blog" target="_blank">이겁니다.</a>
 
