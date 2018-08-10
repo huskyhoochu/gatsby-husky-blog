@@ -14,7 +14,7 @@ published: 'false'
 에서 영감을 받아 쓰였습니다. 저를 돌아볼 기회를 주신
 <a href="https://medium.com/@pycraft114" target="_blank">Chan woo Park</a> 님께 감사 인사를 드려요)
 
-#### 바쁜 독자를 위한 2줄 요약
+#### 바쁜 현대인을 위한 간단 요약
 
 소설과 시나리오가 전공이었지만 졸업과 동시에 때려치우고 개발에 뛰어들었습니다.
 <a href="https://www.fastcampus.co.kr/category_dev_camp/" target="_blank">패스트캠퍼스</a>의 웹 프로그래밍 스쿨로 공부를 시작했고 지금은 생계형 풀스택 프리랜서로 일하고 있습니다. 가을이 되면 취직하고 싶습니다. (ㅜㅜ)
@@ -56,7 +56,8 @@ published: 'false'
 #### 마치며: 결국 이 블로그는 어떻게 만들었니?
 
 패스트캠퍼스에서 Django를 이용한 백엔드 어플리케이션 개발을 배우고, 수료한 다음에는 독학으로 프론트엔드 환경을 배우면서 React를 익혔습니다.
-이 블로그는 React 기반 정적 웹사이트 생성기인 Gatsby로 만들었습니다. 기존의 정적 웹사이트 생성기와 달리 거추장스러운 템플릿 엔진이 없고, 따로 서버를 두지 않는데도 페이지 컨텐츠를 XHR로 받아오도록 컴파일해줍니다!
+이 블로그는 React 기반 정적 웹사이트 생성기인 <a href="https://next.gatsbyjs.org/" target="_blank">Gatsby</a>로 만들었습니다. 기존의 정적 웹사이트 생성기와 달리 거추장스러운 템플릿 엔진이 없고,
+따로 서버를 두지 않는데도 페이지 컨텐츠를 XHR로 받아오도록 컴파일해줍니다!
 그래서 보통 React를 다루듯 완전히 자유롭게 사이트를 설계하면서도 그냥 마크다운 파일을 포함시키는 것만으로 간편하게 컨텐츠 관리를 할 수 있습니다. (Gatsby는 다른 포스트에서 따로 소개해보도록 하겠습니다)
 
 저장소 주소는 <a href="https://github.com/huskyhoochu/gatsby-husky-blog" target="_blank">이겁니다.</a>
