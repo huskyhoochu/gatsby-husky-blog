@@ -34,6 +34,7 @@ const CategoryList = ({ data, pathContext }) => {
           title: `Category as "${_.startCase(_.kebabCase(category))}" | ${
             site.siteMetadata.siteTitle
           }`,
+          type: 'website',
         }}
       />
     </Layout>

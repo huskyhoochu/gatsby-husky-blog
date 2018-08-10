@@ -25,6 +25,7 @@ const AboutMe = ({ data }) => {
           title: `${markdownRemark.frontmatter.title} | ${
             site.siteMetadata.siteTitle
           }`,
+          type: 'article',
         }}
       />
     </Layout>

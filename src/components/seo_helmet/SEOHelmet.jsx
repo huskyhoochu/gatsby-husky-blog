@@ -4,7 +4,9 @@ import Helmet from 'react-helmet';
 import config from '../../data/SiteConfig';
 
 const SEOHelmet = ({ content }) => {
-  const { canonical, description, title } = content;
+  const {
+    canonical, description, title, type,
+  } = content;
   const schemaOrgJSON = [
     {
       '@context': 'http://schema.org',
@@ -70,6 +72,7 @@ const SEOHelmet = ({ content }) => {
       <meta property="og:url" content={canonical} />
       <meta property="og:description" content={description} />
       <meta property="og:title" content={title} />
+      <meta property="og:type" content={type} />
     </Helmet>
   );
 };
@@ -79,6 +82,7 @@ SEOHelmet.propTypes = {
     canonical: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
   }).isRequired,
 };
 

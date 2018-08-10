@@ -34,6 +34,7 @@ const BlogIndex = ({ data }) => {
           title: `${site.siteMetadata.siteTitle} | ${
             site.siteMetadata.siteTitleKorean
           }`,
+          type: 'website',
         }}
       />
     </Layout>
