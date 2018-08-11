@@ -131,6 +131,14 @@ const Content = styled.article`
     color: dimgrey;
     font-size: 1rem;
   }
+
+  .external-img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 1rem auto;
+  }
 `;
 
 export default {

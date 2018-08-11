@@ -37,7 +37,7 @@ published: 'false'
 학기를 보내는 와중에도 <a href="https://opentutorials.org/course/1" target="_blank">생활코딩</a>의 html, css 동영상 강의를 보고(이 자리를 빌어 이고잉 님 감사합니다),
 괜히 CLI 환경도 다뤄보고 싶어서 iTerm, oh-my-zsh, Homebrew 같은 것들을 쓸 줄도 모르면서 설치해댔죠. 도스 창 같은 화면에서 글씨가 주르륵 흘러가는 모습을 흐뭇하게 지켜보는 게 낙이었습니다.
 
-<img src="https://media.giphy.com/media/FHCHRtwAZgGFq/giphy.gif" style="max-width: 600px; display: block; margin: 1rem auto;" alt="pepe" />
+<img class="external-img" src="https://media.giphy.com/media/FHCHRtwAZgGFq/giphy.gif" alt="pepe" />
 <p class="caption">뭐 이런 느낌이랄까요... <a href="http://gph.is/1LnNGzI" target="_blank">via GIPHY</a></p>
 
 소설가가 되는 건 오랜 꿈이었지만 졸업이 다가올수록 그만둬야 한다는 확신이 강해졌습니다. 일단 생계 유지가 어렵다는 건 당연한 사실이었죠.
