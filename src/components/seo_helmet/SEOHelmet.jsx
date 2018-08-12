@@ -5,16 +5,62 @@ import config from '../../data/SiteConfig';
 
 const SEOHelmet = ({ content }) => {
   const {
-    canonical, description, title, type,
+    canonical, description, title, type, date, image,
   } = content;
   const schemaOrgJSON = [
     {
       '@context': 'http://schema.org',
-      '@type': 'WebSite',
+      '@type': 'Blog',
       url: config.siteUrl,
-      name: config.siteTitle,
+      name: `${config.siteTitle} | ${config.siteTitleKorean}`,
+      description: config.siteDescription,
+      sameAs: ['https://github.com/huskyhoochu/'],
+      publisher: {
+        '@type': 'Organization',
+        name: config.siteTitle,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${config.siteUrl}/favicon_package/android-chrome-512x512.png`,
+          width: 600,
+          height: 60,
+        },
+      },
     },
   ];
+
+  if (type === 'article') {
+    schemaOrgJSON.push({
+      '@context': 'http://schema.org',
+      '@type': 'BlogPosting',
+      url: canonical,
+      headline: title,
+      description,
+      author: {
+        '@type': 'Person',
+        name: config.author,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: config.siteTitle,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${config.siteUrl}/favicon_package/android-chrome-512x512.png`,
+          width: 600,
+          height: 60,
+        },
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': canonical,
+      },
+      datePublished: date,
+      dateModified: date,
+      image: {
+        '@type': 'ImageObject',
+        url: `${config.siteUrl}${image}`,
+      },
+    });
+  }
 
   return (
     <Helmet>
@@ -83,6 +129,8 @@ SEOHelmet.propTypes = {
     description: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
+    date: PropTypes.string,
+    image: PropTypes.string,
   }).isRequired,
 };
 

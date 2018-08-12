@@ -36,6 +36,8 @@ const BlogPost = ({ data }) => {
             site.siteMetadata.siteTitle
           }`,
           type: 'article',
+          date: markdownRemark.frontmatter.date,
+          image: file.childImageSharp.fluid.src,
         }}
       />
     </Layout>
