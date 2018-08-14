@@ -36,7 +36,11 @@ class PostList extends React.PureComponent {
     return _.map(_.zip(markdown, imgSharp), (item) => {
       const markdownItem = item[0].node;
       const {
-        date, excerpt, title, subtitle,
+        date,
+        excerpt,
+        title,
+        subtitle,
+        category,
       } = markdownItem.frontmatter;
 
       const imgSharpItem = item[1].node;
@@ -48,7 +52,11 @@ class PostList extends React.PureComponent {
             <Styled.PostThumb src={fluid.src} alt="post-thumb" />
             <Styled.PostTitle>{title}</Styled.PostTitle>
             <Styled.PostSubtitle>{subtitle}</Styled.PostSubtitle>
-            <Styled.PostDate>{date}</Styled.PostDate>
+            <Styled.PostMetaData>
+              <span>{date}</span>
+              <span>&nbsp;•&nbsp;</span>
+              <span>{_.startCase(category)}</span>
+            </Styled.PostMetaData>
             <Styled.PostExcerpt>{excerpt}</Styled.PostExcerpt>
           </Link>
         </Styled.PostBody>

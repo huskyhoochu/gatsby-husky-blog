@@ -55,7 +55,7 @@ const PostSubtitle = styled.h6`
   font-weight: 100 !important;
 `;
 
-const PostDate = styled.p`
+const PostMetaData = styled.p`
   color: rebeccapurple;
   font-weight: 400;
 `;
@@ -71,6 +71,6 @@ export default {
   PostThumb,
   PostTitle,
   PostSubtitle,
-  PostDate,
+  PostMetaData,
   PostExcerpt,
 };

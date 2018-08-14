@@ -105,6 +105,7 @@ export const pageQuery = graphql`
             excerpt
             title
             subtitle
+            category
           }
         }
       }
