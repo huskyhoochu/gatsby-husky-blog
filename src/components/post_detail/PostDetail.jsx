@@ -30,13 +30,13 @@ const PostDetail = ({ edges }) => {
           </Link>
         )}
       </Styled.Content>
-      <Styled.Content>
+      <div style={{ margin: '1rem' }}>
         <AdSense.Google
           client={config.google.adSense.clientId}
           slot={config.google.adSense.clientSlot}
           layout="in-article"
         />
-      </Styled.Content>
+      </div>
     </Fragment>
   );
 };
