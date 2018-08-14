@@ -14,7 +14,11 @@ const SEOHelmet = ({ content }) => {
       url: config.siteUrl,
       name: `${config.siteTitle} | ${config.siteTitleKorean}`,
       description: config.siteDescription,
-      sameAs: ['https://github.com/huskyhoochu/'],
+      sameAs: [
+        'https://github.com/huskyhoochu',
+        'https://www.facebook.com/huskyhoochublog',
+        'https://medium.com/@huskyhoochu',
+      ],
       publisher: {
         '@type': 'Organization',
         name: config.siteTitle,
