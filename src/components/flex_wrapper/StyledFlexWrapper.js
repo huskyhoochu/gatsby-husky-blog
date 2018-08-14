@@ -116,6 +116,36 @@ const Content = styled.article`
     }
   }
 
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  table {
+    text-indent: 0;
+  }
+
+  thead {
+    background-color: lavenderblush;
+
+    th {
+      padding: 0.5rem 0.5rem 0 0.5rem;
+      min-width: 10rem;
+    }
+  }
+
+  td {
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    min-width: 10rem;
+
+    &:nth-last-child(1) {
+      padding-right: 0;
+    }
+  }
+
+  tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+
   @media (max-width: 414px) {
     font-size: 1rem;
 
