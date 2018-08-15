@@ -9,7 +9,7 @@ import config from '../../data/SiteConfig';
 import Styled from '../flex_wrapper/StyledFlexWrapper';
 
 const wrapTableElement = () => {
-  if (document.querySelector('window')) {
+  if (document.querySelector('table')) {
     const nodeList = document.querySelectorAll('table');
 
     _.forEach(nodeList, (node) => {
@@ -29,7 +29,7 @@ const wrapTableElement = () => {
 const PostDetail = ({ edges }) => {
   const { markdownItem, category } = edges;
 
-  if (typeof window !== 'undefined') {
+  if (typeof document !== 'undefined') {
     wrapTableElement();
   }
 
