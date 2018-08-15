@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
@@ -7,8 +8,28 @@ import config from '../../data/SiteConfig';
 // Styled
 import Styled from '../flex_wrapper/StyledFlexWrapper';
 
+const wrapTableElement = () => {
+  const nodeList = document.querySelectorAll('table');
+
+  _.forEach(nodeList, (node) => {
+    const newDiv = document.createElement('div');
+    newDiv.className = 'table-wrapper';
+    node.parentNode.insertBefore(newDiv, node);
+  });
+
+  const wrapperList = document.querySelectorAll('.table-wrapper');
+
+  _.forEach(_.zip(nodeList, wrapperList), (item) => {
+    item[1].appendChild(item[0]);
+  });
+};
+
 const PostDetail = ({ edges }) => {
   const { markdownItem, category } = edges;
+
+  if (document.querySelector('table')) {
+    wrapTableElement();
+  }
 
   return (
     <Fragment>
