@@ -7,7 +7,9 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "prettier": "prettier --single-quote --arrow-parens always --write",
-    "lint": "eslint --fix"
+    "lint": "eslint --fix",
+    "removeUrl": "now rm -y",
+    "deploy": "./scripts/deploy.sh"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
@@ -18,8 +20,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && ./scripts/pre-commit.sh $HUSKY_GIT_PARAMS",
-      "prepare-commit-msg": "./scripts/prepare-commit-msg.sh $HUSKY_GIT_PARAMS"
+      "pre-commit": "lint-staged && ./scripts/image_optimization.sh $HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "./scripts/add_issue_number_into_commit.sh $HUSKY_GIT_PARAMS"
     }
   },
   "dependencies": {
