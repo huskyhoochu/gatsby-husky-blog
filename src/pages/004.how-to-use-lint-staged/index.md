@@ -3,7 +3,7 @@ title: 'lint-staged로 eslint 세상 편하게 자동화하기'
 subtitle: 'eslint, git hook에 얹어 쓰면 얼~마나 편하게요?'
 category: 'frontend'
 excerpt: '커밋할 때마다 eslint 명령어를 자동으로 실행시켜주는 lint-staged 사용법을 알아볼까요?'
-date: '2018-08-14'
+date: '2018-08-13T18:14:28+09:00'
 ---
 
 #### lint, 좋긴 한데 지속적으로 쓰긴 까다로워!
