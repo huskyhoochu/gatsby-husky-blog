@@ -58,6 +58,8 @@ const PostDetail = ({ edges }) => {
           client={config.google.adSense.clientId}
           slot={config.google.adSense.clientSlot}
           layout="in-article"
+          format="auto"
+          responsive="true"
         />
       </div>
     </Fragment>

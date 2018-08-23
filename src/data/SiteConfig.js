@@ -12,7 +12,7 @@ module.exports = {
     adSense: {
       endpoint: '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
       clientId: 'ca-pub-7714688207671069',
-      clientSlot: '2229489712',
+      clientSlot: '2482115694',
     },
   },
   webFontConfig: {
