@@ -69,6 +69,8 @@ const Content = styled.article`
   line-height: 1.75;
   text-indent: 1rem;
   font-size: 1.2rem;
+  word-break: normal;
+  word-wrap: break-word;
 
   h1,
   h2,
@@ -160,6 +162,7 @@ const Content = styled.article`
     text-align: center;
     color: dimgrey;
     font-size: 1rem;
+    text-indent: 0;
   }
 
   .external-img {
