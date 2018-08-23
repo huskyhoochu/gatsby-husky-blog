@@ -21,7 +21,7 @@ const BlogPost = ({ data }) => {
       query={{
         itemList: {},
         markdownItem: markdownRemark,
-        thumbnail: file.childImageSharp.fluid.src,
+        thumbnail: file.childImageSharp.fixed,
         location: splitSlug(markdownRemark.fields.slug),
         category: markdownRemark.frontmatter.category,
       }}
@@ -37,7 +37,7 @@ const BlogPost = ({ data }) => {
           }`,
           type: 'article',
           date: markdownRemark.frontmatter.date,
-          image: file.childImageSharp.fluid.src,
+          image: file.childImageSharp.fixed.src,
         }}
       />
     </Layout>
@@ -73,8 +73,9 @@ export const pageQuery = graphql`
     }
     file(relativeDirectory: { regex: $slug }, name: { regex: "/post/" }) {
       childImageSharp {
-        fluid {
+        fixed {
           src
+          srcSet
         }
       }
     }

@@ -21,7 +21,7 @@ const CategoryList = ({ data, pathContext }) => {
           imgSharp: allFile.edges,
         },
         markdownItem: {},
-        thumbnail: file.childImageSharp.fluid.src,
+        thumbnail: file.childImageSharp.fixed,
         category,
       }}
     >
@@ -81,8 +81,9 @@ export const pageQuery = graphql`
       edges {
         node {
           childImageSharp {
-            fluid {
+            fixed {
               src
+              srcSet
             }
           }
         }
@@ -90,8 +91,9 @@ export const pageQuery = graphql`
     }
     file(relativeDirectory: { eq: "images" }, name: { regex: $category }) {
       childImageSharp {
-        fluid {
+        fixed {
           src
+          srcSet
         }
       }
     }

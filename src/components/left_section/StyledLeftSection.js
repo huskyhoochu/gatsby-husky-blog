@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import styled from 'styled-components';
 import MainThumb from '../../assets/images/category_index.jpg';
 
@@ -46,8 +47,17 @@ const FixedWrapper = styled.div`
 
   background-image: url(${(props) => {
     const { theme } = props;
-    return theme.main;
+    return theme.src;
   }});
+  background-image: image-set(
+    ${(props) => {
+    const { theme } = props;
+    const splitItem = _.split(theme.srcSet, ',');
+    const splitRes = _.map(splitItem, item => _.split(item, ' '));
+    const wrapUrl = _.map(splitRes, item => `url(${item[0]}) ${item[1]}`);
+    return _.join(wrapUrl, ', ');
+  }}
+  );
   background-size: cover;
   background-color: black;
   background-position: center;
@@ -61,7 +71,7 @@ const FixedWrapper = styled.div`
 
 FixedWrapper.defaultProps = {
   theme: {
-    main: MainThumb,
+    src: MainThumb,
   },
 };
 

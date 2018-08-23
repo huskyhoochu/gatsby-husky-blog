@@ -14,7 +14,7 @@ const AboutMe = ({ data }) => {
       query={{
         itemList: {},
         markdownItem: markdownRemark,
-        thumbnail: file.childImageSharp.fluid.src,
+        thumbnail: file.childImageSharp.fixed,
       }}
     >
       <SEOHelmet
@@ -26,7 +26,7 @@ const AboutMe = ({ data }) => {
           }`,
           type: 'article',
           date: markdownRemark.frontmatter.date,
-          image: file.childImageSharp.fluid.src,
+          image: file.childImageSharp.fixed.src,
         }}
       />
     </Layout>
@@ -60,8 +60,9 @@ export const pageQuery = graphql`
     }
     file(relativeDirectory: { eq: "images" }, name: { eq: "privacy_policy" }) {
       childImageSharp {
-        fluid {
+        fixed {
           src
+          srcSet
         }
       }
     }

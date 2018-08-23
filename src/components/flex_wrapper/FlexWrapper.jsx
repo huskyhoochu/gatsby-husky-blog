@@ -57,7 +57,12 @@ const FlexWrapper = ({ query }) => {
 
   return (
     <Styled.FlexWrapper>
-      <ThemeProvider theme={{ main: thumbnail }}>
+      <ThemeProvider
+        theme={{
+          src: thumbnail.src,
+          srcSet: thumbnail.srcSet,
+        }}
+      >
         <LeftSection>
           <Styled.ContentsWrapper>
             <Styled.InfoWrapper>
@@ -77,7 +82,7 @@ FlexWrapper.propTypes = {
   query: PropTypes.shape({
     itemList: PropTypes.object.isRequired,
     markdownItem: PropTypes.object.isRequired,
-    thumbnail: PropTypes.string.isRequired,
+    thumbnail: PropTypes.object.isRequired,
     location: PropTypes.string,
     category: PropTypes.string,
   }).isRequired,

@@ -23,7 +23,7 @@ const BlogIndex = ({ data }) => {
           imgSharp: allFile.edges,
         },
         markdownItem: {},
-        thumbnail: file.childImageSharp.fluid.src,
+        thumbnail: file.childImageSharp.fixed,
         category: 'Latest',
       }}
     >
@@ -77,8 +77,9 @@ export const pageQuery = graphql`
       edges {
         node {
           childImageSharp {
-            fluid {
+            fixed {
               src
+              srcSet
             }
           }
         }
@@ -86,8 +87,9 @@ export const pageQuery = graphql`
     }
     file(relativeDirectory: { eq: "images" }, name: { eq: "category_index" }) {
       childImageSharp {
-        fluid {
+        fixed {
           src
+          srcSet
         }
       }
     }
@@ -114,8 +116,9 @@ export const pageQuery = graphql`
       edges {
         node {
           ... on ImageSharp {
-            fluid {
+            fixed {
               src
+              srcSet
             }
           }
         }

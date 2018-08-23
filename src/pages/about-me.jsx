@@ -14,7 +14,7 @@ const AboutMe = ({ data }) => {
       query={{
         itemList: {},
         markdownItem: markdownRemark,
-        thumbnail: file.childImageSharp.fluid.src,
+        thumbnail: file.childImageSharp.fixed,
         location: 'about-me',
       }}
     >
@@ -27,7 +27,7 @@ const AboutMe = ({ data }) => {
           }`,
           type: 'article',
           date: markdownRemark.frontmatter.date,
-          image: file.childImageSharp.fluid.src,
+          image: file.childImageSharp.fixed.src,
         }}
       />
     </Layout>
@@ -61,8 +61,9 @@ export const pageQuery = graphql`
     }
     file(relativeDirectory: { eq: "images" }, name: { eq: "about_me" }) {
       childImageSharp {
-        fluid {
+        fixed {
           src
+          srcSet
         }
       }
     }

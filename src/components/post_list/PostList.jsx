@@ -44,12 +44,16 @@ class PostList extends React.PureComponent {
       } = markdownItem.frontmatter;
 
       const imgSharpItem = item[1].node;
-      const { fluid } = imgSharpItem.childImageSharp;
+      const { fixed } = imgSharpItem.childImageSharp;
 
       return (
         <Styled.PostBody key={markdownItem.fields.slug}>
           <Link to={`/${splitSlug(markdownItem.fields.slug)}`}>
-            <Styled.PostThumb src={fluid.src} alt="post-thumb" />
+            <Styled.PostThumb
+              src={fixed.src}
+              srcSet={fixed.srcSet}
+              alt="post-thumb"
+            />
             <Styled.PostTitle>{title}</Styled.PostTitle>
             <Styled.PostSubtitle>{subtitle}</Styled.PostSubtitle>
             <Styled.PostMetaData>
