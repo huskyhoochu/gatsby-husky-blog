@@ -26,45 +26,51 @@ const wrapTableElement = () => {
   }
 };
 
-const PostDetail = ({ edges }) => {
-  const { markdownItem, category } = edges;
-
-  if (typeof document !== 'undefined') {
-    wrapTableElement();
+class PostDetail extends React.PureComponent {
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      wrapTableElement();
+    }
   }
 
-  return (
-    <Fragment>
-      <Styled.Content dangerouslySetInnerHTML={{ __html: markdownItem.html }} />
-      <Styled.Content>
-        <hr />
-      </Styled.Content>
-      <Styled.Content style={{ textAlign: 'center' }}>
-        {category !== undefined ? (
-          <Link
-            to={`/categories/${category}`}
-            style={{ color: 'rebeccapurple' }}
-          >
-            <h5>List</h5>
-          </Link>
-        ) : (
-          <Link to="/" style={{ color: 'rebeccapurple' }}>
-            <h5>Home</h5>
-          </Link>
-        )}
-      </Styled.Content>
-      <div style={{ margin: '1rem' }}>
-        <AdSense.Google
-          client={config.google.adSense.clientId}
-          slot={config.google.adSense.clientSlot}
-          layout="in-article"
-          format="auto"
-          responsive="true"
+  render() {
+    const { edges } = this.props;
+
+    return (
+      <Fragment>
+        <Styled.Content
+          dangerouslySetInnerHTML={{ __html: edges.markdownItem.html }}
         />
-      </div>
-    </Fragment>
-  );
-};
+        <Styled.Content>
+          <hr />
+        </Styled.Content>
+        <Styled.Content style={{ textAlign: 'center' }}>
+          {edges.category !== undefined ? (
+            <Link
+              to={`/categories/${edges.category}`}
+              style={{ color: 'rebeccapurple' }}
+            >
+              <h5>List</h5>
+            </Link>
+          ) : (
+            <Link to="/" style={{ color: 'rebeccapurple' }}>
+              <h5>Home</h5>
+            </Link>
+          )}
+        </Styled.Content>
+        <div style={{ margin: '1rem' }}>
+          <AdSense.Google
+            client={config.google.adSense.clientId}
+            slot={config.google.adSense.clientSlot}
+            layout="in-article"
+            format="auto"
+            responsive="true"
+          />
+        </div>
+      </Fragment>
+    );
+  }
+}
 
 PostDetail.propTypes = {
   edges: PropTypes.shape({
