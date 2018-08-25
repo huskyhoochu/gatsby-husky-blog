@@ -39,9 +39,22 @@ const MenuLabel = styled.p`
   line-height: 3;
 `;
 
+const Copyright = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 1.75rem;
+  padding: 1.5rem;
+
+  > a {
+    color: rebeccapurple !important;
+  }
+`;
+
 export default {
   MenuWrapper,
   Menu,
   MenuList,
   MenuLabel,
+  Copyright,
 };

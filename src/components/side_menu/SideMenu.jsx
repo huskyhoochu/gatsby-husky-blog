@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import config from '../../data/SiteConfig';
 
 // Styled
 import Styled from './StyledSideMenu';
@@ -63,6 +64,16 @@ class SideMenu extends React.PureComponent {
             </li>
           </Styled.MenuList>
         </Styled.Menu>
+        <Styled.Copyright>
+          {config.copyright}
+          <a
+            href="https://unsplash.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <strong>Unsplash</strong>.
+          </a>
+        </Styled.Copyright>
       </Styled.MenuWrapper>
     );
   }
