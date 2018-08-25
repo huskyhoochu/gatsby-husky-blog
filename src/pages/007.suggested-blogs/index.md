@@ -6,6 +6,38 @@ excerpt: '유용한 정보가 담긴 블로그는 스택오버플로우만큼이
 date: '2018-08-20T14:41:00+09:00'
 ---
 
+#### 바쁜 현대인들을 위한 목록 요약
+
+######기초 체력 기르기
+
+<a href="#egoing">① 생활코딩 - Coding Everybody</a>
+
+<a href="#programmers">② 프로그래머스</a>
+
+<a href="#monkey">③ 초보몽키의 개발공부로그</a>
+
+###### 트렌디한 소식 접하기
+
+<a href="#gaerae">④ 개발자스럽다</a>
+
+###### 더 깊이 알고 싶다면
+
+<a href="#baek">⑤ 백선기 님의 미디엄 블로그</a>
+
+<a href="#zero-cho">⑥ ZeroCho Blog</a>
+
+<a href="#tech-ssut">⑦ tech.ssut</a>
+
+<a href="#django">⑧ Django 자습 - 핀코인</a>
+
+<a href="#subicura">⑨ 서비큐라 기술 블로그</a>
+
+###### 유명 기업 블로그들
+
+<a href="#companies">⑩ 리디북스, 우아한 형제들, 스포카 기술 블로그</a>
+
+<br />
+
 #### 들어가며
 
 개발자로서 성장하는 데 있어서 좋은 블로그를 구독하는 건 너무너무 중요한 일이죠. 저도 튼실한 주니어 개발자가 되기 위해 여러 블로그를 찾아다니곤 했는데요.
@@ -17,7 +49,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 **"아무것도 모른다! 처음의 처음으로 개발을 시작한다!"** 라면 아래 세 가지 사이트는 꼭 둘러보시길 바랍니다.
 
-##### ① 생활코딩 - Coding Everybody
+<h5 id="egoing">① 생활코딩 - Coding Everybody</h5>
 
 사이트 주소: <a href="https://opentutorials.org/course/1" target="_blank">https://opentutorials.org/course/1</a>
 
@@ -39,7 +71,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <br />
 
-##### ② 프로그래머스
+<h5 id="programmers">② 프로그래머스</h5>
 
 사이트 주소: <a href="https://programmers.co.kr/" target="_blank">https://programmers.co.kr</a>
 
@@ -59,7 +91,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <br />
 
-##### ③ 초보몽키의 개발공부로그
+<h5 id="monkey">③ 초보몽키의 개발공부로그</h5>
 
 사이트 주소: <a href="https://wayhome25.github.io/til/2017/08/14/TIL-for-6-months/" target="_blank">https://wayhome25.github.io/til/2017/08/14/TIL-for-6-months/</a>
 
@@ -78,7 +110,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 최신 뉴스에 민감한 건 개발자의 습성이자 의무죠. 퀄리티 좋은 소식을 받아볼 수 있는 사이트를 소개합니다.
 
-##### ④ 개발자스럽다
+<h5 id="gaerae">④ 개발자스럽다</h5>
 
 사이트 주소: <a href="https://gaerae.com" target="_blank">https://gaerae.com</a>
 
@@ -102,7 +134,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 공부 중인 언어를 더 깊이 알고 싶을 때, 고수의 블로그를 찾아나서게 되는데요. 파이썬, 자바스크립트의 핵심을 파헤치거나 개발 전반에 걸쳐 깊은 혜안을 보여주시는 분들을 소개하도록 하겠습니다.
 
-##### ⑤ 백선기 님의 미디엄 블로그
+<h5 id="baek">⑤ 백선기 님의 미디엄 블로그</h5>
 
 사이트 주소: <a href="https://engineering.huiseoul.com/@sunki.baek" target="_blank">https://engineering.huiseoul.com/@sunki.baek</a>
 
@@ -118,7 +150,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <br />
 
-##### ⑥ ZeroCho Blog
+<h5 id="zero-cho">⑥ ZeroCho Blog</h5>
 
 사이트 주소: <a href="https://www.zerocho.com" target="_blank">https://www.zerocho.com</a>
 
@@ -132,7 +164,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <br />
 
-##### ⑦ tech.ssut
+<h5 id="tech-ssut">⑦ tech.ssut</h5>
 
 사이트 주소: <a href="https://tech.ssut.me" target="_blank">https://tech.ssut.me</a>
 
@@ -144,7 +176,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <br />
 
-##### ⑧ Django 자습 - 핀코인
+<h5 id="django">⑧ Django 자습 - 핀코인</h5>
 
 사이트 주소: <a href="https://wikidocs.net/book/837" target="_blank">https://wikidocs.net/book/837</a>
 
@@ -157,7 +189,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <br />
 
-##### ⑨ 서비큐라 기술 블로그
+<h5 id="subicura">⑨ 서비큐라 기술 블로그</h5>
 
 사이트 주소: <a href="https://subicura.com" target="_blank">https://subicura.com</a>
 
@@ -176,7 +208,7 @@ date: '2018-08-20T14:41:00+09:00'
 개발자 취준생이라면 원티드, 로켓펀치만큼 자주 들락거릴 사이트가 바로 유명 기업들의 기술 블로그일텐데요.
 훌륭한 기업 블로그가 많아서 뭘 소개할지 고민하다가 결국 한 번호에 전부 몰아서 (...) 올리기로 했습니다. ㅎㅎ
 
-##### ⑩ 리디북스, 우아한 형제들, 스포카 기술 블로그
+<h5 id="companies">⑩ 리디북스, 우아한 형제들, 스포카 기술 블로그</h5>
 
 - 리디북스: <a href="http://www.ridicorp.com/blog/" target="_blank">http://www.ridicorp.com/blog/</a>
 - 주요 관심사: **서버 관련 해결 사례, UI/UX 개선 사례**
