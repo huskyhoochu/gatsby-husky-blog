@@ -1,5 +1,5 @@
 ---
-title: 'github 하나로 1인 개발 워크플로 완성하기: 이론 편'
+title: 'github 하나로 1인 개발 워크플로우 완성하기: 이론 편'
 subtitle: 'git으로 백업만 하셨던 분들 여기여기 붙어라~'
 category: 'review'
 excerpt: '이슈 기반 버전 관리를 시작하세요! 커밋과 브랜치, 일정 관리 모두를 일관된 작업 흐름 아래 통제할 수 있습니다.'
@@ -35,7 +35,7 @@ date: '2018-08-25T07:50:00+09:00'
 
 - <a href="#issue-version-control">1인 개발자를 위한 솔루션: github의 이슈 트래커</a>
 
-- <a href="#workflow">이슈 트래커를 이용한 이슈 기반 버전 관리 워크플로</a>
+- <a href="#workflow">이슈 트래커를 이용한 이슈 기반 버전 관리 워크플로우</a>
 
 - <a href="#next">마치며: 실전 편 예고</a>
 
@@ -147,7 +147,7 @@ github 저장소를 돌아다니다 보면 `issues`라는 버튼을 한번쯤 �
 
 <br />
 
-<h5 id="workflow">이슈 트래커를 이용한 이슈 기반 버전 관리 워크플로</h5>
+<h5 id="workflow">이슈 트래커를 이용한 이슈 기반 버전 관리 워크플로우</h5>
 
 이제부터는 구체적인 실행 방법을 알아볼 텐데요. 책에 적혀 있는 순서는 다음과 같습니다.
 
@@ -174,3 +174,6 @@ github 저장소를 돌아다니다 보면 `issues`라는 버튼을 한번쯤 �
 쓰다 보니 포스트가 많이 길어졌네요. 뒷부분부터는 실제로 제가 어떻게 이슈 트래커를 사용하는지 이어가려고 했는데
 '실전 편'을 따로 만드는 편이 보시기에 편할 것 같아서 일단은 여기서 줄입니다.
 다음 포스트에서 만나요!
+
+(다음 포스트: <a href="https://www.huskyhoochu.com/issue-based-version-control-201"
+target="_blank" rel="noopener noreferrer">github 하나로 1인 개발 워크플로우 완성하기: 실전 편</a>)
