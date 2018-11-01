@@ -51,11 +51,11 @@ date: '2018-08-20T14:41:00+09:00'
 
 <h5 id="egoing">① 생활코딩 - Coding Everybody</h5>
 
-사이트 주소: <a href="https://opentutorials.org/course/1" target="_blank">https://opentutorials.org/course/1</a>
+사이트 주소: <a href="https://opentutorials.org/course/1" target="_blank" rel="noopener noreferrer">https://opentutorials.org/course/1</a>
 
-유튜브 주소: <a href="https://www.youtube.com/user/egoing2/featured" target="_blank">https://www.youtube.com/user/egoing2/featured</a>
+유튜브 주소: <a href="https://www.youtube.com/user/egoing2/featured" target="_blank" rel="noopener noreferrer">https://www.youtube.com/user/egoing2/featured</a>
 
-페이스북 그룹: <a href="https://www.facebook.com/groups/codingeverybody" target="_blank">https://www.facebook.com/groups/codingeverybody</a>
+페이스북 그룹: <a href="https://www.facebook.com/groups/codingeverybody" target="_blank" rel="noopener noreferrer">https://www.facebook.com/groups/codingeverybody</a>
 
 슬로건: **일반인들에게 프로그래밍을 알려주는 무료 온라인, 오프라인 수업**
 
@@ -73,7 +73,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <h5 id="programmers">② 프로그래머스</h5>
 
-사이트 주소: <a href="https://programmers.co.kr/" target="_blank">https://programmers.co.kr</a>
+사이트 주소: <a href="https://programmers.co.kr/" target="_blank" rel="noopener noreferrer">https://programmers.co.kr</a>
 
 슬로건: **동영상과 실습으로 구성된 최고의 프로그래밍 강의를 만나세요.**
 
@@ -93,7 +93,8 @@ date: '2018-08-20T14:41:00+09:00'
 
 <h5 id="monkey">③ 초보몽키의 개발공부로그</h5>
 
-사이트 주소: <a href="https://wayhome25.github.io/til/2017/08/14/TIL-for-6-months/" target="_blank">https://wayhome25.github.io/til/2017/08/14/TIL-for-6-months/</a>
+사이트 주소: <a href="https://wayhome25.github.io/til/2017/08/14/TIL-for-6-months/" target="_blank" rel="noopener noreferrer">
+https://wayhome25.github.io/til/2017/08/14/TIL-for-6-months/</a>
 
 핵심 컨텐츠: **개발자 준비생의 TIL(Today I Learned) 포스팅. 워낙 꼼꼼하게 블로그를 채우셔서 결국 취업에도 성공하셨다는 해피엔딩이...!**
 
@@ -112,13 +113,13 @@ date: '2018-08-20T14:41:00+09:00'
 
 <h5 id="gaerae">④ 개발자스럽다</h5>
 
-사이트 주소: <a href="https://gaerae.com" target="_blank">https://gaerae.com</a>
+사이트 주소: <a href="https://gaerae.com" target="_blank" rel="noopener noreferrer">https://gaerae.com</a>
 
-블로그 주소: <a href="https://blog.gaerae.com" target="_blank">https://blog.gaerae.com</a>
+블로그 주소: <a href="https://blog.gaerae.com" target="_blank" rel="noopener noreferrer">https://blog.gaerae.com</a>
 
-페이스북 페이지: <a href="https://www.facebook.com/gaeraecom" target="_blank">https://www.facebook.com/gaeraecom</a>
+페이스북 페이지: <a href="https://www.facebook.com/gaeraecom" target="_blank" rel="noopener noreferrer">https://www.facebook.com/gaeraecom</a>
 
-트위터 주소: <a href="https://twitter.com/gaeraecom" target="_blank">https://twitter.com/gaeraecom</a>
+트위터 주소: <a href="https://twitter.com/gaeraecom" target="_blank" rel="noopener noreferrer">https://twitter.com/gaeraecom</a>
 
 슬로건: **기술 정보를 찾고 분류하며 가치를 더하여 공유하려고 노력합니다.**
 
@@ -136,13 +137,13 @@ date: '2018-08-20T14:41:00+09:00'
 
 <h5 id="baek">⑤ 백선기 님의 미디엄 블로그</h5>
 
-사이트 주소: <a href="https://engineering.huiseoul.com/@sunki.baek" target="_blank">https://engineering.huiseoul.com/@sunki.baek</a>
+사이트 주소: <a href="https://engineering.huiseoul.com/@sunki.baek" target="_blank" rel="noopener noreferrer">https://engineering.huiseoul.com/@sunki.baek</a>
 
 핵심 컨텐츠: **"자바스크립트는 어떻게 작동하는가"** 시리즈
 
-<a href="http://www.huiseoul.com" target="_blank">Huiseoul</a>의 엔지니어로 자바스크립트, 타입스크립트, SQL 등을 주로 다루시는 분입니다.
+<a href="http://www.huiseoul.com" target="_blank" rel="noopener noreferrer">Huiseoul</a>의 엔지니어로 자바스크립트, 타입스크립트, SQL 등을 주로 다루시는 분입니다.
 
-꼭 읽어보셔야 할 글로는 <a href="https://blog.sessionstack.com/@zlatkov" target="_blank">Alexander Zlatkov</a>의 글을 번역한
+꼭 읽어보셔야 할 글로는 <a href="https://blog.sessionstack.com/@zlatkov" target="_blank" rel="noopener noreferrer">Alexander Zlatkov</a>의 글을 번역한
 
 **"자바스크립트는 어떻게 작동하는가"** 시리즈가 있습니다. 자바스크립트의 핵심 작동 원리를 명쾌하게 설명한 포스팅입니다.
 
@@ -152,7 +153,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <h5 id="zero-cho">⑥ ZeroCho Blog</h5>
 
-사이트 주소: <a href="https://www.zerocho.com" target="_blank">https://www.zerocho.com</a>
+사이트 주소: <a href="https://www.zerocho.com" target="_blank" rel="noopener noreferrer">https://www.zerocho.com</a>
 
 핵심 컨텐츠: **프론트엔드 개발 환경 전반을 다루는 깊이 있는 포스팅**
 
@@ -166,7 +167,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <h5 id="tech-ssut">⑦ tech.ssut</h5>
 
-사이트 주소: <a href="https://tech.ssut.me" target="_blank">https://tech.ssut.me</a>
+사이트 주소: <a href="https://tech.ssut.me" target="_blank" rel="noopener noreferrer">https://tech.ssut.me</a>
 
 핵심 컨텐츠: **파이썬 관련 포스팅**
 
@@ -178,7 +179,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <h5 id="django">⑧ Django 자습 - 핀코인</h5>
 
-사이트 주소: <a href="https://wikidocs.net/book/837" target="_blank">https://wikidocs.net/book/837</a>
+사이트 주소: <a href="https://wikidocs.net/book/837" target="_blank" rel="noopener noreferrer">https://wikidocs.net/book/837</a>
 
 핵심 컨텐츠: **django 사용법 A to Z**
 
@@ -191,7 +192,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <h5 id="subicura">⑨ 서비큐라 기술 블로그</h5>
 
-사이트 주소: <a href="https://subicura.com" target="_blank">https://subicura.com</a>
+사이트 주소: <a href="https://subicura.com" target="_blank" rel="noopener noreferrer">https://subicura.com</a>
 
 핵심 컨텐츠: **Docker, DevOps 관련 포스팅**
 
@@ -210,7 +211,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <h5 id="companies">⑩ 리디북스, 우아한 형제들, 스포카 기술 블로그</h5>
 
-- 리디북스: <a href="http://www.ridicorp.com/blog/" target="_blank">http://www.ridicorp.com/blog/</a>
+- 리디북스: <a href="http://www.ridicorp.com/blog/" target="_blank" rel="noopener noreferrer">http://www.ridicorp.com/blog/</a>
 - 주요 관심사: **서버 관련 해결 사례, UI/UX 개선 사례**
 
 <br />
@@ -224,7 +225,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <br />
 
-- 우아한 형제들: <a href="http://woowabros.github.io" target="_blank">http://woowabros.github.io</a>
+- 우아한 형제들: <a href="http://woowabros.github.io" target="_blank" rel="noopener noreferrer">http://woowabros.github.io</a>
 - 주요 관심사: **신입 개발자 양성 후기, 뭔진 잘 모르겠지만 쩔어버리는 기술력 포스팅, 각 멤버들의 회고 포스팅**
 
 <br />
@@ -237,7 +238,7 @@ date: '2018-08-20T14:41:00+09:00'
 
 <br />
 
-- 스포카: <a href="https://spoqa.github.io" target="_blank">https://spoqa.github.io</a>
+- 스포카: <a href="https://spoqa.github.io" target="_blank" rel="noopener noreferrer">https://spoqa.github.io</a>
 - 주요 관심사: **오픈 소스, 오픈 소스, 오픈 소스!**
 
 <br />
@@ -247,7 +248,7 @@ date: '2018-08-20T14:41:00+09:00'
 고객이 핸드폰 번호를 입력하기만 하면 포인트 적립, 고객 관리가 자동으로 이루어지게끔 만들어진 서비스인데요.
 
 그러나 친절하고 샤방샤방한 인터페이스의 뒷면, 기술 블로그에는 오픈 소스의 끝판왕이라고 할 만한 무시무시한 프로젝트가 가득 담겨 있습니다.
-그중에서도 최강은 구글의 노토 산스 CJK 폰트를 경량화한 <a href="https://spoqa.github.io/spoqa-han-sans/ko-KR/" target="_blank">스포카 한 산스</a>가 아닐까 싶네요.
+그중에서도 최강은 구글의 노토 산스 CJK 폰트를 경량화한 <a href="https://spoqa.github.io/spoqa-han-sans/ko-KR/" target="_blank" rel="noopener noreferrer">스포카 한 산스</a>가 아닐까 싶네요.
 **'한글 폰트가 웹에서 쓰기엔 너무 무거우니 직접 서브셋을 만들어버리자!'** 라는 실행력이라니, 엄청나지 않습니까...
 
 뿐만 아니라 일본 시장을 위한 다국어 스크립트도 직접 제작하는 등 스포카 개발자분들의 능력은 정말이지 최고인 듯 싶습니다.

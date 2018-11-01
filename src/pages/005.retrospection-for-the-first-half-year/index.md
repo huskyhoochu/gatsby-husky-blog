@@ -14,7 +14,7 @@ date: '2018-08-14T06:32:00+09:00'
 
 ###### 2월, 5월
 - 대학 친구를 위해 집단 참여형 블로그를 제작해 주었습니다. 친구가 학원 강사를 시작하면서 운영이 멈추었네요.
-(<a href="https://zamsee.com" target="_blank">웹진 잠시 | 잠시, 도시를 지켜보는 사람들의 이야기</a>)
+(<a href="https://zamsee.com" target="_blank" rel="noopener noreferrer">웹진 잠시 | 잠시, 도시를 지켜보는 사람들의 이야기</a>)
 
 <br />
 
@@ -29,7 +29,7 @@ date: '2018-08-14T06:32:00+09:00'
 
 ###### 3-4월
 - 아는 분 성지순례 여행사 홈페이지를 제작해 드렸습니다. 대표님이 나이가 많으셔서 컴퓨터를 못 다루시는지 운영을 못 하고 계시네요.
-(<a href="https://seoulmariacenter.net" target="_blank">서울마리아센터 | 신앙의 현장으로 순례자를 이끄는 성지순례 여행사</a>)
+(<a href="https://seoulmariacenter.net" target="_blank" rel="noopener noreferrer">서울마리아센터 | 신앙의 현장으로 순례자를 이끄는 성지순례 여행사</a>)
 
 <br />
 
@@ -44,7 +44,7 @@ date: '2018-08-14T06:32:00+09:00'
 
 ###### 6월
 - 아는 형의 문학 매거진 사이트를 제작해 주었습니다. 구글 / 네이버 SEO 적용에 많은 정성을 들였습니다. 필진 섭외가 쉽지 않아 애를 먹는 중입니다.
-(<a href="https://www.somethingmore.co.kr" target="_blank">Something More | 소설이 아닌, 소설 너머의 문학</a>)
+(<a href="https://www.somethingmore.co.kr" target="_blank" rel="noopener noreferrer">Something More | 소설이 아닌, 소설 너머의 문학</a>)
 
 <br />
 
@@ -58,7 +58,7 @@ date: '2018-08-14T06:32:00+09:00'
 <br />
 
 ###### 7월
-- 블로그를 제작했습니다. Gatsby를 사용하면서 graphQL을 다루게 되었습니다. <a href="https://zeit.co/now" target="_blank">Now</a>라는 배포 업체를 알아냈습니다.
+- 블로그를 제작했습니다. Gatsby를 사용하면서 graphQL을 다루게 되었습니다. <a href="https://zeit.co/now" target="_blank" rel="noopener noreferrer">Now</a>라는 배포 업체를 알아냈습니다.
 무료 플랜에서도 커스텀 도메인을 사용할 수 있고, 자동으로 HTTP/2를 지원해줘요!
 단지 배포한 코드 리소스가 공개될 뿐인데, 어차피 블로그니까 크게 상관 없었습니다.
 
@@ -82,7 +82,7 @@ date: '2018-08-14T06:32:00+09:00'
 
 그래도 잘한 점이라면 github 잔디밭을 잘 채웠다, 아직까지 결과가 좋은 건 없지만 실전 풀스택 프로젝트를 3건이나 해냈다, 이런 게 있네요.
 어떤 한 분야를 깊이 파헤치지는 못했지만 웹 프로젝트를 기획, 개발, 배포, 홍보하는 프로세스를 전부 혼자 해 보면서 1인 개발에는 도가 튼 것 같습니다.
-최근에는 <a href="http://www.yes24.com/24/Goods/30741673" target="_blank">'<팀을 위한 git>'</a> 이라는 책을 읽으면서 '이슈 기반 버전관리' 방식에 따라 개발하고 있어요.
+최근에는 <a href="http://www.yes24.com/24/Goods/30741673" target="_blank" rel="noopener noreferrer">'<팀을 위한 git>'</a> 이라는 책을 읽으면서 '이슈 기반 버전관리' 방식에 따라 개발하고 있어요.
 이전까지는 스크럼이나 할 일 관리는 구글 문서나 트렐로에 관리하고 git은 git대로 따로 굴리느라 정신이 없었는데 이제는 두 가지 영역을 이슈 트래커로 한꺼번에 처리할 수 있어서 좋습니다.
 
 #### 하반기에는?

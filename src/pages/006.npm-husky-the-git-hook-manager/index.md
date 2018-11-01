@@ -8,8 +8,8 @@ date: '2018-08-20T05:35:00+09:00'
 
 #### 들어가며
 
-<a href="https://github.com/typicode/husky" target="_blank">husky</a>는 프론트엔드 개발 환경에서
-<a href="https://git-scm.com/book/ko/v2/Git%EB%A7%9E%EC%B6%A4-Git-Hooks" target="_blank">git hook</a>을 손쉽게 제어하도록 도와주는 매니저입니다.
+<a href="https://github.com/typicode/husky" target="_blank" rel="noopener noreferrer">husky</a>는 프론트엔드 개발 환경에서
+<a href="https://git-scm.com/book/ko/v2/Git%EB%A7%9E%EC%B6%A4-Git-Hooks" target="_blank" rel="noopener noreferrer">git hook</a>을 손쉽게 제어하도록 도와주는 매니저입니다.
 `git hook`은 말 그대로 갈고리 같은 건데요. `git`을 쓰다가 특정 이벤트(커밋할 때, 푸시할 때 등등)가 벌어졌을 때, 그 순간에 '갈고리'를 걸어서 특정 스크립트가 실행되도록 도와주는 게 `git hook`입니다.
 
 물론 `husky`를 쓰지 않더라도 `git hook`을 설정할 수 있는 공식적인 방법은 따로 있습니다. `.git/hooks` 폴더에 들어가서 스크립트를 작성하면 되는 건데요.
@@ -56,8 +56,8 @@ yarn add --dev husky@next
 
 이게 끝입니다. 참 쉽죠? `git hook`으로 `npm scripts`를 다룰 때는 그냥 이렇게만 하면 충분합니다.
 
-하지만 `git hook`을 `npm scripts` 쓰는 데에만 사용하진 않죠. <a href="http://woowabros.github.io/" target="_blank">우아한 형제들 블로그</a>에서 올려 주신
-<a href="http://woowabros.github.io/tools/2017/07/12/git_hook.html" target="_blank">훅으로 Git에 훅 들어가기</a> 같은 글을 보면,
+하지만 `git hook`을 `npm scripts` 쓰는 데에만 사용하진 않죠. <a href="http://woowabros.github.io/" target="_blank" rel="noopener noreferrer">우아한 형제들 블로그</a>에서 올려 주신
+<a href="http://woowabros.github.io/tools/2017/07/12/git_hook.html" target="_blank" rel="noopener noreferrer">훅으로 Git에 훅 들어가기</a> 같은 글을 보면,
 **프로젝트에 이미지를 추가하고 커밋하면 자동으로 이미지를 최적화 해주는 스크립트**를 소개해주고 있습니다.
 또는 **이슈 기반 버전 관리**를 할 때, 브랜치에 적어 놓은 이슈 번호를 자동으로 긁어와 커밋 메시지에 추가해주는 스크립트 같은 것도 만들 수가 있죠.
 이런 복잡한 명령들은 `husky`에 그냥 입력한다고 작동시킬 수는 없겠죠. 따로 스크립트를 작성하는 편이 나을 겁니다.
@@ -75,7 +75,8 @@ yarn add --dev husky@next
 <p class="caption">husky를 설치하면 자동으로 모든 hook에 husky를 실행하라는 스크립트가 작성됩니다.</p>
 
 그럼 `husky`를 쓰면 스크립트 파일로 `git hook`을 쓸 수는 없는 건가요? 그건 아닙니다.
-<a href="https://github.com/typicode/husky/blob/dev/DOCS.md" target="_blank">husky 공식 문서</a>를 보면 `husky`로 스크립트 파일을 호출하는 방법을 알려주고 있습니다.
+<a href="https://github.com/typicode/husky/blob/dev/DOCS.md" target="_blank" rel="noopener noreferrer">husky 공식 문서</a>
+를 보면 `husky`로 스크립트 파일을 호출하는 방법을 알려주고 있습니다.
 
 ```json
 // package.json
@@ -114,10 +115,11 @@ yarn add --dev husky@next
 
 ##### 실전 응용: 커밋 메시지에 이슈 넘버를 포함시키는 git hook 만들기
 
-이미지 자동 압축 스크립트는 우아한 형제들 블로그의 <a href="http://woowabros.github.io/tools/2017/07/12/git_hook.html" target="_blank">훅으로 Git에 훅 들어가기</a>를 참조하시면 되구요.
+이미지 자동 압축 스크립트는 우아한 형제들 블로그의 <a href="http://woowabros.github.io/tools/2017/07/12/git_hook.html" target="_blank" rel="noopener noreferrer">
+훅으로 Git에 훅 들어가기</a>를 참조하시면 되구요.
 저는 이슈 넘버를 커밋 메시지에 자동으로 포함시키는 스크립트를 소개해드리도록 하겠습니다.
 
-**(참고: <a href="https://mug896.github.io/bash-shell/index.html" target="_blank">Bash Shell Script 가이드 by mug896</a>)**
+**(참고: <a href="https://mug896.github.io/bash-shell/index.html" target="_blank" rel="noopener noreferrer">Bash Shell Script 가이드 by mug896</a>)**
 
 ```bash
 // add_issue_number_into_commit.sh
@@ -139,7 +141,8 @@ yarn add --dev husky@next
 
 **➁** 현재 커밋의 브랜치 이름을 가져옵니다. `git rev-parse --abbrev-ref HEAD` 명령어로 나온 결과값을 `branch_name` 이라는 변수에 담는 건데요, 명령어를 하나하나 뜯어보면 이렇습니다.
 
-> `rev-parse` : `git`의 저수준 명령어 중 하나입니다. 찾고자 하는 커밋이나 브랜치의 SHA-1 해시 값을 파싱해줍니다. **(참고: <a href="https://git-scm.com/docs/git-rev-parse" target="_blank">https://git-scm.com/docs/git-rev-parse</a>)**
+> `rev-parse` : `git`의 저수준 명령어 중 하나입니다. 찾고자 하는 커밋이나 브랜치의 SHA-1 해시 값을 파싱해줍니다.
+**(참고: <a href="https://git-scm.com/docs/git-rev-parse" target="_blank" rel="noopener noreferrer">https://git-scm.com/docs/git-rev-parse</a>)**
 >
 > `—abbrev-ref` : 해시 값 대신 해시가 가리키는 오브젝트의 이름을 찾아줍니다.
 
@@ -157,7 +160,7 @@ yarn add --dev husky@next
 `-z` 는 문자열이 `null`일 경우 `true`를 반환하는 조건식입니다.
 
 **➅** `sed`: `stream editor` 의 줄임말로 텍스트 파일을 편집하게 해주는 에디터입니다. 유닉스 시절에 개발된 아주아주 오래된 도구죠.
-**(참고: <a href="https://mug896.github.io/sed-stream-editor/" target="_blank">SED Stream EDitor 가이드 by mug896</a>)**
+**(참고: <a href="https://mug896.github.io/sed-stream-editor/" target="_blank" rel="noopener noreferrer">SED Stream EDitor 가이드 by mug896</a>)**
 
 > `-i` : 파일의 직접 수정을 가능케 합니다.
 >

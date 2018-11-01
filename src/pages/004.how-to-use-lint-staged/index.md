@@ -8,11 +8,14 @@ date: '2018-08-13T18:14:28+09:00'
 
 #### lint, 좋긴 한데 지속적으로 쓰긴 까다로워!
 
-프론트엔드 개발자들은 코드 스타일 유지를 위해 여러 `lint` 툴을 사용합니다. 저는 <a href="https://eslint.org/" target="_blank">eslint</a> 에 `airbnb` 설정을 붙여 쓰는 편인데요.
-**(참고: <a href="https://github.com/ParkSB/javascript-style-guide" target="_blank">Airbnb JavaScript 스타일 가이드 한글 번역</a>)**
+프론트엔드 개발자들은 코드 스타일 유지를 위해 여러 `lint` 툴을 사용합니다. 저는
+<a href="https://eslint.org/" target="_blank" rel="noopener noreferrer">eslint</a> 에 `airbnb` 설정을 붙여 쓰는 편인데요.
+**(참고: <a href="https://github.com/ParkSB/javascript-style-guide" target="_blank" rel="noopener noreferrer">Airbnb JavaScript 스타일 가이드 한글 번역</a>)**
 `lint` 자체는 좋지만 **마구잡이로 사용하면 `git` 히스토리가 엉망이 된다**는 문제가 있죠.
 
-한창 개발 중인 프로젝트에 `eslint`를 설치해 전체 파일에 적용했다 칩시다. 세미콜론, 쉼표 같은 자잘한 경고부터 <a href="https://eslint.org/docs/rules/no-undef" target="_blank">no-undef</a> 같은 심각한 에러까지 수정 사항이 여기저기서 뿜뿜 튀어나올 겁니다.
+한창 개발 중인 프로젝트에 `eslint`를 설치해 전체 파일에 적용했다 칩시다. 세미콜론, 쉼표 같은 자잘한 경고부터
+<a href="https://eslint.org/docs/rules/no-undef" target="_blank" rel="noopener noreferrer">no-undef</a>
+같은 심각한 에러까지 수정 사항이 여기저기서 뿜뿜 튀어나올 겁니다.
 이때 `lint`가 시키는 대로 마구 수정을 하면 개발 중이던 이슈와는 상관 없는 파일들까지 죄다 갈아엎어지겠죠?
 그럼 어쩔 수 없이 `git add -A` 같은 광역 명령어를 치고 '`lint` 수정' 같은 무의미한 커밋을 날려야 합니다. 보기 좋은 상황은 아니에요.
 
@@ -25,7 +28,8 @@ date: '2018-08-13T18:14:28+09:00'
 #### git과 lint를 하나로! lint-staged
 
 이런 불편함을 해결하고자 등장한 도구가 [lint-staged](https://github.com/okonet/lint-staged) 입니다. 이름 그대로 `git`에 `staged` 된 파일만 `lint` 해주는 녀석이에요.
-어떻게 그럴 수 있냐고요? <a href="https://git-scm.com/book/ko/v2/Git%EB%A7%9E%EC%B6%A4-Git-Hooks" target="_blank">git hook</a>이라는 기능을 이용하면 가능합니다.
+어떻게 그럴 수 있냐고요? <a href="https://git-scm.com/book/ko/v2/Git%EB%A7%9E%EC%B6%A4-Git-Hooks" target="_blank" rel="noopener noreferrer">git hook</a>
+이라는 기능을 이용하면 가능합니다.
 
 ##### git hook? 처음 듣는데요
 
