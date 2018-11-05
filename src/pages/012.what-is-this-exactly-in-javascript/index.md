@@ -4,7 +4,7 @@ subtitle: '자바스크립트에서 가장 불가사의한 키워드, "this" 를
 category: 'frontend'
 excerpt: '단연코 "this"는 자바스크립트에서 가장 많이 오해받고 있는 개념일 겁니다. 자바스크립트를 그저 "객체 지향 언어겠거니..." 하고 접근하기 때문인데요.
 물론 자바스크립트는 그렇게 만들어진 언어가 아닙니다. 우선 this를 공부하면서 차근차근 알아가도록 합시다.'
-date: '2018-11-01T19:14:00+09:00'
+date: '2018-11-05T17:27:00+09:00'
 ---
 
 #### 들어가며
@@ -28,7 +28,7 @@ date: '2018-11-01T19:14:00+09:00'
 class Car:
   def __init__(self):
     self.speed = 0
-  
+
   def __str__(self):
     return f'<Car speed={self.speed}>'
 
@@ -63,7 +63,7 @@ truck(); // car speed=undefined
 
 자바스크립트에는 클래스가 없기 때문에 (ES6에 클래스 문법이 소개되긴 했지만 어디까지나 모조품일 뿐입니다. 참고: <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes#Class_%EC%A0%95%EC%9D%98" target="_blank" rel="noopener noreferrer">MDN | Class 정의</a>) car 함수를 정의하고, 함수 객체를 생성해 속력 프로퍼티를 추가해보았습니다. 하지만 결과로 찍혀나오는 건 `undefined`로군요. 어째서일까요? `this`가 자기 참조 키워드라면 자기 자신의 속력으로 설정된 값을 출력할 만도 한데요.
 
-사실 자바스크립트의 모든 함수는 객체이기 때문에, 함수 객체에 프로퍼티를 추가하면 기록이 남게 되어 있습니다. 
+사실 자바스크립트의 모든 함수는 객체이기 때문에, 함수 객체에 프로퍼티를 추가하면 기록이 남게 되어 있습니다.
 
 ```javascript
 console.log(truck.speed); // 70
@@ -83,7 +83,7 @@ EcmaScript 2015 공식 명세서에서는 `this`를 기본 표현식의 하나�
 > `ResolveThisBinding()`
 >
 > "The abstract operation ResolveThisBinding determines the binding of the keyword **this** using the <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments" target="_blank" rel="noopener noreferrer">LexicalEnvironment</a> of the <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-execution-contexts" target="_blank" rel="noopener noreferrer">running execution context.</a>"
-> 
+>
 > "추상 연산자 ResolveThisBinding은 실행 환경 컨텍스트의 렉시컬 환경을 사용하여 **this** 키워드의 바인딩을 결정한다."
 >
 
@@ -111,7 +111,7 @@ console.log(hello() === global); // true (Node)
 
 <br />
 
-하지만 이 경우에는 예외가 있습니다. 엄격 모드를 사용하면 전역에서 호출된 함수의 `this`는 `undefined`가 됩니다. 
+하지만 이 경우에는 예외가 있습니다. 엄격 모드를 사용하면 전역에서 호출된 함수의 `this`는 `undefined`가 됩니다.
 
 ```javascript
 'use strict'; // 엄격 모드
@@ -204,7 +204,7 @@ binded(9, 10); // 540
 
 ###### new 생성자 호출
 
-new를 이용해 함수를 호출하면, 그 함수의 `this`는 함수 객체 자신을 가리키게 됩니다. 
+new를 이용해 함수를 호출하면, 그 함수의 `this`는 함수 객체 자신을 가리키게 됩니다.
 
 ```javascript
 function pasta() {
