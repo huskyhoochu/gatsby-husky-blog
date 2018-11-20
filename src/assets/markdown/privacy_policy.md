@@ -8,7 +8,8 @@ published: 'false'
 
 #### 1. 개인정보의 처리 목적
 
-**<Huskyhoochu | 허스키후추의 개발 블로그>(‘https://www.huskyhoochu.com’이하 ‘허스키후추’)** 은(는) 다음의 목적을 위하여 개인정보를
+**<Huskyhoochu | 허스키후추의 개발 블로그>('<a href="https://www.huskyhoochu.com" target="_blank" rel="noopener noreferrer">
+https://www.huskyhoochu.com</a>' 이하 ‘허스키후추’)** 은(는) 다음의 목적을 위하여 개인정보를
 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.
 
 > 고객에 대한 서비스 제공에 따른 본인 식별.인증 등
