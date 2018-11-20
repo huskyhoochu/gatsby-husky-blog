@@ -13,36 +13,36 @@ const CategoryList = ({ data, pathContext }) => {
   } = data;
   const { category } = pathContext;
 
+  const layoutQuery = {
+    itemList: {
+      markdown: allMarkdownRemark.edges,
+      imgSharp: allFile.edges,
+    },
+    markdownItem: {
+      frontmatter: {},
+      html: '',
+    },
+    thumbnail: file.childImageSharp.fixed,
+    location: '',
+    category,
+  };
+
+  const helmetContent = {
+    canonical: `${site.siteMetadata.siteUrl}/categories/${_.kebabCase(
+      category,
+    )}`,
+    description: _.startCase(_.kebabCase(category)),
+    title: `Category as "${_.startCase(_.kebabCase(category))}" | ${
+      site.siteMetadata.siteTitle
+    }`,
+    type: 'website',
+    date: '',
+    image: '',
+  };
+
   return (
-    <Layout
-      query={{
-        itemList: {
-          markdown: allMarkdownRemark.edges,
-          imgSharp: allFile.edges,
-        },
-        markdownItem: {
-          frontmatter: {},
-          html: '',
-        },
-        thumbnail: file.childImageSharp.fixed,
-        location: '',
-        category,
-      }}
-    >
-      <SEOHelmet
-        content={{
-          canonical: `${site.siteMetadata.siteUrl}/categories/${_.kebabCase(
-            category,
-          )}`,
-          description: _.startCase(_.kebabCase(category)),
-          title: `Category as "${_.startCase(_.kebabCase(category))}" | ${
-            site.siteMetadata.siteTitle
-          }`,
-          type: 'website',
-          date: '',
-          image: '',
-        }}
-      />
+    <Layout query={layoutQuery}>
+      <SEOHelmet content={helmetContent} />
     </Layout>
   );
 };

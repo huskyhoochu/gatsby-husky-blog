@@ -16,33 +16,33 @@ import splitSlug from '../utils/SplitSlugToFilePath';
 const BlogPost = ({ data }) => {
   const { markdownRemark, site, file } = data;
 
+  const layoutQuery = {
+    itemList: {
+      markdown: [],
+      imgSharp: [],
+    },
+    markdownItem: markdownRemark,
+    thumbnail: file.childImageSharp.fixed,
+    location: splitSlug(markdownRemark.fields.slug),
+    category: markdownRemark.frontmatter.category,
+  };
+
+  const helmetContent = {
+    canonical: `${site.siteMetadata.siteUrl}/${splitSlug(
+      markdownRemark.fields.slug,
+    )}`,
+    description: markdownRemark.frontmatter.excerpt,
+    title: `${markdownRemark.frontmatter.title} | ${
+      site.siteMetadata.siteTitle
+    }`,
+    type: 'article',
+    date: markdownRemark.frontmatter.date,
+    image: file.childImageSharp.fixed.src,
+  };
+
   return (
-    <Layout
-      query={{
-        itemList: {
-          markdown: [],
-          imgSharp: [],
-        },
-        markdownItem: markdownRemark,
-        thumbnail: file.childImageSharp.fixed,
-        location: splitSlug(markdownRemark.fields.slug),
-        category: markdownRemark.frontmatter.category,
-      }}
-    >
-      <SEOHelmet
-        content={{
-          canonical: `${site.siteMetadata.siteUrl}/${splitSlug(
-            markdownRemark.fields.slug,
-          )}`,
-          description: markdownRemark.frontmatter.excerpt,
-          title: `${markdownRemark.frontmatter.title} | ${
-            site.siteMetadata.siteTitle
-          }`,
-          type: 'article',
-          date: markdownRemark.frontmatter.date,
-          image: file.childImageSharp.fixed.src,
-        }}
-      />
+    <Layout query={layoutQuery}>
+      <SEOHelmet content={helmetContent} />
     </Layout>
   );
 };

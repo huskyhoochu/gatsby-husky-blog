@@ -15,52 +15,44 @@ import PostDetail from '../post_detail/PostDetail';
 
 const WhatInformation = ({ category, location, markdownItem }) => {
   if (Object.keys(markdownItem.frontmatter).length !== 0) {
-    return (
-      <PostInformation
-        content={{
-          frontmatter: markdownItem.frontmatter,
-          author: config.author,
-          location,
-        }}
-      />
-    );
+    const postInfoContent = {
+      frontmatter: markdownItem.frontmatter,
+      author: config.author,
+      location,
+    };
+    return <PostInformation content={postInfoContent} />;
   }
+
   return <CategoryInformation category={category} />;
 };
 
 const WhatPage = ({ category, itemList, markdownItem }) => {
   if (Object.keys(markdownItem.frontmatter).length !== 0) {
-    return (
-      <PostDetail
-        edges={{
-          markdownItem,
-          category,
-        }}
-      />
-    );
+    const detailEdges = {
+      markdownItem,
+      category,
+    };
+    return <PostDetail edges={detailEdges} />;
   }
-  return (
-    <PostList
-      edges={{
-        markdown: itemList.markdown,
-        imgSharp: itemList.imgSharp,
-        category,
-      }}
-    />
-  );
+
+  const listEdges = {
+    markdown: itemList.markdown,
+    imgSharp: itemList.imgSharp,
+    category,
+  };
+  return <PostList edges={listEdges} />;
 };
 
 class FlexWrapper extends React.PureComponent {
   render() {
     const { query } = this.props;
+    const thumbTheme = {
+      src: query.thumbnail.src,
+      srcSet: query.thumbnail.srcSet,
+    };
     return (
       <Styled.FlexWrapper>
-        <ThemeProvider
-          theme={{
-            src: query.thumbnail.src,
-            srcSet: query.thumbnail.srcSet,
-          }}
-        >
+        <ThemeProvider theme={thumbTheme}>
           <LeftSection>
             <Styled.ContentsWrapper>
               <Styled.InfoWrapper>

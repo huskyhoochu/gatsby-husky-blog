@@ -11,34 +11,34 @@ const BlogIndex = ({ data }) => {
     allFile, allMarkdownRemark, site, file,
   } = data;
 
+  const layoutQuery = {
+    itemList: {
+      markdown: allMarkdownRemark.edges,
+      imgSharp: allFile.edges,
+    },
+    markdownItem: {
+      frontmatter: {},
+      html: '',
+    },
+    thumbnail: file.childImageSharp.fixed,
+    location: '',
+    category: 'Latest',
+  };
+
+  const helmetContent = {
+    canonical: site.siteMetadata.siteUrl,
+    description: site.siteMetadata.description,
+    title: `${site.siteMetadata.siteTitle} | ${
+      site.siteMetadata.siteTitleKorean
+    }`,
+    type: 'website',
+    date: '',
+    image: '',
+  };
+
   return (
-    <Layout
-      query={{
-        itemList: {
-          markdown: allMarkdownRemark.edges,
-          imgSharp: allFile.edges,
-        },
-        markdownItem: {
-          frontmatter: {},
-          html: '',
-        },
-        thumbnail: file.childImageSharp.fixed,
-        location: '',
-        category: 'Latest',
-      }}
-    >
-      <SEOHelmet
-        content={{
-          canonical: site.siteMetadata.siteUrl,
-          description: site.siteMetadata.description,
-          title: `${site.siteMetadata.siteTitle} | ${
-            site.siteMetadata.siteTitleKorean
-          }`,
-          type: 'website',
-          date: '',
-          image: '',
-        }}
-      />
+    <Layout query={layoutQuery}>
+      <SEOHelmet content={helmetContent} />
     </Layout>
   );
 };
