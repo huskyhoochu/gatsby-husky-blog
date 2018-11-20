@@ -8,6 +8,7 @@
     "serve": "gatsby serve",
     "prettier": "prettier --single-quote --arrow-parens always --write",
     "lint": "eslint --fix",
+    "removeCache": "rm -rf .cache public",
     "removeUrl": "now rm -y",
     "deploy": "./scripts/deploy.sh"
   },
@@ -44,24 +45,24 @@
     "minireset.css": "^0.0.3",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
-    "react": "^16.6.0",
+    "react": "^16.6.3",
     "react-adsense": "^0.0.6",
-    "react-dom": "^16.6.0",
+    "react-dom": "^16.6.3",
     "react-facebook": "^5.0.3",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.4.10",
+    "styled-components": "^4.1.1",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
+    "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "husky": "^1.1.2",
-    "lint-staged": "^8.0.4",
-    "prettier": "1.14.3"
+    "husky": "^1.1.4",
+    "lint-staged": "^8.0.5",
+    "prettier": "^1.15.2"
   }
 }
