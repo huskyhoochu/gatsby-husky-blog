@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import StyledBasic from '../../layouts/StyledBasic';
 
 const CategoryTitle = styled.h6`
   margin-top: 0 !important;
@@ -6,8 +7,7 @@ const CategoryTitle = styled.h6`
   text-align: center;
 `;
 
-const PostWrapper = styled.div`
-  display: flex;
+const PostWrapper = styled(StyledBasic.BasicFlexWrapper)`
   flex-wrap: wrap;
   align-items: center;
   align-content: flex-start;

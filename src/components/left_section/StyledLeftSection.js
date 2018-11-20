@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import MainThumb from '../../assets/images/category_index.jpg';
 
 // Styled
+import StyledBasic from '../../layouts/StyledBasic';
 import StyledFlexWrpper from '../flex_wrapper/StyledFlexWrapper';
 
-const GreyOut = styled.div`
-  position: absolute;
+const GreyOut = styled(StyledBasic.BasicAbsoluteWrapper)`
   top: 0;
   left: 0;
   z-index: 2;
@@ -18,10 +18,9 @@ const GreyOut = styled.div`
   transition: opacity 0.5s ease;
 `;
 
-const LeftSection = styled.section.attrs({
+const LeftSection = styled(StyledBasic.BasicRelativeWrapper).attrs({
   id: 'left',
 })`
-  position: relative;
   top: 0;
   z-index: 1;
   height: 100vh;

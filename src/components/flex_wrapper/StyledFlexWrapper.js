@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import StyledBasic from '../../layouts/StyledBasic';
 
-const RightSection = styled.section`
+const RightSection = styled(StyledBasic.BasicRelativeWrapper).attrs({
+  id: 'right',
+})`
   background-color: white;
-  position: relative;
   z-index: 0;
   flex: 1;
   width: 50%;
@@ -13,17 +15,15 @@ const RightSection = styled.section`
   }
 `;
 
-const FlexWrapper = styled.div`
-  display: flex;
+const FlexWrapper = styled(StyledBasic.BasicFlexWrapper)`
   flex-direction: row;
-  position: relative;
 
   @media (max-width: 1024px) {
     flex-direction: column;
   }
 `;
 
-const ContentsWrapper = styled.div`
+const ContentsWrapper = styled(StyledBasic.BasicRelativeWrapper)`
   padding: 4rem 1rem;
 
   @media (max-width: 414px) {
@@ -31,8 +31,7 @@ const ContentsWrapper = styled.div`
   }
 `;
 
-const InfoWrapper = styled.div`
-  position: relative;
+const InfoWrapper = styled(StyledBasic.BasicRelativeWrapper)`
   z-index: 3;
   color: floralwhite;
   margin: 0 7rem;
@@ -59,7 +58,7 @@ const InfoWrapper = styled.div`
   }
 `;
 
-const InfoInner = styled.article`
+const InfoInner = styled(StyledBasic.BasicRelativeWrapper)`
   align-self: center;
   text-align: center;
 `;

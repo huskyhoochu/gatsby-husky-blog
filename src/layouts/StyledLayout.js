@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import minireset from 'minireset.css/minireset.min.css';
 
 // Styled
+import StyledBasic from './StyledBasic';
 import StyledGreyOut from '../components/grey_out/StyledGreyOut';
 import StyledHeader from '../components/header/StyledHeader';
 
@@ -9,12 +10,11 @@ const resetCSS = css`
   ${minireset}
 `;
 
-const Canvas = styled.div`
-  position: relative;
+const Canvas = styled(StyledBasic.BasicRelativeWrapper)`
   transition: 0.5s ease;
 `;
 
-const App = styled.div.attrs({
+const App = styled(StyledBasic.BasicRelativeWrapper).attrs({
   id: 'App',
 })`
   ${resetCSS}

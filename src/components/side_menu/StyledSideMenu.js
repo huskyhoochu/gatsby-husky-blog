@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import StyledBasic from '../../layouts/StyledBasic';
 
-const MenuWrapper = styled.aside`
-  position: absolute;
+const MenuWrapper = styled(StyledBasic.BasicAbsoluteWrapper).attrs({
+  id: 'side',
+})`
   width: 19rem;
   height: 100vh;
   top: 0;
@@ -9,7 +11,7 @@ const MenuWrapper = styled.aside`
   transform: translate3d(-100%, 0, 0);
 `;
 
-const Menu = styled.div`
+const Menu = styled(StyledBasic.BasicRelativeWrapper)`
   margin-top: 1.75rem;
   padding: 1.5rem;
 `;
@@ -39,8 +41,7 @@ const MenuLabel = styled.p`
   line-height: 3;
 `;
 
-const Copyright = styled.div`
-  position: absolute;
+const Copyright = styled(StyledBasic.BasicAbsoluteWrapper)`
   bottom: 0;
   left: 0;
   margin-bottom: 1.75rem;

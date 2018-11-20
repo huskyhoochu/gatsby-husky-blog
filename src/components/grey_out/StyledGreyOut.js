@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import StyledBasic from '../../layouts/StyledBasic';
 
-const GreyOut = styled.div`
-  position: absolute;
+const GreyOut = styled(StyledBasic.BasicAbsoluteWrapper)`
   top: 0;
   left: 0;
   z-index: 1000;

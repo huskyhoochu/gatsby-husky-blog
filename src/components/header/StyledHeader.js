@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import StyledBasic from '../../layouts/StyledBasic';
 
-const NavBar = styled.nav`
-  display: flex;
+const NavBar = styled(StyledBasic.BasicFlexWrapper).attrs({
+  id: 'nav',
+})`
   position: fixed;
   top: 0;
   z-index: 3;
