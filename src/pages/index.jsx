@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import '../utils/WebFontLoader';
 
-// CSS
-import 'minireset.css/minireset.min.css';
-
 // Components
 import Layout from '../layouts/Layout';
 import SEOHelmet from '../components/seo_helmet/SEOHelmet';

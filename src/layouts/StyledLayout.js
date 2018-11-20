@@ -1,8 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import minireset from 'minireset.css/minireset.min.css';
 
 // Styled
 import StyledGreyOut from '../components/grey_out/StyledGreyOut';
 import StyledHeader from '../components/header/StyledHeader';
+
+const resetCSS = css`
+  ${minireset}
+`;
 
 const Canvas = styled.div`
   position: relative;
@@ -12,6 +17,7 @@ const Canvas = styled.div`
 const App = styled.div.attrs({
   id: 'App',
 })`
+  ${resetCSS}
   font-family: 'Josefin Sans', 'Noto Sans KR', sans-serif;
   font-style: normal;
   font-weight: 300;
