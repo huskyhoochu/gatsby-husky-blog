@@ -18,8 +18,12 @@ const BlogIndex = ({ data }) => {
           markdown: allMarkdownRemark.edges,
           imgSharp: allFile.edges,
         },
-        markdownItem: {},
+        markdownItem: {
+          frontmatter: {},
+          html: '',
+        },
         thumbnail: file.childImageSharp.fixed,
+        location: '',
         category: 'Latest',
       }}
     >

@@ -12,9 +12,14 @@ const AboutMe = ({ data }) => {
   return (
     <Layout
       query={{
-        itemList: {},
+        itemList: {
+          markdown: [],
+          imgSharp: [],
+        },
         markdownItem: markdownRemark,
         thumbnail: file.childImageSharp.fixed,
+        location: '',
+        category: '',
       }}
     >
       <SEOHelmet

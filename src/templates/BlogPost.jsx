@@ -19,7 +19,10 @@ const BlogPost = ({ data }) => {
   return (
     <Layout
       query={{
-        itemList: {},
+        itemList: {
+          markdown: [],
+          imgSharp: [],
+        },
         markdownItem: markdownRemark,
         thumbnail: file.childImageSharp.fixed,
         location: splitSlug(markdownRemark.fields.slug),
