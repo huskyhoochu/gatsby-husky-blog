@@ -18,7 +18,7 @@ const PostInformation = ({ content }) => (
       <span>&nbsp;|&nbsp;</span>
       <strong>{content.author}</strong>
     </p>
-    {content.location ? (
+    {content.location && (
       <p>
         <FacebookProvider appId={config.facebookAppId}>
           <Share href={`${config.siteUrl}/${content.location}`}>
@@ -30,7 +30,7 @@ const PostInformation = ({ content }) => (
           </Share>
         </FacebookProvider>
       </p>
-    ) : null}
+    )}
   </Fragment>
 );
 
