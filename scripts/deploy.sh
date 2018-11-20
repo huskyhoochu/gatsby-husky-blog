@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-rm -rf .cache public
+yarn removeCache
 
 yarn build
 
