@@ -39,6 +39,8 @@ const CategoryList = ({ data, pathContext }) => {
             site.siteMetadata.siteTitle
           }`,
           type: 'website',
+          date: '',
+          image: '',
         }}
       />
     </Layout>

@@ -3,34 +3,35 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import config from '../../data/SiteConfig';
 
+const schemaOrgJSON = [
+  {
+    '@context': 'http://schema.org',
+    '@type': 'Blog',
+    url: config.siteUrl,
+    name: `${config.siteTitle} | ${config.siteTitleKorean}`,
+    description: config.siteDescription,
+    sameAs: [
+      'https://github.com/huskyhoochu',
+      'https://www.facebook.com/huskyhoochublog',
+      'https://medium.com/@huskyhoochu',
+    ],
+    publisher: {
+      '@type': 'Organization',
+      name: config.siteTitle,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${config.siteUrl}/favicon_package/android-chrome-512x512.png`,
+        width: 600,
+        height: 60,
+      },
+    },
+  },
+];
+
 const SEOHelmet = ({ content }) => {
   const {
     canonical, description, title, type, date, image,
   } = content;
-  const schemaOrgJSON = [
-    {
-      '@context': 'http://schema.org',
-      '@type': 'Blog',
-      url: config.siteUrl,
-      name: `${config.siteTitle} | ${config.siteTitleKorean}`,
-      description: config.siteDescription,
-      sameAs: [
-        'https://github.com/huskyhoochu',
-        'https://www.facebook.com/huskyhoochublog',
-        'https://medium.com/@huskyhoochu',
-      ],
-      publisher: {
-        '@type': 'Organization',
-        name: config.siteTitle,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${config.siteUrl}/favicon_package/android-chrome-512x512.png`,
-          width: 600,
-          height: 60,
-        },
-      },
-    },
-  ];
 
   if (type === 'article') {
     schemaOrgJSON.push({
@@ -133,8 +134,8 @@ SEOHelmet.propTypes = {
     description: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
-    date: PropTypes.string,
-    image: PropTypes.string,
+    date: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
   }).isRequired,
 };
 
