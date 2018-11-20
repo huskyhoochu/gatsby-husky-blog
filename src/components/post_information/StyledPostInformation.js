@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const IconButton = styled.button.attrs({
   type: 'button',
+  disabled: 'loading',
 })`
   background-color: transparent;
   border: none;

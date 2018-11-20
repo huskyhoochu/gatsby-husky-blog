@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import FacebookProvider, { Share } from 'react-facebook';
+import { FacebookProvider, Share } from 'react-facebook';
 import config from '../../data/SiteConfig';
 
 // CSS
@@ -22,9 +22,11 @@ const PostInformation = ({ content }) => (
       <p>
         <FacebookProvider appId={config.facebookAppId}>
           <Share href={`${config.siteUrl}/${content.location}`}>
-            <Styled.IconButton>
-              <Styled.Icon src={faFacebook} />
-            </Styled.IconButton>
+            {({ handleClick }) => (
+              <Styled.IconButton onClick={handleClick}>
+                <Styled.Icon src={faFacebook} />
+              </Styled.IconButton>
+            )}
           </Share>
         </FacebookProvider>
       </p>
