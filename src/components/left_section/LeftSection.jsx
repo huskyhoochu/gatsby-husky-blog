@@ -4,22 +4,34 @@ import PropTypes from 'prop-types';
 // Styled
 import Styled from './StyledLeftSection';
 
-class LeftSection extends React.PureComponent {
-  static handleTouch(e) {
-    e.currentTarget.classList.toggle('move');
-  }
+const handleTouch = () => {
+  const el = document.getElementById('left');
+  el.classList.toggle('move');
+};
 
+class LeftSection extends React.Component {
   componentDidMount() {
     const el = document.getElementById('left');
-    el.addEventListener('touchstart', LeftSection.handleTouch, {
+    el.addEventListener('touchstart', handleTouch, {
       passive: true,
     });
-    el.addEventListener('mouseenter', LeftSection.handleTouch, {
+    el.addEventListener('mouseenter', handleTouch, {
       passive: true,
     });
-    el.addEventListener('mouseleave', LeftSection.handleTouch, {
+    el.addEventListener('mouseleave', handleTouch, {
       passive: true,
     });
+  }
+
+  shouldComponentUpdate() {
+    return false;
+  }
+
+  componentWillUnmount() {
+    const el = document.getElementById('left');
+    el.removeEventListener('touchstart', handleTouch);
+    el.removeEventListener('mouseenter', handleTouch);
+    el.removeEventListener('mouseleave', handleTouch);
   }
 
   render() {
