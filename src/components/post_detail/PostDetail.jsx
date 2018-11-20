@@ -26,11 +26,15 @@ const wrapTableElement = () => {
   }
 };
 
-class PostDetail extends React.PureComponent {
+class PostDetail extends React.Component {
   componentDidMount() {
     if (typeof window !== 'undefined') {
       wrapTableElement();
     }
+  }
+
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {

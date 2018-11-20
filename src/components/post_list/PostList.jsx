@@ -9,7 +9,7 @@ import Styled from './StyledPostList';
 // Methods
 import splitSlug from '../../utils/SplitSlugToFilePath';
 
-class PostList extends React.PureComponent {
+class PostList extends React.Component {
   static handleTouch(e) {
     e.currentTarget.classList.toggle('move');
   }
@@ -26,6 +26,19 @@ class PostList extends React.PureComponent {
       node.addEventListener('mouseleave', PostList.handleTouch, {
         passive: true,
       });
+    });
+  }
+
+  shouldComponentUpdate() {
+    return false;
+  }
+
+  componentWillUnmount() {
+    const el = document.querySelectorAll('.thumbItem');
+    _.forEach(el, (node) => {
+      node.removeEventListener('touchstart', PostList.handleTouch);
+      node.removeEventListener('mouseenter', PostList.handleTouch);
+      node.removeEventListener('mouseleave', PostList.handleTouch);
     });
   }
 
