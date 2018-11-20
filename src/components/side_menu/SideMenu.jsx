@@ -6,13 +6,11 @@ import config from '../../data/SiteConfig';
 import Styled from './StyledSideMenu';
 
 // Methods
-import { Hamburger } from '../header/Header';
+import { callSidebar } from '../header/Header';
 
-class SideMenu extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.callSidebar = Hamburger.callSidebar.bind(this);
+class SideMenu extends React.Component {
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {
@@ -21,7 +19,7 @@ class SideMenu extends React.PureComponent {
         <Styled.Menu>
           <Styled.MenuList>
             <li>
-              <Link to="/" onClick={this.callSidebar}>
+              <Link to="/" onClick={callSidebar}>
                 Latest
               </Link>
             </li>
@@ -29,7 +27,7 @@ class SideMenu extends React.PureComponent {
           <Styled.MenuLabel>Programming</Styled.MenuLabel>
           <Styled.MenuList>
             <li>
-              <Link to="/categories/frontend" onClick={this.callSidebar}>
+              <Link to="/categories/frontend" onClick={callSidebar}>
                 Frontend
               </Link>
             </li>
@@ -40,12 +38,12 @@ class SideMenu extends React.PureComponent {
           <Styled.MenuLabel>Literature</Styled.MenuLabel>
           <Styled.MenuList>
             <li>
-              <Link to="/categories/essay" onClick={this.callSidebar}>
+              <Link to="/categories/essay" onClick={callSidebar}>
                 Essay
               </Link>
             </li>
             <li>
-              <Link to="/categories/review" onClick={this.callSidebar}>
+              <Link to="/categories/review" onClick={callSidebar}>
                 Review
               </Link>
             </li>
@@ -53,12 +51,12 @@ class SideMenu extends React.PureComponent {
           <Styled.MenuLabel>About</Styled.MenuLabel>
           <Styled.MenuList>
             <li>
-              <Link to="/about-me" onClick={this.callSidebar}>
+              <Link to="/about-me" onClick={callSidebar}>
                 About Me
               </Link>
             </li>
             <li>
-              <Link to="/privacy-policy" onClick={this.callSidebar}>
+              <Link to="/privacy-policy" onClick={callSidebar}>
                 Privacy Policy
               </Link>
             </li>

@@ -4,17 +4,15 @@ import React from 'react';
 import Styled from './StyledGreyOut';
 
 // Methods
-import { Hamburger } from '../header/Header';
+import { callSidebar } from '../header/Header';
 
-class GreyOut extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    this.callSidebar = Hamburger.callSidebar.bind(this);
+class GreyOut extends React.Component {
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {
-    return <Styled.GreyOut onClick={this.callSidebar} aria-hidden />;
+    return <Styled.GreyOut onClick={callSidebar} aria-hidden />;
   }
 }
 

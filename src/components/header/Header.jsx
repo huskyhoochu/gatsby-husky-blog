@@ -7,19 +7,23 @@ import faSearch from '../../assets/icons/search-solid.svg';
 // Styled
 import Styled from './StyledHeader';
 
-export class Hamburger extends React.PureComponent {
-  static callSidebar = () => {
-    const sidebar = document.querySelector('#App');
-    sidebar.classList.toggle('slide');
+export const callSidebar = () => {
+  const sidebar = document.querySelector('#App');
+  sidebar.classList.toggle('slide');
 
-    const burger = document.querySelector('#burger');
-    burger.classList.toggle('is-active');
-  };
+  const burger = document.querySelector('#burger');
+  burger.classList.toggle('is-active');
+};
+
+class Hamburger extends React.Component {
+  shouldComponentUpdate() {
+    return false;
+  }
 
   render() {
     return (
       <Styled.MenuSection>
-        <Styled.Burger onClick={Hamburger.callSidebar}>
+        <Styled.Burger onClick={callSidebar}>
           <span />
           <span />
           <span />
