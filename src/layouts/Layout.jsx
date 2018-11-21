@@ -11,18 +11,20 @@ import SideMenu from '../components/side_menu/SideMenu';
 import GreyOut from '../components/grey_out/GreyOut';
 import FlexWrapper from '../components/flex_wrapper/FlexWrapper';
 
-const Layout = ({ query }) => (
+const Layout = ({ children, query }) => (
   <Styled.App>
     <Styled.Canvas>
       <SideMenu />
       <Header />
       <FlexWrapper query={query} />
+      {children}
       <GreyOut />
     </Styled.Canvas>
   </Styled.App>
 );
 
 Layout.propTypes = {
+  children: PropTypes.element.isRequired,
   query: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
 };
 
