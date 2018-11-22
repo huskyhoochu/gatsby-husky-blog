@@ -7,17 +7,18 @@ import config from '../../data/SiteConfig';
 import faFacebook from '../../assets/icons/facebook.svg';
 
 // Styled
+import StyledBasic from '../../layouts/StyledBasic';
 import Styled from './StyledPostInformation';
 
 const PostInformation = ({ content }) => (
   <Fragment>
-    <h3>{content.frontmatter.title}</h3>
-    <h6>{content.frontmatter.subtitle}</h6>
-    <p>
+    <StyledBasic.BasicH1>{content.frontmatter.title}</StyledBasic.BasicH1>
+    <StyledBasic.BasicH2>{content.frontmatter.subtitle}</StyledBasic.BasicH2>
+    <Styled.PostMetaData>
       <span>{content.frontmatter.date}</span>
       <span>&nbsp;|&nbsp;</span>
       <strong>{content.author}</strong>
-    </p>
+    </Styled.PostMetaData>
     {content.location && (
       <p>
         <FacebookProvider appId={config.facebookAppId}>

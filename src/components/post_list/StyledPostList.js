@@ -45,9 +45,9 @@ const PostThumb = styled.img.attrs({
 `;
 
 const PostMetaData = styled(StyledBasic.BasicP)`
-  color: rebeccapurple;
-  font-weight: 400;
   margin: 1rem 0;
+  font-weight: 400;
+  color: rebeccapurple;
 `;
 
 const PostExcerpt = styled(StyledBasic.BasicP)`
