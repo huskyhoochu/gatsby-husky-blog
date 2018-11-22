@@ -6,7 +6,7 @@ import AdSense from 'react-adsense';
 import config from '../../data/SiteConfig';
 
 // Styled
-import Styled from '../flex_wrapper/StyledFlexWrapper';
+import Styled from './StyledPostDetail';
 
 const wrapTableElement = () => {
   if (document.querySelector('table')) {
