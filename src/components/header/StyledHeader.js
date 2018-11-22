@@ -23,8 +23,7 @@ const MenuSection = styled.div`
   text-align: center;
 `;
 
-const HomeTitle = styled.h6`
-  margin: 0 !important;
+const HomeTitle = styled(StyledBasic.BasicH2)`
   color: white;
 `;
 

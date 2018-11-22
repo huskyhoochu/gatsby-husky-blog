@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import StyledBasic from '../../layouts/StyledBasic';
 
-const CategoryTitle = styled.h6`
-  margin-top: 0 !important;
+const CategoryTitle = styled(StyledBasic.BasicH2)`
   color: rebeccapurple;
   text-align: center;
 `;
@@ -45,23 +44,20 @@ const PostThumb = styled.img.attrs({
   }
 `;
 
-const PostTitle = styled.h4`
-  margin-bottom: 0 !important;
-`;
+const PostTitle = styled(StyledBasic.BasicH1)``;
 
-const PostSubtitle = styled.h6`
-  margin-top: 0 !important;
-  color: dimgrey;
-  font-weight: 100 !important;
+const PostSubtitle = styled(StyledBasic.BasicH2)`
+  font-weight: 100;
 `;
 
 const PostMetaData = styled.p`
   color: rebeccapurple;
   font-weight: 400;
+  margin: 1rem 0;
 `;
 
 const PostExcerpt = styled.p`
-  color: dimgrey;
+  color: ${StyledBasic.BasicColor};
 `;
 
 export default {
