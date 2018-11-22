@@ -22,12 +22,10 @@ const BasicH1 = styled.h1`
 
 const BasicH2 = styled.h2`
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 100;
 `;
 
-const BasicP = styled.p`
-  margin-bottom: 1rem;
-`;
+const BasicP = styled.p``;
 
 export default {
   BasicRelativeWrapper,

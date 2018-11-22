@@ -44,19 +44,13 @@ const PostThumb = styled.img.attrs({
   }
 `;
 
-const PostTitle = styled(StyledBasic.BasicH1)``;
-
-const PostSubtitle = styled(StyledBasic.BasicH2)`
-  font-weight: 100;
-`;
-
-const PostMetaData = styled.p`
+const PostMetaData = styled(StyledBasic.BasicP)`
   color: rebeccapurple;
   font-weight: 400;
   margin: 1rem 0;
 `;
 
-const PostExcerpt = styled.p`
+const PostExcerpt = styled(StyledBasic.BasicP)`
   color: ${StyledBasic.BasicColor};
 `;
 
@@ -65,8 +59,6 @@ export default {
   PostWrapper,
   PostBody,
   PostThumb,
-  PostTitle,
-  PostSubtitle,
   PostMetaData,
   PostExcerpt,
 };

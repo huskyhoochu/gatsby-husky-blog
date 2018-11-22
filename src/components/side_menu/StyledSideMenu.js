@@ -14,11 +14,11 @@ const MenuWrapper = styled(StyledBasic.BasicAbsoluteWrapper).attrs({
 const Menu = styled(StyledBasic.BasicRelativeWrapper)`
   margin-top: 1.75rem;
   padding: 1.5rem;
+  line-height: 2.5;
 `;
 
 const MenuList = styled.ul`
   font-weight: 400;
-  line-height: 2;
   padding-left: 1rem;
 
   li {
@@ -36,11 +36,6 @@ const MenuList = styled.ul`
   }
 `;
 
-const MenuLabel = styled.p`
-  margin-bottom: 0 !important;
-  line-height: 3;
-`;
-
 const Copyright = styled(StyledBasic.BasicAbsoluteWrapper)`
   bottom: 0;
   left: 0;
@@ -56,6 +51,5 @@ export default {
   MenuWrapper,
   Menu,
   MenuList,
-  MenuLabel,
   Copyright,
 };

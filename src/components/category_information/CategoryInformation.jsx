@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import config from '../../data/SiteConfig';
 
 // Styled
+import StyledBasic from '../../layouts/StyledBasic';
 import Styled from './StyledCategoryInformation';
 
 const CategoryInformation = ({ category }) => {
@@ -13,9 +14,9 @@ const CategoryInformation = ({ category }) => {
   return (
     <Fragment>
       <Styled.Quote>{categoryMessage.message}</Styled.Quote>
-      <p>
+      <StyledBasic.BasicP>
         <strong>{categoryMessage.author}</strong>
-      </p>
+      </StyledBasic.BasicP>
     </Fragment>
   );
 };

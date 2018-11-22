@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
 // Styled
+import StyledBasic from '../../layouts/StyledBasic';
 import Styled from './StyledPostList';
 
 // Methods
@@ -67,8 +68,8 @@ class PostList extends React.Component {
               srcSet={fixed.srcSet}
               alt="post-thumb"
             />
-            <Styled.PostTitle>{title}</Styled.PostTitle>
-            <Styled.PostSubtitle>{subtitle}</Styled.PostSubtitle>
+            <StyledBasic.BasicH1>{title}</StyledBasic.BasicH1>
+            <StyledBasic.BasicH2>{subtitle}</StyledBasic.BasicH2>
             <Styled.PostMetaData>
               <span>{date}</span>
               <span>&nbsp;•&nbsp;</span>

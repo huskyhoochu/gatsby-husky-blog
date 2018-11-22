@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import config from '../../data/SiteConfig';
 
 // Styled
+import StyledBasic from '../../layouts/StyledBasic';
 import Styled from './StyledSideMenu';
 
 // Methods
@@ -24,7 +25,7 @@ class SideMenu extends React.Component {
               </Link>
             </li>
           </Styled.MenuList>
-          <Styled.MenuLabel>Programming</Styled.MenuLabel>
+          <StyledBasic.BasicP>Programming</StyledBasic.BasicP>
           <Styled.MenuList>
             <li>
               <Link to="/categories/frontend" onClick={callSidebar}>
@@ -35,7 +36,7 @@ class SideMenu extends React.Component {
               <Link to="/">Backend</Link>
             </li>
           </Styled.MenuList>
-          <Styled.MenuLabel>Literature</Styled.MenuLabel>
+          <StyledBasic.BasicP>Literature</StyledBasic.BasicP>
           <Styled.MenuList>
             <li>
               <Link to="/categories/essay" onClick={callSidebar}>
@@ -48,7 +49,7 @@ class SideMenu extends React.Component {
               </Link>
             </li>
           </Styled.MenuList>
-          <Styled.MenuLabel>About</Styled.MenuLabel>
+          <StyledBasic.BasicP>About</StyledBasic.BasicP>
           <Styled.MenuList>
             <li>
               <Link to="/about-me" onClick={callSidebar}>

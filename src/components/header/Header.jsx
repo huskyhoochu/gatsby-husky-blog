@@ -36,7 +36,9 @@ class Hamburger extends React.Component {
 const Title = () => (
   <div className="home-menu">
     <Link to="/">
-      <Styled.HomeTitle>huskyhoochu.com</Styled.HomeTitle>
+      <Styled.HomeTitle>
+        <strong>huskyhoochu.com</strong>
+      </Styled.HomeTitle>
     </Link>
   </div>
 );
