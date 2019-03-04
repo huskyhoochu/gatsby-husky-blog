@@ -15,6 +15,11 @@ const Content = styled.article`
   h5,
   h6 {
     text-indent: 0;
+    margin: 2rem 0;
+  }
+
+  h4 {
+    font-size: 1.5rem;
   }
 
   a {
